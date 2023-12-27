@@ -1,0 +1,107 @@
+.free-box-dash {
+    background: #fff;
+    border-radius: 20px;
+    margin: 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #9c9c9c;
+}
+
+.free-box-dash-border {
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.free-box-dash-btn-block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #f0f0f0;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+.header-form{
+    padding-top: 155px;
+}
+
+.log-img{
+    padding: 25px 0px 0px 0px;
+}
+.log-img h6{
+    padding: 0px 0px 25px 80px;
+}
+
+.log-text{
+    padding: 60px 10px 10px 10px;
+}
+
+.button-blue-s {
+    background-color: #1c67bd;
+    border-radius: 3px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "promptlight";
+    font-size: 16px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-blue-s:hover,
+.button-blue-s:focus {
+    background-color: #2e7cd5;
+}
+
+.button-red-s {
+    background-color: #be1e2d;
+    border-radius: 3px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "promptlight";
+    font-size: 16px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-red-s:hover,
+.button-red-s:focus {
+    background-color: #df4f5d;
+}
