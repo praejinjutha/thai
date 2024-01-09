@@ -25,7 +25,7 @@ $themes =  base_url();
             </div>
         </div>
         <div class="row">
-            <div class="col pt-1 text-end" style="padding-right: 25px">
+            <div class="col pt-1 text-end" style="padding-right: 65px">
                 <a href="<?= $themes ?>assets/file/ระบบงานบุคลากร.pdf" class="fw-bold" style="text-decoration: none;"
                     target="_blank">
                     <span
