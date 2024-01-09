@@ -10,19 +10,31 @@ $themes =  base_url();
                 <img src="<?= $themes ?>assets/images/header/02.png" class="img-fluid logo-response" alt="" width="80%">
             </a>
         </div>
-        <div class="float-end setting-profile">
-            <span class="fw-bold setting-profile-span"
-                style="font-family: promptlight; font-size: 16px;">&nbsp;&nbsp;&nbsp;<?= $this->session->userdata('Name') ?>&nbsp;</span>
-            <span class="fw-bold"><img src="<?= $themes ?>assets/images/profile/profile.png" class="setting-profile-img"
-                    alt="profile"></span>
-            <button type="button" class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span class="glyphicon glyphicon-cog"></span><i class="fa fa-chevron-down"
-                    aria-hidden="true"></i></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="<?= site_url('auth/logout') ?>">Logout</a></li>
-            </ul>
+        <div class="row">
+            <div class="col text-end">
+                <span class="fw-bold ml-6"
+                    style="font-family: promptlight; font-size: 16px;">&nbsp;&nbsp;<?= $this->session->userdata('Name') ?>&nbsp;</span>
+                <i class="fa-solid fa-user fs-5"></i>
+                <button type="button" class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span class="glyphicon glyphicon-cog"></span><i class="fa fa-chevron-down"
+                        aria-hidden="true"></i></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item fw-bold" href="<?= site_url('auth/logout') ?>">ออกจากระบบ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col pt-1 text-end" style="padding-right: 25px">
+                <a href="<?= $themes ?>assets/file/ระบบงานบุคลากร.pdf" class="fw-bold" style="text-decoration: none;"
+                    target="_blank">
+                    <span
+                        style="font-family: promptlight; font-size: 16px; font-weight: bold; cursor: pointer; color: #000;">
+                        คู่มือการใช้งาน&nbsp;&nbsp;<i class="fa-solid fa-book fs-5"></i>
+                    </span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -55,20 +67,28 @@ $themes =  base_url();
         </div>
         <div class="col-md-2 menu-bar-border menu-bar-other">
             <?php if ($this->session->userdata('Role') == 'admin'): ?>
-                <a href="<?= site_url('PersonnelHome') ?>"><i class="fa-solid fa-user"></i></a>
-                <a href="<?= site_url('PersonnelHome') ?>"> <h5 class="fw-bold">งานบุคลากร</h5> </a>
+            <a href="<?= site_url('PersonnelHome') ?>"><i class="fa-solid fa-user"></i></a>
+            <a href="<?= site_url('PersonnelHome') ?>">
+                <h5 class="fw-bold">งานบุคลากร</h5>
+            </a>
             <?php else: ?>
-                <a href="<?= site_url('User_Controller/PersonnelHome_User') ?>"><i class="fa-solid fa-user"></i></a>
-                <a href="<?= site_url('User_Controller/PersonnelHome_User') ?>"> <h5 class="fw-bold">งานบุคลากร</h5> </a>
+            <a href="<?= site_url('User_Controller/PersonnelHome_User') ?>"><i class="fa-solid fa-user"></i></a>
+            <a href="<?= site_url('User_Controller/PersonnelHome_User') ?>">
+                <h5 class="fw-bold">งานบุคลากร</h5>
+            </a>
             <?php endif; ?>
         </div>
         <div class="col-md-2 menu-bar-border menu-bar-other">
             <?php if ($this->session->userdata('Role') == 'admin'): ?>
-                <a href="<?= site_url('HelperHome') ?>"><i class="fa-solid fa-lightbulb"></i></a>
-                <a href="<?= site_url('HelperHome') ?>"><h5 class="fw-bold">ช่วยเหลือ</h5></a>
+            <a href="<?= site_url('HelperHome') ?>"><i class="fa-solid fa-lightbulb"></i></a>
+            <a href="<?= site_url('HelperHome') ?>">
+                <h5 class="fw-bold">ช่วยเหลือ</h5>
+            </a>
             <?php else: ?>
-                <a href="<?= site_url('User_Controller/HelperHome') ?>"><i class="fa-solid fa-lightbulb"></i></a>
-                <a href="<?= site_url('User_Controller/HelperHome') ?>"><h5 class="fw-bold">ช่วยเหลือ</h5></a>
+            <a href="<?= site_url('User_Controller/HelperHome') ?>"><i class="fa-solid fa-lightbulb"></i></a>
+            <a href="<?= site_url('User_Controller/HelperHome') ?>">
+                <h5 class="fw-bold">ช่วยเหลือ</h5>
+            </a>
             <?php endif; ?>
         </div>
         <div class="col">
@@ -102,7 +122,7 @@ $themes =  base_url();
                 <div class="col dash-box-style">
                     <div class="col free-box-dash text-center" style="height: 110px;">
                         <div class="row">
-                            <div class="col mt-4" >
+                            <div class="col mt-4">
                                 <h4 class="fw-bold">ภาคเรียนที่</h4>
                                 <h4 class="fw-bold" style="color: #6d5e4d; font-size:26px"><?= $Semester ?></h4>
                             </div>
@@ -135,16 +155,21 @@ $themes =  base_url();
                     <div class="col free-box-dash p-1">
                         <div class="body">
                             &nbsp; &nbsp; &nbsp; &nbsp;
-                                <?php if ($this->session->userdata('Role') == 'admin'): ?>
-                                    <a href="<?= site_url('PlanningInformation') ?>">
-                                    <h5 class="btn fw-bold fs-5" style="background-color: #d2a549; color: #FFFFFF; padding: 3px;">ข้อมูลสารสนเทศ</h5></a>
-                                <?php else: ?>
-                                    <a href="<?= site_url('User_Controller/PlanningInformation') ?>">
-                                    <h5 class="btn fw-bold fs-5" style="background-color: #d2a549; color: #FFFFFF; padding: 3px;">ข้อมูลสารสนเทศ</h5></a>
-                                <?php endif; ?>
+                            <?php if ($this->session->userdata('Role') == 'admin'): ?>
+                            <a href="<?= site_url('PlanningInformation') ?>">
+                                <h5 class="btn fw-bold fs-5"
+                                    style="background-color: #d2a549; color: #FFFFFF; padding: 3px;">ข้อมูลสารสนเทศ</h5>
+                            </a>
+                            <?php else: ?>
+                            <a href="<?= site_url('User_Controller/PlanningInformation') ?>">
+                                <h5 class="btn fw-bold fs-5"
+                                    style="background-color: #d2a549; color: #FFFFFF; padding: 3px;">ข้อมูลสารสนเทศ</h5>
+                            </a>
+                            <?php endif; ?>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12">
-                                    <canvas id="chBar" style="width:830px !important; height:290px !important;"></canvas>
+                                    <canvas id="chBar"
+                                        style="width:830px !important; height:290px !important;"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -260,7 +285,8 @@ $themes =  base_url();
                                     <?php if ($this->data['total_rows2'] > 0): ?>
                                     <tr>
                                         <td style="font-size: 22px; padding-top: 5px">ผู้อำนวยการสถานศึกษา</td>
-                                        <td style="font-size: 22px; text-align:right; padding-top: 5px"><?= $this->data['total_rows2'] ?>
+                                        <td style="font-size: 22px; text-align:right; padding-top: 5px">
+                                            <?= $this->data['total_rows2'] ?>
                                         </td>
                                         <td style="font-size: 22px; text-align:right; padding-top: 5px">คน</td>
                                     </tr>
@@ -268,7 +294,8 @@ $themes =  base_url();
                                     <?php if ($this->data['total_rows3'] > 0): ?>
                                     <tr>
                                         <td style="font-size: 22px; padding-top: 5px">รองผู้อำนวยการสถานศึกษา</td>
-                                        <td style="font-size: 22px; text-align:right; padding-top: 5px"><?= $this->data['total_rows3'] ?>
+                                        <td style="font-size: 22px; text-align:right; padding-top: 5px">
+                                            <?= $this->data['total_rows3'] ?>
                                         </td>
                                         <td style="font-size: 22px; text-align:right; padding-top: 5px">คน</td>
                                     </tr>
@@ -297,16 +324,20 @@ $themes =  base_url();
                                     <?php if ($this->data['total_rows4'] > 0): ?>
                                     <tr>
                                         <td style="font-size: 22px; padding-top: 5px">ครูผู้ช่วย</td>
-                                        <td style="font-size: 22px; text-align:right; padding-top: 5px"><?= $this->data['total_rows4'] ?>
+                                        <td style="font-size: 22px; text-align:right; padding-top: 5px">
+                                            <?= $this->data['total_rows4'] ?>
                                         </td>
-                                        <td style="font-size: 22px; padding-top: 10px; text-align:right; padding-top: 5px">คน</td>
+                                        <td
+                                            style="font-size: 22px; padding-top: 10px; text-align:right; padding-top: 5px">
+                                            คน</td>
                                     </tr>
                                     <?php endif; ?>
 
                                     <?php if ($this->data['total_rows5'] > 0): ?>
                                     <tr>
                                         <td style="font-size: 22px; padding-top: 5px">ครู</td>
-                                        <td style="font-size: 22px; text-align:right; padding-top: 5px"><?= $this->data['total_rows5'] ?>
+                                        <td style="font-size: 22px; text-align:right; padding-top: 5px">
+                                            <?= $this->data['total_rows5'] ?>
                                         </td>
                                         <td style="font-size: 22px; text-align:right; padding-top: 5px">คน</td>
                                     </tr>
@@ -315,7 +346,8 @@ $themes =  base_url();
                                     <?php if ($this->data['total_rows6'] > 0): ?>
                                     <tr>
                                         <td style="font-size: 22px; padding-top: 5px">อาจารย์</td>
-                                        <td style="font-size: 22px; text-align:right; padding-top: 5px"><?= $this->data['total_rows6'] ?>
+                                        <td style="font-size: 22px; text-align:right; padding-top: 5px">
+                                            <?= $this->data['total_rows6'] ?>
                                         </td>
                                         <td style="font-size: 22px; text-align:right; padding-top: 5px">คน</td>
                                     </tr>
@@ -324,7 +356,8 @@ $themes =  base_url();
                                     <?php if ($this->data['total_rows7'] > 0): ?>
                                     <tr>
                                         <td style="font-size: 22px; padding-top: 5px">ผู้ช่วยศาสตราจารย์</td>
-                                        <td style="font-size: 22px; text-align:right; padding-top: 5px"><?= $this->data['total_rows7'] ?>
+                                        <td style="font-size: 22px; text-align:right; padding-top: 5px">
+                                            <?= $this->data['total_rows7'] ?>
                                         </td>
                                         <td style="font-size: 22px; text-align:right; padding-top: 5px">คน</td>
                                     </tr>
@@ -333,7 +366,8 @@ $themes =  base_url();
                                     <?php if ($this->data['total_rows8'] > 0): ?>
                                     <tr>
                                         <td style="font-size: 22px; padding-top: 5px">รองศาสตราจารย์</td>
-                                        <td style="font-size: 22px; text-align:right; padding-top: 5px"><?= $this->data['total_rows8'] ?>
+                                        <td style="font-size: 22px; text-align:right; padding-top: 5px">
+                                            <?= $this->data['total_rows8'] ?>
                                         </td>
                                         <td style="font-size: 22px; text-align:right; padding-top: 5px">คน</td>
                                     </tr>
@@ -342,7 +376,8 @@ $themes =  base_url();
                                     <?php if ($this->data['total_rows9'] > 0): ?>
                                     <tr>
                                         <td style="font-size: 22px; padding-top: 5px">ศาสตราจารย์</td>
-                                        <td style="font-size: 22px; text-align:right; padding-top: 5px"><?= $this->data['total_rows9'] ?>
+                                        <td style="font-size: 22px; text-align:right; padding-top: 5px">
+                                            <?= $this->data['total_rows9'] ?>
                                         </td>
                                         <td style="font-size: 22px; text-align:right; padding-top: 5px">คน</td>
                                     </tr>

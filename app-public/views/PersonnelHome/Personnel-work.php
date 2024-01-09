@@ -9,19 +9,31 @@ $themes =  base_url();
                 <img src="<?= $themes ?>assets/images/header/02.png" class="img-fluid logo-response" alt="">
             </a>
         </div>
-        <div class="float-end setting-profile">
-            <span class="fw-bold setting-profile-span"
-                style="font-family: promptlight; font-size: 16px;">&nbsp;&nbsp;&nbsp;<?= $this->session->userdata('Name') ?>&nbsp;</span>
-            <span class="fw-bold"><img src="<?= $themes ?>assets/images/profile/profile.png" class="setting-profile-img"
-                    alt="profile"></span>
-            <button type="button" class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span class="glyphicon glyphicon-cog"></span><i class="fa fa-chevron-down"
-                    aria-hidden="true"></i></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="<?= site_url('auth/logout') ?>">Logout</a></li>
-            </ul>
+        <div class="row">
+            <div class="col text-end">
+                <span class="fw-bold ml-6"
+                    style="font-family: promptlight; font-size: 16px;">&nbsp;&nbsp;<?= $this->session->userdata('Name') ?>&nbsp;</span>
+                <i class="fa-solid fa-user fs-5"></i>
+                <button type="button" class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span class="glyphicon glyphicon-cog"></span><i class="fa fa-chevron-down"
+                        aria-hidden="true"></i></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item fw-bold" href="<?= site_url('auth/logout') ?>">ออกจากระบบ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col pt-1 text-end" style="padding-right: 25px">
+                <a href="<?= $themes ?>assets/file/ระบบงานบุคลากร.pdf" class="fw-bold" style="text-decoration: none;"
+                    target="_blank">
+                    <span
+                        style="font-family: promptlight; font-size: 16px; font-weight: bold; cursor: pointer; color: #000;">
+                        คู่มือการใช้งาน&nbsp;&nbsp;<i class="fa-solid fa-book fs-5"></i>
+                    </span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
