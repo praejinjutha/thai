@@ -45,7 +45,7 @@ define('INDEX_PAGE', 'index.php');
 define('THEMES', 'themes');
 
 // @default_controller
-define('DEFAULT_CONTROLLER', 'auth');
+define('DEFAULT_CONTROLLER', 'Dashboard');
 
 /*
  *---------------------------------------------------------------

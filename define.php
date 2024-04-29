@@ -22,6 +22,11 @@ define('DB_UID', 'sa');
 define('DB_PASSWORD', 'modeP@ssw0rd');
 define('DB_NAME', 'SPL_modeweb_dev');
 
+// define('DB_HOST', 'localhost');
+// define('DB_UID', 'root');
+// define('DB_PASSWORD', '');
+// define('DB_NAME', 'thai');
+
 // @BASE_URL
 define('UPLOAD_PATH', 'upload/public');
 
