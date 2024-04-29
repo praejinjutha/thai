@@ -1,4 +1,4 @@
-# SPL_Personal 
+# Thai
 
 ```php
 define('APP_NAME', ' ');
