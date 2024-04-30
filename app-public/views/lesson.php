@@ -116,13 +116,17 @@
   </div><!-- End Portfolio Item -->
 
   <div class="col-lg-3 col-md-6 portfolio-item filter-lesson">
-    <img src="../assets/img/portfolio/lesson-5.png" class="img-fluid" alt="">
-    <div class="caption">  สะกดคำ   <br>Spell Words  </div>
+    <a href="<?= site_url('Learning_media_controller') ?>" target="_brank">
+      <img src="../assets/img/portfolio/lesson-5.png" class="img-fluid" alt="">
+      <div class="caption">  สะกดคำ   <br>Spell Words  </div>
+    </a>
   </div><!-- End Portfolio Item -->
 
   <div class="col-lg-3 col-md-6 portfolio-item filter-lesson">
-    <img src="../assets/img/portfolio/lesson-6.png" class="img-fluid" alt="">
-    <div class="caption">  อ่านออก อ่านถูก   <br>Reading Accuracy   </div>
+    <a href="<?= site_url('Readcorrectly_controller') ?>" target="_brank">
+      <img src="../assets/img/portfolio/lesson-6.png" class="img-fluid" alt="">
+      <div class="caption">  อ่านออก อ่านถูก   <br>Reading Accuracy   </div>
+    </a>
   </div><!-- End Portfolio Item -->
 
   <div class="col-lg-3 col-md-6 portfolio-item filter-lesson">
@@ -147,8 +151,10 @@
 <h2 id="practice-heading" style="margin-top: 50px;">ฝึกปฏิบัติ <hr></h2>
 <div class="row gy-4 portfolio-container"  data-aos-delay="300">
   <div class="col-lg-3 col-md-6 portfolio-item filter-prac">
-    <img src="../assets/img/portfolio/prac1.png" class="img-fluid" alt="">
-    <div class="caption">  อ่านเร็ว อ่านคล่อง   <br> Speed Reading Test </div>
+    <a href="<?= site_url('Readfluently_controller') ?>" target="_brank">
+      <img src="../assets/img/portfolio/prac1.png" class="img-fluid" alt="">
+      <div class="caption">  อ่านเร็ว อ่านคล่อง   <br> Speed Reading Test </div>
+    </a>
   </div><!-- End Portfolio Item -->
 
   <div class="col-lg-3 col-md-6 portfolio-item filter-prac">
@@ -173,8 +179,10 @@
   </div><!-- End Portfolio Item -->
 
   <div class="col-lg-3 col-md-6 portfolio-item filter-prac">
-    <img src="../assets/img/portfolio/prac4.png" class="img-fluid" alt="">
-    <div class="caption">   เกม   <br> Games  </div>
+    <a href="<?= site_url('Game_controller') ?>">
+      <img src="../assets/img/portfolio/prac4.png" class="img-fluid" alt="">
+      <div class="caption">   เกม   <br> Games  </div>
+    </a>
   </div><!-- End Portfolio Item -->
 </div><!-- End Portfolio Container -->
 
@@ -182,8 +190,10 @@
 <h2 id="exercise-heading"style="margin-top: 50px;" >แบบฝึกหัด <hr></h2>
 <div class="row gy-4 portfolio-container"  data-aos-delay="300">
   <div class="col-lg-3 col-md-6 portfolio-item filter-ex">
-    <img src="../assets/img/portfolio/ex1.png" class="img-fluid" alt="">
-    <div class="caption">  คลังข้อสอบ   <br> Exam Archive </div>
+    <a href="<?= site_url('Test_controller') ?>" target="_brank">
+      <img src="../assets/img/portfolio/ex1.png" class="img-fluid" alt="">
+      <div class="caption">  คลังข้อสอบ   <br> Exam Archive </div>
+    </a>
   </div><!-- End Portfolio Item -->
 
   <div class="col-lg-3 col-md-6 portfolio-item filter-ex">
