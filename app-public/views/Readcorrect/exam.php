@@ -20,8 +20,28 @@ body {
     cursor: pointer;
     transform: scale(1.1);
 }
+
+.number {
+    width: 20vh;
+    height: 13vh;
+    font-size: 36px;
+    font-family: "niramit";
+    color: #ffff;
+    background-color: #ce9036;
+    border: 5px solid #fce7c9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
 </style>
 
+<?php
+    $numArr = ['๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙', '๑o', '๑๑', '๑๒', '๑๓', '๑๔', '๑๕', '๑๖', '๑๗', '๑๘', '๑๙', '๒o'];
+    $num = isset($numArr[$this->data['ID'] - 1]) ? $numArr[$this->data['ID'] - 1] : '';
+?>
 
 <div class="container-fluid">
     <div class="row">
@@ -34,11 +54,10 @@ body {
             </div>
         </div>
     </div>
-    <!---------------------------------------------- ชุดที่ 1  ---------------------------------------------->
-    <?php if ($this->data['ID'] == 1) :  ?>
     <div class="row">
-        <div class="col text-center" style="margin-top: 110px">
-            <img src="<?= $themes ?>assets/img/thai/page3/btn-1.png" width="230vh">
+        <div class="col text-center" style="margin-top: 110px; display: flex; justify-content: center;">
+            <!-- <img src="<?= $themes ?>assets/img/thai/page3/btn-1.png" width="230vh"> -->
+            <div class="number">ชุดที่ <?= $num ?></div>
         </div>
     </div>
     <div class="row">
@@ -46,214 +65,16 @@ body {
             <a href="<?= $themes ?>assets/files/Readcorrectly/Exam1/Vocabulary.html">
                 <img src="<?= $themes ?>assets/img/thai/page3/btn-vocab.png" width="600vh" class="img-hover-effect me-3">
             </a>
-            <a href="<?= site_url('Readcorrectly_controller/Explanation_Exam/1') ?>">
+            <a href="<?= site_url('Readcorrectly_controller/Explanation_Exam/') . $this->data['ID'] ?>">
                 <img src="<?= $themes ?>assets/img/thai/page3/brn-exam.png" width="600vh" class="img-hover-effect me-3">
             </a>
         </div>
         <div class="col-6" style="padding-left: 130px; padding-top: 110px">
             <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-gameread.png" width="600vh"
                     class="img-hover-effect me-3"></a>
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-        </div>
-    </div>
-    <!---------------------------------------------- ชุดที่ 2  ---------------------------------------------->
-    <?php elseif ($this->data['ID'] == 2) :  ?>
-    <div class="row">
-        <div class="col text-center" style="margin-top: 110px">
-            <img src="<?= $themes ?>assets/img/thai/page3/btn-2.png" width="230vh">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6" style="padding-left: 240px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-vocab.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="<?= site_url('Readcorrectly_controller/Explanation_Exam/2') ?>">
-                <img src="<?= $themes ?>assets/img/thai/page3/brn-exam.png" width="600vh" class="img-hover-effect me-3">
+            <a href="<?= site_url('Readcorrectly_controller/SpellTheWord/') . $this->data['ID'] ?>">
+                <img src="<?= $themes ?>assets/img/thai/page3/btn-spell.png" width="600vh" class="img-hover-effect me-3">
             </a>
         </div>
-        <div class="col-6" style="padding-left: 130px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-gameread.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-        </div>
     </div>
-    <!---------------------------------------------- ชุดที่ 3  ---------------------------------------------->
-    <?php elseif ($this->data['ID'] == 3) : ?>
-    <div class="row">
-        <div class="col text-center" style="margin-top: 110px">
-            <img src="<?= $themes ?>assets/img/thai/page3/btn-3.png" width="230vh">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6" style="padding-left: 240px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-vocab.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="<?= site_url('Readcorrectly_controller/Explanation_Exam/3') ?>">
-                <img src="<?= $themes ?>assets/img/thai/page3/brn-exam.png" width="600vh" class="img-hover-effect me-3">
-            </a>
-        </div>
-        <div class="col-6" style="padding-left: 130px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-gameread.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-        </div>
-    </div>
-    <!---------------------------------------------- ชุดที่ 4  ---------------------------------------------->
-    <?php elseif ($this->data['ID'] == 4) : ?>
-    <div class="row">
-        <div class="col text-center" style="margin-top: 110px">
-            <img src="<?= $themes ?>assets/img/thai/page3/btn-4.png" width="230vh">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6" style="padding-left: 240px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-vocab.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="<?= site_url('Readcorrectly_controller/Explanation_Exam/4') ?>">
-                <img src="<?= $themes ?>assets/img/thai/page3/brn-exam.png" width="600vh" class="img-hover-effect me-3">
-            </a>
-        </div>
-        <div class="col-6" style="padding-left: 130px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-gameread.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-        </div>
-    </div>
-    <!---------------------------------------------- ชุดที่ 5  ---------------------------------------------->
-    <?php elseif ($this->data['ID'] == 5) : ?>
-    <div class="row">
-        <div class="col text-center" style="margin-top: 110px">
-            <img src="<?= $themes ?>assets/img/thai/page3/btn-5.png" width="230vh">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6" style="padding-left: 240px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-vocab.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="<?= site_url('Readcorrectly_controller/Explanation_Exam/5') ?>">
-                <img src="<?= $themes ?>assets/img/thai/page3/brn-exam.png" width="600vh" class="img-hover-effect me-3">
-            </a>
-        </div>
-        <div class="col-6" style="padding-left: 130px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-gameread.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-        </div>
-    </div>
-    <!---------------------------------------------- ชุดที่ 6  ---------------------------------------------->
-    <?php elseif ($this->data['ID'] == 6) : ?>
-    <div class="row">
-        <div class="col text-center" style="margin-top: 110px">
-            <img src="<?= $themes ?>assets/img/thai/page3/btn-6.png" width="230vh">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6" style="padding-left: 240px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-vocab.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="<?= site_url('Readcorrectly_controller/Explanation_Exam/6') ?>">
-                <img src="<?= $themes ?>assets/img/thai/page3/brn-exam.png" width="600vh" class="img-hover-effect me-3">
-            </a>
-        </div>
-        <div class="col-6" style="padding-left: 130px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-gameread.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-        </div>
-    </div>
-    <!---------------------------------------------- ชุดที่ 7  ---------------------------------------------->
-    <?php elseif ($this->data['ID'] == 7) : ?>
-    <div class="row">
-        <div class="col text-center" style="margin-top: 110px">
-            <img src="<?= $themes ?>assets/img/thai/page3/btn-7.png" width="230vh">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6" style="padding-left: 240px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-vocab.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="<?= site_url('Readcorrectly_controller/Explanation_Exam/7') ?>">
-                <img src="<?= $themes ?>assets/img/thai/page3/brn-exam.png" width="600vh" class="img-hover-effect me-3">
-            </a>
-        </div>
-        <div class="col-6" style="padding-left: 130px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-gameread.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-        </div>
-    </div>
-    <!---------------------------------------------- ชุดที่ 8  ---------------------------------------------->
-    <?php elseif ($this->data['ID'] == 8) : ?>
-    <div class="row">
-        <div class="col text-center" style="margin-top: 110px">
-            <img src="<?= $themes ?>assets/img/thai/page3/btn-8.png" width="230vh">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6" style="padding-left: 240px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-vocab.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="<?= site_url('Readcorrectly_controller/Explanation_Exam/8') ?>">
-                <img src="<?= $themes ?>assets/img/thai/page3/brn-exam.png" width="600vh" class="img-hover-effect me-3">
-            </a>
-        </div>
-        <div class="col-6" style="padding-left: 130px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-gameread.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-        </div>
-    </div>
-    <!---------------------------------------------- ชุดที่ 9  ---------------------------------------------->
-    <?php elseif ($this->data['ID'] == 9) : ?>
-    <div class="row">
-        <div class="col text-center" style="margin-top: 110px">
-            <img src="<?= $themes ?>assets/img/thai/page3/btn-9.png" width="230vh">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6" style="padding-left: 240px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-vocab.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="<?= site_url('Readcorrectly_controller/Explanation_Exam/9') ?>">
-                <img src="<?= $themes ?>assets/img/thai/page3/brn-exam.png" width="600vh" class="img-hover-effect me-3">
-            </a>
-        </div>
-        <div class="col-6" style="padding-left: 130px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-gameread.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-        </div>
-    </div>
-    <!---------------------------------------------- ชุดที่ 10  ---------------------------------------------->
-    <?php elseif ($this->data['ID'] == 10) : ?>
-    <div class="row">
-        <div class="col text-center" style="margin-top: 110px">
-            <img src="<?= $themes ?>assets/img/thai/page3/btn-10.png" width="230vh">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6" style="padding-left: 240px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-vocab.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="<?= site_url('Readcorrectly_controller/Explanation_Exam/10') ?>">
-                <img src="<?= $themes ?>assets/img/thai/page3/brn-exam.png" width="600vh"class="img-hover-effect me-3">
-            </a>
-        </div>
-        <div class="col-6" style="padding-left: 130px; padding-top: 110px">
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-gameread.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-            <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell.png" width="600vh"
-                    class="img-hover-effect me-3"></a>
-        </div>
-    </div>
-    <?php endif; ?>
 </div>

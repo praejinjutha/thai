@@ -15,4 +15,12 @@ class Readfluently_controller extends CI_Controller
         $this->data['view_file'] = 'Readfluently/readfluently';
         $this->load->view(THEMES, $this->data);
     }
+
+    public function Read_Choose($ID)
+    {
+        $this->data['ID'] = $ID;
+
+        $this->data['view_file'] = 'Readfluently/read_choose';
+        $this->load->view(THEMES, $this->data);
+    }
 }

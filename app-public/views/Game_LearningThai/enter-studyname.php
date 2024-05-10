@@ -146,9 +146,9 @@ body {
                 <h5 class="modal-title fw-bold fs-3" id="exampleModalLongTitle">สืบค้นข้อมูล</h5>
             </div>
             <div class="modal-body tbodyDiv">
-                <table class="table">
+                <table class="table table-bordered">
                     <thead>
-                        <tr class="text-center">
+                        <tr class="text-center table-info">
                             <th width="200px"><span class="fs-5">รหัสประจำตัว</span></th>
                             <th><span class="fs-5">ชื่อ - นามสกุล</span></th>
                             <th width="100px"><span class="fs-5">ชั้น</span></th>
@@ -170,7 +170,7 @@ body {
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary fs-5" data-dismiss="modal">ยกเลิก</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
             </div>
         </div>
     </div>

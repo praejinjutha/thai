@@ -31,7 +31,7 @@ body {
 <div class="container-fluid">
     <div class="row justify-content-end align-items-end" style="height: 100vh;">
         <div class="col-auto">
-            <a href="<?= site_url('Learning_media_controller/Choose/1') ?>">
+            <a href="<?= site_url('Learning_media_controller/Choose') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/btn-start.png" alt="" class="btn-start">
             </a>
         </div>

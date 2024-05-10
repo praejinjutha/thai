@@ -72,6 +72,12 @@ body {
     font-weight: bold;
     padding-left: 20px;
 }
+
+
+.tbodyDiv {
+    max-height: 600px;
+    overflow: auto;
+}
 </style>
 
 <div class="container-fluid">
@@ -89,19 +95,19 @@ body {
             <a href="#" onclick="appendNoParam(1)" style="text-decoration: none; color: #8c6239;">
                 <div class="choice active">
                     <img src="<?= $themes ?>assets/img/thai/page5/bullet.png" width="70vh">
-                    <span >ระดับ 1</span>
+                    <span >ระดับ ๑</span>
                 </div>
             </a>
             <a href="#"  onclick="appendNoParam(2)" style="text-decoration: none; color: #8c6239;">
                 <div class="choice">
                     <img src="<?= $themes ?>assets/img/thai/page5/bullet.png" width="70vh">
-                    <span >ระดับ 2</span>
+                    <span >ระดับ ๒</span>
                 </div>
             </a>
             <a href="#" onclick="appendNoParam(3)" style="text-decoration: none; color: #8c6239;">
                 <div class="choice">
                     <img src="<?= $themes ?>assets/img/thai/page5/bullet.png" width="70vh">
-                    <span >ระดับ 3</span>
+                    <span >ระดับ ๓</span>
                 </div>
             </a>
         </div>
@@ -113,19 +119,19 @@ body {
             <a href="#" onclick="appendNoParam(4)" style="text-decoration: none; color: #8c6239;">
                 <div class="choice">
                     <img src="<?= $themes ?>assets/img/thai/page5/bullet.png" width="70vh">
-                    <span >ระดับ 4</span>
+                    <span >ระดับ ๔</span>
                 </div>
             </a>
             <a href="#" onclick="appendNoParam(5)" style="text-decoration: none; color: #8c6239;">
                 <div class="choice">
                     <img src="<?= $themes ?>assets/img/thai/page5/bullet.png" width="70vh">
-                    <span >ระดับ 5</span>
+                    <span >ระดับ ๕</span>
                 </div>
             </a>
             <a href="#" onclick="appendNoParam(6)" style="text-decoration: none; color: #8c6239;">
                 <div class="choice">
                     <img src="<?= $themes ?>assets/img/thai/page5/bullet.png" width="70vh">
-                    <span >ระดับ 6</span>
+                    <span >ระดับ ๖</span>
                 </div>
             </a>
         </div>
@@ -142,13 +148,15 @@ body {
                 <h5 class="modal-title fw-bold fs-3" id="exampleModalLongTitle">สถิติคะแนน</h5>
             </div>
             <div class="modal-body tbodyDiv">
-                <table class="table" id="tbl_Stat">
+                <table class="table table-bordered" id="tbl_Stat">
                     <thead>
-                        <tr class="text-center">
-                            <th width="100px"><span class="fs-5">ลำดับ</span></th>
-                            <th width="150px"><span class="fs-5">รหัสนักเรียน</span></th>
+                        <tr class="text-center table-warning">
+                            <th width="80px"><span class="fs-5">ลำดับ</span></th>
+                            <th width="130px"><span class="fs-5">รหัสนักเรียน</span></th>
                             <th><span class="fs-5">ชื่อ - นามสกุล</span></th>
-                            <th width="150px"><span class="fs-5">แต้มสะสม</span></th>
+                            <th width="100px"><span class="fs-5">ห้อง</span></th>
+                            <th width="100px"><span class="fs-5">ระดับ</span></th>
+                            <th width="130px"><span class="fs-5">แต้มสะสม</span></th>
                         </tr>
                     </thead>
                     <tbody class="text-center">
@@ -204,7 +212,9 @@ function get_Stat(No) {
                             <td>${count}</td>
                             <td>${row.id_user || ''}</td>
                             <td align="left">${row.FullName || ''}${row.Name || ''}</td>
-                            <td>${row.score || ''}</td>
+                            <td>${row.ClassYear}/${row.Room}</td>
+                            <td>${row.unit || ''}</td>
+                            <td>${row.Score || ''}</td>
                         </tr>`;
                     table_body.append(table_row);
                 });

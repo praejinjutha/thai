@@ -31,4 +31,13 @@ class GamePuzzle_controller extends CI_Controller
         $this->data['view_file'] = 'Game_Puzzle/playgame';
         $this->load->view(THEMES, $this->data);
     }
+
+    public function Score_summary($win, $Role)
+    {
+        $this->data['win'] = $win;
+        $this->data['Role'] = $Role;
+
+        $this->data['view_file'] = 'Game_Puzzle/score-summary';
+        $this->load->view(THEMES, $this->data);
+    }
 }

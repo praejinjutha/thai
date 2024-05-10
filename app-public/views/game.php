@@ -41,12 +41,12 @@ $themes =  base_url();
             </div>
             <div class="mt-5" id="Game_LearningThai">
                 <a href="<?= site_url('GameLearningThai_controller'); ?>" target="_brank">
-                    <img src="<?= $themes ?>assets/img/game1.png" style="width: 100%; height: auto;">
+                    <img src="<?= $themes ?>assets/img/game1.png" style="width: 100%; height: auto; border-radius: 10px;">
                 </a>
             </div>
             <div class="mt-5" id="Game_Puzzle">
                 <a href="<?= site_url('GamePuzzle_controller'); ?>" target="_brank">
-                    <img src="<?= $themes ?>assets/img/game2.png" style="width: 100%; height: auto;">
+                    <img src="<?= $themes ?>assets/img/game2.png" style="width: 100%; height: auto; border-radius: 10px;">
                 </a>
             </div>
         </div>

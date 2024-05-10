@@ -52,4 +52,20 @@ class Readcorrectly_controller extends CI_Controller
         $this->data['view_file'] = 'Readcorrect/rule_exam';
         $this->load->view(THEMES, $this->data);
     }
+
+    public function SpellTheWord($ID)
+    {
+        $this->data['ID'] = $ID;
+
+        $this->data['view_file'] = 'Readcorrect/spell-theword';
+        $this->load->view(THEMES, $this->data);
+    }
+
+    public function Rule_Spell($ID)
+    {
+        $this->data['ID'] = $ID;
+        
+        $this->data['view_file'] = 'Readcorrect/role_spell';
+        $this->load->view(THEMES, $this->data);
+    }
 }

@@ -91,8 +91,8 @@ body {
     font-family: 'Sarabun', sans-serif;
     width: 50px;
     text-align: center;
-    top: 5vh;
-    right: 42vh;
+    top: 4.5vh;
+    right: 42.5vh;
     position: absolute;
 }
 
@@ -136,7 +136,6 @@ body {
     line-height: 1;
     transform: translate(-50%, -50%);
     position: absolute;
-    
 }
 
 .boat {
@@ -226,11 +225,13 @@ body {
     <div class="row">
         <div class="col-md-6 d-flex">
             <img src="<?= $themes ?>assets/img/thai/page5/logo.gif" class="score-logo">
-            <p class="txt-score">0/100</p>
+            <p class="txt-score">o/๑oo</p>
+            <p class="txt-score-hidden d-none">0/100</p>
             <p class="txt-level">ระดับที่ <?= $Level ?></p>
         </div>
         <div class="col-md-6 text-end">
-            <p class="txt-clause">0/10</p>
+            <p class="txt-clause">o/๑o</p>
+            <p class="txt-clause-hidden d-none">0/10</p>
             <p class="txt-time"></p>
             <a href="#" id="home"><img src="<?= $themes ?>assets/img/thai/page5/home.png"
                     alt="" class="btn-home"></a>
@@ -310,6 +311,7 @@ body {
 //------------แสดงคำถาม คำตอบ-------------//
 var randomQuestion;
 var isFirstLoad = true;
+var nextQuestion = true;
 
 $(document).ready(function() {
     document.getElementById("btn-start").addEventListener("click", function() {
@@ -320,13 +322,46 @@ $(document).ready(function() {
     });
 });
 
+function convertToArabicNumber(thaiNumber) {
+    const thaiNumbers = ['๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙', '๑o'];
+    let arabicNumber = 0;
+
+    for (let i = 0; i < thaiNumber.length; i++) {
+        arabicNumber += thaiNumbers.indexOf(thaiNumber[i]);
+    }
+    return arabicNumber;
+}
+
+function convertToThaiNumber(arabicNumber) {
+    const thaiNumbers = ['๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙' , '๑o'];
+    const digits = arabicNumber.toString().split('');
+    let thaiNumber = '';
+
+    for (let digit of digits) {
+        thaiNumber += thaiNumbers[digit];
+    }
+
+    return thaiNumber;
+}
+
+function convertToThaiScore(arabicNumber) {
+    const thaiNumbers = ['๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙'];
+    const digits = arabicNumber.toString().split('');
+    let thaiNumber = '';
+
+    for (let digit of digits) {
+        thaiNumber += thaiNumbers[parseInt(digit)];
+    }
+
+    return thaiNumber;
+}
+
 function Question() {
-    
     if (questions.length === 0) {
         window.location.href = "<?= site_url('GameLearningThai_controller') ?>";
-        return; 
+        return;
     }
-    
+
     var randomIndex = Math.floor(Math.random() * questions.length);
     randomQuestion = questions[randomIndex];
     questions.splice(randomIndex, 1);
@@ -341,7 +376,10 @@ function Question() {
                 <div class="title-container">
                     <span class="answercheck" id="answer1" onclick="playCorrectSound(1, ${randomQuestion.correct})">
                         <img src="<?= $themes ?>assets/img/thai/page5/choice.png" class="choice">
-                        <div class="choice-text">${randomQuestion.choice1}</div>
+                        <div class="choice-text">
+                            <span style="color: #737373; float: left; padding-left: 20px">ก.</span>
+                            <span style="display: inline-block;">${randomQuestion.choice1}</span>
+                        </div>
                     </span>
                 </div>
             </div>
@@ -349,7 +387,10 @@ function Question() {
                 <div class="title-container">
                     <span class="answercheck" id="answer2" onclick="playCorrectSound(2, ${randomQuestion.correct})">
                         <img src="<?= $themes ?>assets/img/thai/page5/choice.png" class="choice">
-                        <div class="choice-text">${randomQuestion.choice2}</div>
+                        <div class="choice-text">
+                            <span style="color: #737373; float: left; padding-left: 20px">ข.</span> 
+                            <span style="display: inline-block;">${randomQuestion.choice2}</span>
+                        </div>
                     </span>
                 </div>
             </div>
@@ -359,7 +400,10 @@ function Question() {
                 <div class="title-container">
                     <span class="answercheck" id="answer3" onclick="playCorrectSound(3, ${randomQuestion.correct})">
                         <img src="<?= $themes ?>assets/img/thai/page5/choice.png" class="choice">
-                        <div class="choice-text">${randomQuestion.choice3}</div>
+                        <div class="choice-text">
+                            <span style="color: #737373; float: left; padding-left: 20px">ค.</span> 
+                            <span style="display: inline-block;">${randomQuestion.choice3}</span>
+                        </div>
                     </span>
                 </div>
             </div>
@@ -367,26 +411,39 @@ function Question() {
                 <div class="title-container">
                     <span class="answercheck" id="answer4" onclick="playCorrectSound(4, ${randomQuestion.correct})">
                         <img src="<?= $themes ?>assets/img/thai/page5/choice.png" class="choice">
-                        <div class="choice-text">${randomQuestion.choice4}</div>
+                        <div class="choice-text">
+                            <span style="color: #737373; float: left; padding-left: 20px">ง.</span> 
+                            <span style="display: inline-block;">${randomQuestion.choice4}</span>
+                        </div>
                     </span>
                 </div>
             </div>
         </div>
     `;
-    
 
     startCountdown();
 
-    document.querySelector(".boat").style.animation = "none";  
-    document.querySelector(".boat").offsetHeight; 
-    document.querySelector(".boat").style.animation = "moveBoat 30s linear infinite"; 
-    
+    document.querySelector(".boat").style.animation = "none";
+    document.querySelector(".boat").offsetHeight;
+    document.querySelector(".boat").style.animation = "moveBoat 30s linear infinite";
+
     if (isFirstLoad) {
+        var clausehidden = document.querySelector(".txt-clause-hidden");
+        var hiddenClause = parseInt(clausehidden.innerText.split('/')[0]);
         var clauseElement = document.querySelector(".txt-clause");
-        var currentClause = parseInt(clauseElement.innerText.split('/')[0]);
-        var clause = currentClause + 1;
-        if (clause > 10) {
-            var scoreElement = document.querySelector(".txt-score");
+        var currentClause = convertToArabicNumber(clauseElement.innerText.split('/')[0]);
+
+        if (nextQuestion) {
+            var nextClause = hiddenClause + 1;
+            var showClause = currentClause + 1;
+        } else {
+            var nextClause = hiddenClause;
+            var showClause = currentClause;
+            nextQuestion = true;
+        }
+
+        if (nextClause > 10) {
+            var scoreElement = document.querySelector(".txt-score-hidden");
             var currentScore = parseInt(scoreElement.innerText.split('/')[0]);
             var urlParams = new URLSearchParams(window.location.search);
             var No = urlParams.get('No');
@@ -395,12 +452,12 @@ function Question() {
             var url = "<?= site_url('GameLearningThai_controller/Score_summary/') ?>" + No + "?score=" + currentScore;
             window.location.href = url;
         } else {
-            clauseElement.innerText = clause + "/10";
+            clausehidden.innerText = nextClause + "/10";
+            clauseElement.innerText = convertToThaiNumber(showClause) + "/๑o";
             questionContainer.innerHTML = html;
         }
     }
 }
-
 
 //------------เช็คข้อถูก ข้อผิด-------------//
 var allowMultipleAnswers = false;
@@ -408,20 +465,31 @@ var answerCount = 0;
 
 function playCorrectSound(answer, correct) {
     var correctAnswer = document.getElementById("answer" + answer);
-    var scoreElement = document.querySelector(".txt-score");
-  
+    var scoreElement = document.querySelector(".txt-score-hidden");
+    var scoreShow = document.querySelector(".txt-score");
+
+    var choices = ['ก.', 'ข.', 'ค.', 'ง.'];
+    if (answer >= 1 && answer <= 4) {
+        thaichoice = choices[answer - 1];
+    }
+
     if (answer === correct) {
         var audio = new Audio("<?= $themes ?>assets/sounds/correct.mp3");
         audio.play();
 
         correctAnswer.innerHTML = `
             <img src="<?= $themes ?>assets/img/thai/page5/correct.png" class="choice">
-            <div class="choice-text text-light">${randomQuestion['choice' + correct]}</div>
+            <div class="choice-text text-light">
+                <span style="float: left; padding-left: 20px">${thaichoice}</span> 
+                <span style="display: inline-block;">${randomQuestion['choice' + correct]}</span>
+            </div>
         `;
 
         var currentScore = parseInt(scoreElement.innerText.split('/')[0]);
         var newScore = currentScore + 10;
         scoreElement.innerText = newScore + "/100";
+        
+        scoreShow.innerText = convertToThaiScore(newScore) + "/๑oo";
         
     } else {
         var audio = new Audio("<?= $themes ?>assets/sounds/wrong.mp3");
@@ -429,7 +497,10 @@ function playCorrectSound(answer, correct) {
 
         correctAnswer.innerHTML = `
             <img src="<?= $themes ?>assets/img/thai/page5/wrong.png" class="choice">
-            <div class="choice-text text-light">${randomQuestion['choice' + answer]}</div>
+            <div class="choice-text text-light">
+                <span style="float: left; padding-left: 20px">${thaichoice}</span> 
+                <span style="display: inline-block;">${randomQuestion['choice' + answer]}</span>
+            </div>
         `;
     }
     
@@ -485,10 +556,12 @@ function autoAnswer() {
         var correctAnswerIndex = randomQuestion.correct;
         playCorrectSound(correctAnswerIndex, correctAnswerIndex);
         
-        var scoreElement = document.querySelector(".txt-score");
+        var scoreElement = document.querySelector(".txt-score-hidden");
+        var scoreShow = document.querySelector(".txt-score");
         var currentScore = parseInt(scoreElement.innerText.split('/')[0]);
         var newScore = currentScore - 10;
         scoreElement.innerText = newScore + "/100";
+        scoreShow.innerText = convertToThaiScore(newScore) + "/๑oo";
 
         autoAnswerClicked = true;
         
@@ -502,10 +575,12 @@ var doubleClicked = false;
 function doubleAnswer() {
     if (!doubleClicked) {
         allowMultipleAnswers = true;
-        var scoreElement = document.querySelector(".txt-score");
+        var scoreElement = document.querySelector(".txt-score-hidden");
+        var scoreShow = document.querySelector(".txt-score");
         var currentScore = parseInt(scoreElement.innerText.split('/')[0]);
         var newScore = currentScore - 5;
         scoreElement.innerText = newScore + "/100";
+        scoreShow.innerText = convertToThaiScore(newScore) + "/๑oo";
 
         doubleClicked = true;
 
@@ -518,11 +593,15 @@ function doubleAnswer() {
 var changeClicked = false;
 function changeQuestion() {
     if (!changeClicked) {
+        nextQuestion = false;
         Question();
         var scoreElement = document.querySelector(".txt-score");
+        var scoreElement = document.querySelector(".txt-score-hidden");
+        var scoreShow = document.querySelector(".txt-score");
         var currentScore = parseInt(scoreElement.innerText.split('/')[0]);
         var newScore = currentScore - 5;
         scoreElement.innerText = newScore + "/100";
+        scoreShow.innerText = convertToThaiScore(newScore) + "/๑oo";
         changeClicked = true;
         allowMultipleAnswers = false;
         var changeButton = document.querySelector(".change");
@@ -538,10 +617,10 @@ var countdownInterval;
 function startCountdown() {
     clearInterval(countdownInterval);
     timeLeft = 30;
-    timeElement.innerText = timeLeft;
+    timeElement.innerText = convertToThaiScore(timeLeft);
     countdownInterval = setInterval(function() {
         timeLeft--;
-        timeElement.innerText = timeLeft;
+        timeElement.innerText = convertToThaiScore(timeLeft);
 
         if (timeLeft < 0) {
             clearInterval(countdownInterval);

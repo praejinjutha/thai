@@ -5,7 +5,7 @@ $themes = base_url();
 
 <style>
 body {
-    background-image: url("<?= $themes ?>assets/img/thai/page2/bg-practice-read.jpg");
+    background-image: url("<?= $themes ?>assets/img/thai/page2/bg-practice-read.png");
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,7 +44,7 @@ img.choose.active {
 
 .btn-choose {
     width: 28vh;
-    height: 28vh;
+    height: 26vh;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -64,7 +64,7 @@ img.choose.active {
     align-items: center;
     text-decoration: none; 
     color: #26719b;
-    font-size: 36px;
+    font-size: 28px;
     font-family: "niramit";
 }
 
@@ -94,7 +94,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around" style="margin-top: 15vh;">
+        <div class="col-md-12 d-flex justify-content-around" style="margin-top: 15vh; margin-bottom: 3vh;">
             <a href="<?= site_url('Learning_media_controller/Practice_reading/1') ?>" class="choose">ชุดที่ ๑ - ๑o</a>
             <a href="<?= site_url('Learning_media_controller/Practice_reading/2') ?>" class="choose">ชุดที่ ๑๑ - ๒o</a>
             <a href="<?= site_url('Learning_media_controller/Practice_reading/3') ?>" class="choose">ชุดที่ ๒๑ - ๓o</a>
@@ -164,7 +164,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around">
+        <div class="col-md-12 d-flex justify-content-around mt-3">
             <a href="<?= site_url('Learning_media_controller/Reading_Choose/16') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/practice-read/btn-choose16.png" alt="" class="btn-choose">
             </a>
@@ -203,7 +203,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around">
+        <div class="col-md-12 d-flex justify-content-around mt-3">
             <a href="<?= site_url('Learning_media_controller/Reading_Choose/26') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/practice-read/btn-choose26.png" alt="" class="btn-choose">
             </a>
@@ -242,7 +242,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around">
+        <div class="col-md-12 d-flex justify-content-around mt-3">
             <a href="<?= site_url('Learning_media_controller/Reading_Choose/36') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/practice-read/btn-choose36.png" alt="" class="btn-choose">
             </a>
@@ -281,7 +281,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around">
+        <div class="col-md-12 d-flex justify-content-around mt-3">
             <a href="<?= site_url('Learning_media_controller/Reading_Choose/46') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/practice-read/btn-choose46.png" alt="" class="btn-choose">
             </a>
@@ -320,7 +320,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around">
+        <div class="col-md-12 d-flex justify-content-around mt-3">
             <a href="<?= site_url('Learning_media_controller/Reading_Choose/56') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/practice-read/btn-choose56.png" alt="" class="btn-choose">
             </a>

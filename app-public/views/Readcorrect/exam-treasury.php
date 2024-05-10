@@ -24,7 +24,7 @@ $themes =  base_url();
     width: 40%;
     padding: 1rem 3rem 1rem 2rem;
     -moz-padding-start: calc(0.75rem - 3px);
-    font-size: 2rem;
+    font-size: 24px;
     font-weight: 400;
     font-family: "niramit";
     line-height: 1.5;
@@ -41,7 +41,7 @@ $themes =  base_url();
 }
 
 .fnz-select {
-    font-size: 2rem;
+    font-size: 24px;
     font-family: "niramit";
 }
 </style>

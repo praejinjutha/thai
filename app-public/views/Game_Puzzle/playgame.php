@@ -5,7 +5,7 @@ $themes = base_url();
 
 <style>
 body {
-    font-family: 'promptlight', sans-serif;
+    font-family: 'niramit', sans-serif;
     background-image: url("<?= $themes ?>assets/img/thai/page6/playgame/bg-play.png");
     background-size: 100% 100%;
     background-position: center;
@@ -59,10 +59,10 @@ body {
 }
 
 .answer-top-no {
-    line-height: 0;
+    padding-left: 5vh;
     width: 10vh;
-    border-bottom: 2px #fffaf0 solid;
-    /* border-bottom: 2px red solid; */
+    /* border-bottom: 2px #fffaf0 solid; */
+    opacity: 0.5;
     margin: 0 1vh;
 }
 
@@ -86,23 +86,24 @@ body {
 .answer-bottom-no {
     padding-left: 5vh;
     width: 10vh;
-    border-bottom: 2px #fffaf0 solid;
-    /* border-bottom: 2px red solid; */
+    /* border-bottom: 2px #fffaf0 solid; */
+    opacity: 0.5;
     margin: 0 1vh;
 }
 
 .frame-time {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
     height: 15vh;
-    margin-right: 3.5vh;
+    width: 17vh;
 }
 
 .time {
-    font-size: 48px;
-    font-weight: bold;
-    font-family: 'promptlight', sans-serif;
+    text-align: center;
+    font-size: 58px;
+    font-weight: 2px bold;
+    font-family: 'niramit', sans-serif;
 }
 
 .btn-home {
@@ -142,6 +143,7 @@ body {
     width: 20vh;
     margin-top: 14vh;
     margin-left: 6vh;
+    pointer-events: none;
 }
 
 .girl-hero {
@@ -158,6 +160,7 @@ body {
     align-items: flex-start;
     height: 220px;
     margin-top: 4vh;
+    pointer-events: none;
 }
 
 .dragon-heart img {
@@ -165,23 +168,23 @@ body {
 }
 
 .dragon-score {
-    font-size: 36px;
+    font-size: 68px;
     font-weight: bold;
     color: #ffff;
-    font-family: 'promptlight', sans-serif;
+    font-family: 'niramit', sans-serif;
     position: absolute;
-    margin-top: 5vh;
-    margin-left: 70px;
+    top: 18vh;
+    right: 85vh;
 }
 
 .hero-score {
-    font-size: 36px;
+    font-size: 68px;
     font-weight: bold;
     color: #ffff;
-    font-family: 'promptlight', sans-serif;
+    font-family: 'niramit', sans-serif;
     position: absolute;
-    margin-top: 5vh;
-    margin-left: 195px;
+    top: 18vh;
+    right: 25vh;
 }
 
 .hero-heart {
@@ -239,6 +242,31 @@ body {
 .btn-sara:active {
     border: none;
 }
+
+b {
+    font-weight: 500;
+}
+
+.tick-mark {
+    width: 100px;
+    top: 38vh;
+    left: 68vh;
+    position: absolute;
+    display: none;
+    animation: bounceIn 0.5s ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 </style>
 
 <div class="container-fluid">
@@ -264,13 +292,14 @@ body {
                     </div>
                 </div>
             </div>
+            <img src="<?= $themes ?>assets/img/correct.png" class="tick-mark">
         </div>
         <div class="col-md-7">
             <div class="row">
                 <div class="col-4"></div>
-                <div class="col-4">
+                <div class="col-4 d-flex justify-content-end">
                     <div class="frame-time">
-                        <h1 class="time">180</h1>
+                        <h1 class="time">๓oo</h1>
                     </div>
                 </div>
                 <div class="col-4">
@@ -292,37 +321,35 @@ body {
                                 <div class="col-7"></div>
                                 <div class="col-3" style="padding-left: 7px;">
                                     <div class="dragon-heart">
-                                        <?php
-                                            $total_images = 5; 
-
-                                            for ($i = 1; $i <= $total_images; $i++) {
-                                                echo '<img src="' . $themes . 'assets/img/thai/page6/playgame/red-heart.png" alt="" width="20vh">';
-                                            }
-                                        ?>
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="dg1" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="dg2" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="dg3" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="dg4" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="dg5" alt="" width="20vh">
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="dragon-heart">
-                                        <?php
-                                            $total_images = 5; 
-
-                                            for ($i = 1; $i <= $total_images; $i++) {
-                                                echo '<img src="' . $themes . 'assets/img/thai/page6/playgame/red-heart.png" alt="" width="20vh">';
-                                            }
-                                        ?>
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="dg6" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="dg7" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="dg8" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="dg9" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="dg10" alt="" width="20vh">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-8">
-                            <h2 class="dragon-score">1</h2>
+                            <h2 class="dragon-score d-none" id="dragon-score">0</h2>
+                            <h2 class="dragon-score show">o</h2>
                             <img src="<?= $themes ?>assets/img/thai/page6/playgame/dragon.gif" alt=""
                                 class="dragon-hero">
                         </div>
                     </div>
                 </div>
                 <div class="col-5">
-                    <h2 class="hero-score">3</h2>
+                    <h2 class="hero-score d-none" id="hero-score">0</h2>
+                    <h2 class="hero-score show">o</h2>
                     <div class="row">
                         <div class="col">
                             <div class="text-start">
@@ -338,24 +365,20 @@ body {
                             <div class="row">
                                 <div class="col-5">
                                     <div class="hero-heart">
-                                        <?php
-                                            $total_images = 5; 
-
-                                            for ($i = 1; $i <= $total_images; $i++) {
-                                                echo '<img src="' . $themes . 'assets/img/thai/page6/playgame/gray-heart.png" alt="" width="20vh">';
-                                            }
-                                        ?>
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="hr1" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="hr2" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="hr3" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="hr4" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="hr5" alt="" width="20vh">
                                     </div>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-7" style="padding-left: 5px;">
                                     <div class="hero-heart" style="margin-left: 0;">
-                                        <?php
-                                            $total_images = 5; 
-
-                                            for ($i = 1; $i <= $total_images; $i++) {
-                                                echo '<img src="' . $themes . 'assets/img/thai/page6/playgame/red-heart.png" alt="" width="20vh">';
-                                            }
-                                        ?>
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="hr6" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="hr7" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="hr8" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="hr9" alt="" width="20vh">
+                                        <img src="<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png" id="hr10" alt="" width="20vh">
                                     </div>
                                 </div>
                             </div>
@@ -420,30 +443,17 @@ body {
         <div class="col-md-5">
             <div class="row" style="margin-top: 17vh; margin-right: 3vh;">
                 <div class="col frame-word">
-                    <span class="btn btn-sara">่</span>
-                    <span class="btn btn-sara">้</span>
-                    <span class="btn btn-sara">๊</span>
-                    <span class="btn btn-sara">๋</span>
-                    <span class="btn btn-sara">็</span>
-                    <span class="btn btn-sara">์</span>
-                    <span class="btn btn-sara">ั</span>
-                    <span class="btn btn-sara">ิ</span>
-                    <span class="btn btn-sara">ี</span>
-                    <span class="btn btn-sara">ึ</span>
-                    <span class="btn btn-sara">ื</span>
-                    <span class="btn btn-sara">ุ</span>
-                    <span class="btn btn-sara">ู</span>
-                    <span class="btn btn-sara">เ</span>
-                    <span class="btn btn-sara">แ</span>
-                    <span class="btn btn-sara">โ</span>
-                    <span class="btn btn-sara">ใ</span>
-                    <span class="btn btn-sara">ไ</span>
-                    <span class="btn btn-sara">ะ</span>
-                    <span class="btn btn-sara">า</span>
-                    <span class="btn btn-sara">อ</span>
-                    <span class="btn btn-sara">ำ</span>
-                    <span class="btn btn-sara">ฤ</span>
-                    <span class="btn btn-sara">ฦ</span>
+                    <span class="btn-word">เ</span>
+                    <span class="btn-word">แ</span>
+                    <span class="btn-word">โ</span>
+                    <span class="btn-word">ใ</span>
+                    <span class="btn-word">ไ</span>
+                    <span class="btn-word">ะ</span>
+                    <span class="btn-word">า</span>
+                    <span class="btn-word">อ</span>
+                    <span class="btn-word">ำ</span>
+                    <span class="btn-word">ฤ</span>
+                    <span class="btn-word">ฦ</span>
                 </div>
             </div>
         </div>
@@ -455,6 +465,7 @@ body {
 <script>
 $(document).ready(function() {
     Question();
+    startCountdown();
 });
 
 var correctAnswer;
@@ -462,21 +473,22 @@ var correctAnswer;
 function Question() {
     var randomIndex = Math.floor(Math.random() * questions.length);
     var selectedQuestion = questions[randomIndex];
+    // questions.splice(randomIndex, 1);
 
     var questionTitleElement = document.getElementById('questionTitle');
     questionTitleElement.innerHTML = selectedQuestion.Title;
 
     correctAnswer = selectedQuestion.correct;
-
+    
     var hiddenAnswer = '';
     var hiddenTopAnswer = '';
     var hiddenBottomAnswer = '';
     var checkbottom = 0;
     var checkcenter = 0;
     var checktop = 0;
+
     for (var i = 0; i < correctAnswer.length; i++) {
 
-        // แสดง bottom-line ของสระบน
         if (correctAnswer[i] === '่' || correctAnswer[i] === '้' || correctAnswer[i] === '๊' || correctAnswer[i] ===
             '๋' || correctAnswer[i] === '็' || correctAnswer[i] === '์' || correctAnswer[i] === 'ั' || correctAnswer[
                 i] === 'ิ' || correctAnswer[i] === 'ี' || correctAnswer[i] === 'ึ' || correctAnswer[i] === 'ื') {
@@ -487,9 +499,11 @@ function Question() {
                 } else {
                     hiddenTopAnswer = hiddenTopAnswer.slice(0, -70);
                 }
+                hiddenTopAnswer += '<span class="answer-top" style="font-size: 68px; color: red;">' + correctAnswer[i] + '</span>';
+                
             } else {
                 hiddenTopAnswer = hiddenTopAnswer.slice(0, -12);
-                hiddenTopAnswer += '"></span>';
+                hiddenTopAnswer += '"style="font-size: 68px; color: red;">' + correctAnswer[i] + '</span>';
                 checkcenter = 0;
                 checkbottom = 0;
                 checktop += 1;
@@ -507,6 +521,7 @@ function Question() {
             hiddenAnswer += '';
 
         } else {
+
             hiddenAnswer += '<span class="answer"></span>';
             checkcenter += 1;
         }
@@ -515,7 +530,7 @@ function Question() {
         if (correctAnswer[i] === 'ุ' || correctAnswer[i] === 'ู') {
 
             hiddenBottomAnswer = hiddenBottomAnswer.slice(0, -12);
-            hiddenBottomAnswer += '"></span>';
+            hiddenBottomAnswer += '" style="font-size: 68px; color: red;">' + correctAnswer[i] + '</span>';
             checkbottom += 1;
             hiddenTopAnswer += '<span class="answer-top-no"></span>';
         } else {
@@ -536,87 +551,158 @@ function Question() {
 $('.btn-word').click(function() {
     var word = $(this).text();
     var correctIndex = 0;
-
-    for (var i = 0; i < correctAnswer.length; i++) {
-        if (word === correctAnswer[i]) {
-            if (correctAnswer[i] === '่' || correctAnswer[i] === '้' || correctAnswer[i] === '๊' || correctAnswer[i] === '๋'
-                || correctAnswer[i] === '็' || correctAnswer[i] === '์' || correctAnswer[i] === 'ั' || correctAnswer[
-                i] === 'ิ' || correctAnswer[i] === 'ี' || correctAnswer[i] === 'ึ' || correctAnswer[i] === 'ื') {
-                var emptySpan = $('.frame-answer-top .answer-top').eq(correctIndex).filter(function() {
-                    return $(this).text().trim() === '';
-                }).first();
-            } else if (correctAnswer[i] === 'ุ' || correctAnswer[i] === 'ู') {
-                var emptySpan = $('.frame-answer-bottom .answer-bottom').eq(correctIndex).filter(function() {
-                    return $(this).text().trim() === '';
-                }).first();
-            } else {
-                var emptySpan = $('.frame-answer .answer').eq(correctIndex).filter(function() {
-                    return $(this).text().trim() === '';
-                }).first();
-            }
-
-            if (emptySpan.length) {
-                emptySpan.text(word).css({
-                    'font-size': '72px',
-                    'color': 'red'
-                });
-            }
-            return; 
+    var isCorrectAnswer = false;
+    
+    for (var a = 0; a < correctAnswer.length; a++) {
+        if (correctAnswer[a] === '่' || correctAnswer[a] === '้' || correctAnswer[a] === '๊' || correctAnswer[a] === '๋'
+            || correctAnswer[a] === '็' || correctAnswer[a] === '์' || correctAnswer[a] === 'ั' || correctAnswer[a] === 'ิ' || correctAnswer[a] === 'ี' || correctAnswer[a] === 'ึ' || correctAnswer[a] === 'ื' || correctAnswer[a] === 'ุ' || correctAnswer[a] === 'ู') {
+            correctIndex - 1;
         } else {
-            if (correctAnswer[i] === '่' || correctAnswer[i] === '้' || correctAnswer[i] === '๊' || correctAnswer[i] === '๋' 
-                || correctAnswer[i] === '็' || correctAnswer[i] === '์' || correctAnswer[i] === 'ั' || correctAnswer[
-                i] === 'ิ' || correctAnswer[i] === 'ี' || correctAnswer[i] === 'ึ' || correctAnswer[i] === 'ื' ||
-                correctAnswer[i] === 'ุ' || correctAnswer[i] === 'ู') {
-                    
+            correctIndex++;
+        }
+
+        if (word === correctAnswer[a]) {
+            // เช็คว่า correctAnswer[i] มีตัวอักษรซ้ำกันหรือไม่
+            var occurrences = correctAnswer.split(word).length - 1;
+            var emptySpans = $('.frame-answer .answer').eq(correctIndex - 1).filter(function() {
+                return $(this).text().trim() === '';
+            });
+            emptySpans.slice(0, occurrences).each(function() {
+                $(this).text(word).css({'font-size': '68px', 'color': 'red'});
+            });
+
+            isCorrectAnswer = true;
+
+            // เพิ่มคะแนนใน dragon-score และรีเซ็ตภาพใหม่
+            var redHeartCount = 0;
+            for (var i = 1; i <= 10; i++) {
+                var heartId = '#hr' + i;
+                var heartImg = $(heartId).attr('src');
+                if (heartImg.indexOf('red-heart.png') !== -1) {
+                    redHeartCount++;
+                }
+            }
+
+            if (redHeartCount === 10) {
+                var currentScore = parseInt($('.hero-score').text());
+                $('.hero-score').text(currentScore + 1);
+                heroScore = currentScore + 1;
+                document.querySelector('.hero-score.show').textContent = convertToThaiNumber(heroScore);
+                
+                for (var i = 1; i <= 10; i++) {
+                    var heartId = '#hr' + i;
+                    if (i === 1) {
+                        $(heartId).attr('src', '<?= $themes ?>assets/img/thai/page6/playgame/red-heart.png');
+                    } else {
+                        $(heartId).attr('src', '<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png');
+                    }
+                }
             } else {
-                correctIndex++;
+                for (var i = 1; i <= 10; i++) {
+                    var heartId = '#hr' + i;
+                    var heartImg = $(heartId).attr('src');
+                    if (heartImg.indexOf('gray-heart.png') !== -1) {
+                        $(heartId).attr('src', '<?= $themes ?>assets/img/thai/page6/playgame/red-heart.png');
+                        break;
+                    }
+                }
             }
         }
     }
-    $(this).text('X').css({'pointer-events': 'none', 'color': 'red'});
-});
 
+    if (!isCorrectAnswer) {
+        $(this).css({'pointer-events': 'none', 'color': 'red'});
 
-
-
-
-$('.btn-sara').click(function() {
-    var sara = $(this).text();
-
-    if (sara === '่' || sara === '้' || sara === '๊' || sara === '๋' || sara === '็' || sara === '์' || sara ===
-        'ั' || sara === 'ิ' || sara === 'ี' || sara === 'ึ' || sara === 'ื') {
-        var emptySpan = $('.frame-answer-top .answer-top').filter(function() {
-            return $(this).text().trim() === '';
-        }).first();
-
-        if (emptySpan.length) {
-            emptySpan.text(sara).css({
-                'font-size': '72px',
-                'color': 'red'
-            });
+        var redHeartCount = 0;
+        for (var i = 1; i <= 10; i++) {
+            var heartId = '#dg' + i;
+            var heartImg = $(heartId).attr('src');
+            if (heartImg.indexOf('red-heart.png') !== -1) {
+                redHeartCount++;
+            }
         }
-    } else if (sara === 'ุ' || sara === 'ู') {
-        var emptySpan = $('.frame-answer-bottom .answer-bottom').filter(function() {
-            return $(this).text().trim() === '';
-        }).first();
 
-        if (emptySpan.length) {
-            emptySpan.text(sara).css({
-                'font-size': '72px',
-                'color': 'red'
-            });
+        if (redHeartCount === 10) {
+            var currentScore = parseInt($('.dragon-score').text());
+            $('.dragon-score').text(currentScore + 1);
+            dragonScore = currentScore + 1;
+            document.querySelector('.dragon-score.show').textContent = convertToThaiNumber(dragonScore);
+            for (var i = 1; i <= 10; i++) {
+                var heartId = '#dg' + i;
+                if (i === 1) {
+                    $(heartId).attr('src', '<?= $themes ?>assets/img/thai/page6/playgame/red-heart.png');
+                } else {
+                    $(heartId).attr('src', '<?= $themes ?>assets/img/thai/page6/playgame/gray-heart.png');
+                }
+            }
+        } else {
+            for (var i = 1; i <= 10; i++) {
+                var heartId = '#dg' + i;
+                var heartImg = $(heartId).attr('src');
+                if (heartImg.indexOf('gray-heart.png') !== -1) {
+                    $(heartId).attr('src', '<?= $themes ?>assets/img/thai/page6/playgame/red-heart.png');
+                    break;
+                }
+            }
         }
+        
     } else {
-        var emptySpan = $('.frame-answer .answer').filter(function() {
-            return $(this).text().trim() === '';
-        }).first();
+        $(this).css({'pointer-events': 'none', 'color': 'black'});
+        var isAnswerComplete = true;
+        $('.frame-answer .answer').each(function() {
+            if ($(this).text().trim() === '') {
+                isAnswerComplete = false;
+                return false;
+            }
+        });
 
-        if (emptySpan.length) {
-            emptySpan.text(sara).css({
-                'font-size': '72px',
-                'color': 'red'
-            });
+        if (isAnswerComplete) {
+            var audio = new Audio("<?= $themes ?>assets/sounds/correct.mp3");
+            audio.play();
+            $('.tick-mark').show();
+            setTimeout(function() {
+                Question();
+                resetGameUI();
+                $('.tick-mark').hide();
+            }, 1500);
         }
     }
 });
+
+function resetGameUI() {
+    $('.btn-word').css({'pointer-events': 'auto', 'color': 'black'});
+}
+
+
+var countdown = 300; 
+var timerDisplay = document.querySelector('.time');
+const thaiNumbers = ['๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙'];
+
+function startCountdown() {
+    heroScore = document.getElementById('#hero-score');
+    dragonScore = document.getElementById('#dragon-score');
+
+    var timer = setInterval(function() {
+        countdown--;
+        timerDisplay.textContent = convertToThaiNumber(countdown);
+        if (countdown <= 280) {
+            if (heroScore > dragonScore) {
+                window.location.href = "<?= site_url('GamePuzzle_controller/Score_summary/h/') . $this->data['Role'] . '?score=' ?>" + heroScore;
+            } else if (dragonScore > heroScore) {
+                window.location.href = "<?= site_url('GamePuzzle_controller/Score_summary/d/3?score=') ?>" + dragonScore;
+            } else {
+                window.location.href = "<?= site_url('GamePuzzle_controller/Score_summary/e/') . $this->data['Role'] . '?score=' ?>" + heroScore;
+            }
+        }
+    }, 1000);
+}
+
+function convertToThaiNumber(number) {
+    var thaiNumberString = '';
+    var digits = number.toString().split('');
+    digits.forEach(digit => {
+        thaiNumberString += thaiNumbers[digit];
+    });
+    return thaiNumberString;
+}
 </script>

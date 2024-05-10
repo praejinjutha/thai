@@ -37,9 +37,8 @@ class Learning_media_controller extends CI_Controller
         $this->load->view(THEMES, $this->data);
     }
 
-    public function Choose($ID)
+    public function Choose()
     {
-        $this->data['ID'] = $ID;
 
         $this->data['view_file'] = 'Learning/choose';
         $this->load->view(THEMES, $this->data);
@@ -52,6 +51,21 @@ class Learning_media_controller extends CI_Controller
         $this->load->view(THEMES, $this->data);
     }
 
+    public function Reading_Choose($ID)
+    {
+        $this->data['ID'] = $ID;
+        
+        $this->data['view_file'] = 'Learning/reading-choose';
+        $this->load->view(THEMES, $this->data);
+    }
+
+    public function Writing()
+    {
+
+        $this->data['view_file'] = 'Learning/writing';
+        $this->load->view(THEMES, $this->data);
+    }
+
     public function Practice_reading($ID)
     {
         $this->data['ID'] = $ID;
@@ -60,11 +74,18 @@ class Learning_media_controller extends CI_Controller
         $this->load->view(THEMES, $this->data);
     }
 
-    public function Reading_Choose($ID)
+    public function Practice_writing()
+    {
+
+        $this->data['view_file'] = 'Learning/practice-writing';
+        $this->load->view(THEMES, $this->data);
+    }
+
+    public function Writing_Choose($ID)
     {
         $this->data['ID'] = $ID;
-        
-        $this->data['view_file'] = 'Learning/reading-choose';
+
+        $this->data['view_file'] = 'Learning/writing_choose';
         $this->load->view(THEMES, $this->data);
     }
 }

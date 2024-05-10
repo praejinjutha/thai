@@ -50,7 +50,7 @@ body {
     width: 80%;
     padding: 1.5rem 3rem 1.5rem 2rem;
     -moz-padding-start: calc(0.75rem - 3px);
-    font-size: 2rem;
+    font-size: 24px;
     font-weight: 400;
     font-family: "niramit";
     line-height: 1.5;
@@ -66,8 +66,23 @@ body {
     cursor: pointer;
 }
 
+.select::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.select::-webkit-scrollbar-track {
+    background-color: #b2b2b2; 
+}
+
+.select::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 50px; 
+    border: 3px solid #888; 
+}
+
 .fnz-select {
-    font-size: 2rem;
+    font-size: 24px;
     font-family: "niramit";
 }
 
@@ -138,6 +153,16 @@ body {
                         <option value="8" class="fnz-select">ชุดที่ ๘</option>
                         <option value="9" class="fnz-select">ชุดที่ ๙</option>
                         <option value="10" class="fnz-select">ชุดที่ ๑o</option>
+                        <option value="11" class="fnz-select">ชุดที่ ๑๒</option>
+                        <option value="12" class="fnz-select">ชุดที่ ๑๓</option>
+                        <option value="13" class="fnz-select">ชุดที่ ๑๓</option>
+                        <option value="14" class="fnz-select">ชุดที่ ๑๔</option>
+                        <option value="15" class="fnz-select">ชุดที่ ๑๕</option>
+                        <option value="16" class="fnz-select">ชุดที่ ๑๖</option>
+                        <option value="17" class="fnz-select">ชุดที่ ๑๗</option>
+                        <option value="18" class="fnz-select">ชุดที่ ๑๘</option>
+                        <option value="19" class="fnz-select">ชุดที่ ๑๙</option>
+                        <option value="20" class="fnz-select">ชุดที่ ๒o</option>
                     </select>
                 </div>
                 <div class="col-1"></div>
@@ -159,4 +184,10 @@ body {
             window.location.href = "<?= site_url('Readcorrectly_controller/Exam/') ?>" + selectedValue;
         }
     }
+</script>
+
+
+<script>
+const dropdown = document.querySelector('.value-list');
+dropdown.classList.add('open');
 </script>

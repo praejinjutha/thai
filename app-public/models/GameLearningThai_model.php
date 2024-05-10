@@ -18,11 +18,12 @@ class GameLearningThai_model extends CI_Model
 
     public function get_Stat($No)
     {
-        return $this->db->select("ST.id_user, ISNULL(SS.Titlename,'')+ ' ' + ISNULL(SS.Firstname,'')+ ' ' + ISNULL(SS.Lastname,'') AS FullName, SU.Name, ST.score")
+        return $this->db->select("ST.id_user, ISNULL(SS.Titlename,'')+ ' ' + ISNULL(SS.Firstname,'')+ ' ' + ISNULL(SS.Lastname,'') AS FullName, SS.ClassYear, SS.Room, ST.unit, MAX(ST.score) AS Score")
                         ->from('Score_Thai ST')
                         ->join('SPL_AC_Student SS', 'SS.StudentNo = ST.id_user', 'LEFT')
                         ->join('SPL_LOG_UserData SU', 'SU.NationalID = ST.id_user', 'LEFT')
                         ->where('ST.id_user', $No)
+                        ->group_by('ST.id_user, SS.Titlename, SS.Firstname, SS.Lastname, SS.ClassYear, SS.Room, ST.unit')
                         ->get();
     }
 
