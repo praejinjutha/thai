@@ -165,7 +165,7 @@ if (empty($pros) || $pros == 1) {
                                     $pros_text = "๖. ไปโรงเรียน";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;"><?php echo $pros_text; ?></span>
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;"><?php echo $pros_text; ?></span>
 
                             </a>
                         </li>

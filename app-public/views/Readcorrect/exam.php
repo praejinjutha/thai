@@ -61,7 +61,7 @@ body {
         </div>
     </div>
     <div class="row">
-        <div class="col-6" style="padding-left: 240px; padding-top: 110px">
+        <div class="col-6" style="padding-left: 240px; padding-top: 150px">
             <a href="<?= $themes ?>assets/files/Readcorrectly/Exam1/Vocabulary.html">
                 <img src="<?= $themes ?>assets/img/thai/page3/btn-vocab.png" width="600vh" class="img-hover-effect me-3">
             </a>
@@ -69,7 +69,7 @@ body {
                 <img src="<?= $themes ?>assets/img/thai/page3/brn-exam.png" width="600vh" class="img-hover-effect me-3">
             </a>
         </div>
-        <div class="col-6" style="padding-left: 130px; padding-top: 110px">
+        <div class="col-6" style="padding-left: 130px; padding-top: 150px">
             <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-gameread.png" width="600vh"
                     class="img-hover-effect me-3"></a>
             <a href="<?= site_url('Readcorrectly_controller/SpellTheWord/') . $this->data['ID'] ?>">

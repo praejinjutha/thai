@@ -174,7 +174,7 @@ body {
     font-family: 'niramit', sans-serif;
     position: absolute;
     top: 18vh;
-    right: 85vh;
+    right: 84.5vh;
 }
 
 .hero-score {
@@ -299,7 +299,7 @@ b {
                 <div class="col-4"></div>
                 <div class="col-4 d-flex justify-content-end">
                     <div class="frame-time">
-                        <h1 class="time">๓oo</h1>
+                        <h1 class="time">๓๐๐</h1>
                     </div>
                 </div>
                 <div class="col-4">
@@ -341,7 +341,7 @@ b {
                         </div>
                         <div class="col-8">
                             <h2 class="dragon-score d-none" id="dragon-score">0</h2>
-                            <h2 class="dragon-score show">o</h2>
+                            <h2 class="dragon-score show">๐</h2>
                             <img src="<?= $themes ?>assets/img/thai/page6/playgame/dragon.gif" alt=""
                                 class="dragon-hero">
                         </div>
@@ -349,7 +349,7 @@ b {
                 </div>
                 <div class="col-5">
                     <h2 class="hero-score d-none" id="hero-score">0</h2>
-                    <h2 class="hero-score show">o</h2>
+                    <h2 class="hero-score show">๐</h2>
                     <div class="row">
                         <div class="col">
                             <div class="text-start">
@@ -473,7 +473,7 @@ var correctAnswer;
 function Question() {
     var randomIndex = Math.floor(Math.random() * questions.length);
     var selectedQuestion = questions[randomIndex];
-    // questions.splice(randomIndex, 1);
+    questions.splice(randomIndex, 1);
 
     var questionTitleElement = document.getElementById('questionTitle');
     questionTitleElement.innerHTML = selectedQuestion.Title;
@@ -681,11 +681,17 @@ const thaiNumbers = ['๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '�
 function startCountdown() {
     heroScore = document.getElementById('#hero-score');
     dragonScore = document.getElementById('#dragon-score');
+    var urlParams = new URLSearchParams(window.location.search);
+    var No = urlParams.get('No');
 
     var timer = setInterval(function() {
         countdown--;
         timerDisplay.textContent = convertToThaiNumber(countdown);
-        if (countdown <= 280) {
+        if (countdown <= 0) {
+            if (heroScore === null) {
+                heroScore = 0;
+            }
+            Insert(heroScore, No);
             if (heroScore > dragonScore) {
                 window.location.href = "<?= site_url('GamePuzzle_controller/Score_summary/h/') . $this->data['Role'] . '?score=' ?>" + heroScore;
             } else if (dragonScore > heroScore) {
@@ -704,5 +710,24 @@ function convertToThaiNumber(number) {
         thaiNumberString += thaiNumbers[digit];
     });
     return thaiNumberString;
+}
+
+
+function Insert(heroScore, No) {
+
+    let formData = new FormData();
+    formData.append('Score', heroScore);
+    formData.append('StudentNo', No);
+
+    $.ajax({
+        url: "<?= site_url('GamePuzzle_controller/Insert_StudentScore') ?>",
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(dataResult) { 
+
+        }
+    });
 }
 </script>

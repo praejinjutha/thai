@@ -248,7 +248,7 @@ var questions = [{
     }
 ];
 
-var questions๒ = [{
+var questions2 = [{
         "choice1": "๖ พยางค์",
         "choice2": "๗ พยางค์",
         "choice3": "๘ พยางค์",
@@ -650,7 +650,7 @@ var questions๒ = [{
     }
 ];
 
-var questions๓ = [{
+var questions3 = [{
         "choice1": "อดออม พุทรา",
         "choice2": "ฎีกา บัวตอง",
         "choice3": "แกงไก่ ผ้าใบ",
@@ -1052,7 +1052,7 @@ var questions๓ = [{
     },
 ];
 
-var questions๔ = [{
+var questions4 = [{
         "choice1": "เจตภูต / ตุ๊กตา",
         "choice2": "ชาติพันธุ์ / ทานบดี",
         "choice3": "ขัดสมาธิ / จิตวิทยา",
@@ -1454,7 +1454,7 @@ var questions๔ = [{
     },
 ];
 
-var questions๕ = [{
+var questions5 = [{
         "choice1": "๑ ชนิด",
         "choice2": "๒ ชนิด",
         "choice3": "๓ ชนิด",
@@ -1856,7 +1856,7 @@ var questions๕ = [{
     },
 ];
 
-var questions๖ = [{
+var questions6 = [{
         "choice1": "พืชกินคน",
         "choice2": "พืชกินโคลน",
         "choice3": "พืชกินสัตว์",

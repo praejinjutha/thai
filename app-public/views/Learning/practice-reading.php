@@ -125,7 +125,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around">
+        <div class="col-md-12 mt-3 d-flex justify-content-around">
             <a href="<?= site_url('Learning_media_controller/Reading_Choose/6') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/practice-read/btn-choose6.png" alt="" class="btn-choose">
             </a>
@@ -164,7 +164,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around mt-3">
+        <div class="col-md-12 mt-3 d-flex justify-content-around mt-3">
             <a href="<?= site_url('Learning_media_controller/Reading_Choose/16') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/practice-read/btn-choose16.png" alt="" class="btn-choose">
             </a>
@@ -203,7 +203,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around mt-3">
+        <div class="col-md-12 mt-3 d-flex justify-content-around mt-3">
             <a href="<?= site_url('Learning_media_controller/Reading_Choose/26') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/practice-read/btn-choose26.png" alt="" class="btn-choose">
             </a>
@@ -242,7 +242,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around mt-3">
+        <div class="col-md-12 mt-3 d-flex justify-content-around mt-3">
             <a href="<?= site_url('Learning_media_controller/Reading_Choose/36') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/practice-read/btn-choose36.png" alt="" class="btn-choose">
             </a>
@@ -281,7 +281,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around mt-3">
+        <div class="col-md-12 mt-3 d-flex justify-content-around mt-3">
             <a href="<?= site_url('Learning_media_controller/Reading_Choose/46') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/practice-read/btn-choose46.png" alt="" class="btn-choose">
             </a>
@@ -320,7 +320,7 @@ img.choose.active {
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-around mt-3">
+        <div class="col-md-12 mt-3 d-flex justify-content-around mt-3">
             <a href="<?= site_url('Learning_media_controller/Reading_Choose/56') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page2/practice-read/btn-choose56.png" alt="" class="btn-choose">
             </a>

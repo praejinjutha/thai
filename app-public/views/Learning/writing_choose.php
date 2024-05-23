@@ -65,7 +65,7 @@ body {
                     <img src="<?= $themes ?>assets/img/thai/page2/close.png" alt="" class="btn-close">
                 </a>
             </div>
-            <a href="<?= site_url('Learning_media_controller/Practice_writing') ?>">
+            <a href="<?= $themes ?>assets/files/SpellTheWord/Write/1.html">
                 <img src="<?= $themes ?>assets/img/thai/page2/btn-next-write.png" alt="" class="btn-start">
             </a>
         </div>

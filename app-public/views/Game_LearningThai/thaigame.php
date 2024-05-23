@@ -225,12 +225,12 @@ body {
     <div class="row">
         <div class="col-md-6 d-flex">
             <img src="<?= $themes ?>assets/img/thai/page5/logo.gif" class="score-logo">
-            <p class="txt-score">o/๑oo</p>
+            <p class="txt-score">๐/๑๐๐</p>
             <p class="txt-score-hidden d-none">0/100</p>
             <p class="txt-level">ระดับที่ <?= $Level ?></p>
         </div>
         <div class="col-md-6 text-end">
-            <p class="txt-clause">o/๑o</p>
+            <p class="txt-clause">๐/๑๐</p>
             <p class="txt-clause-hidden d-none">0/10</p>
             <p class="txt-time"></p>
             <a href="#" id="home"><img src="<?= $themes ?>assets/img/thai/page5/home.png"
@@ -369,7 +369,7 @@ function Question() {
     var html = `
         <div class="title-container">
             <img src="<?= $themes ?>assets/img/thai/page5/title.png" class="title">
-            <div class="title-text">${randomQuestion.Title}</div>
+            <div class="title-text text-light">${randomQuestion.Title}</div>
         </div>
         <div class="row mt-4">
             <div class="col">
@@ -453,7 +453,7 @@ function Question() {
             window.location.href = url;
         } else {
             clausehidden.innerText = nextClause + "/10";
-            clauseElement.innerText = convertToThaiNumber(showClause) + "/๑o";
+            clauseElement.innerText = convertToThaiNumber(showClause) + "/๑๐";
             questionContainer.innerHTML = html;
         }
     }
@@ -489,7 +489,7 @@ function playCorrectSound(answer, correct) {
         var newScore = currentScore + 10;
         scoreElement.innerText = newScore + "/100";
         
-        scoreShow.innerText = convertToThaiScore(newScore) + "/๑oo";
+        scoreShow.innerText = convertToThaiScore(newScore) + "/๑๐๐";
         
     } else {
         var audio = new Audio("<?= $themes ?>assets/sounds/wrong.mp3");
@@ -561,7 +561,7 @@ function autoAnswer() {
         var currentScore = parseInt(scoreElement.innerText.split('/')[0]);
         var newScore = currentScore - 10;
         scoreElement.innerText = newScore + "/100";
-        scoreShow.innerText = convertToThaiScore(newScore) + "/๑oo";
+        scoreShow.innerText = convertToThaiScore(newScore) + "/๑๐๐";
 
         autoAnswerClicked = true;
         
@@ -580,7 +580,7 @@ function doubleAnswer() {
         var currentScore = parseInt(scoreElement.innerText.split('/')[0]);
         var newScore = currentScore - 5;
         scoreElement.innerText = newScore + "/100";
-        scoreShow.innerText = convertToThaiScore(newScore) + "/๑oo";
+        scoreShow.innerText = convertToThaiScore(newScore) + "/๑๐๐";
 
         doubleClicked = true;
 
@@ -601,7 +601,7 @@ function changeQuestion() {
         var currentScore = parseInt(scoreElement.innerText.split('/')[0]);
         var newScore = currentScore - 5;
         scoreElement.innerText = newScore + "/100";
-        scoreShow.innerText = convertToThaiScore(newScore) + "/๑oo";
+        scoreShow.innerText = convertToThaiScore(newScore) + "/๑๐๐";
         changeClicked = true;
         allowMultipleAnswers = false;
         var changeButton = document.querySelector(".change");

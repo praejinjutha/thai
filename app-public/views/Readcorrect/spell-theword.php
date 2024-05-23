@@ -49,5 +49,5 @@ body {
             </div>
         </div>
     </div>
-    <a href="<?= site_url('Readcorrectly_controller/Rule_Spell/') . $this->data['ID'] ?>"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell-start.png" width="60vh" class="start"></a>
+    <a href="<?= site_url('Readcorrectly_controller/Spell_Level/') . $this->data['ID'] ?>"><img src="<?= $themes ?>assets/img/thai/page3/btn-spell-start.png" width="60vh" class="start"></a>
 </div>

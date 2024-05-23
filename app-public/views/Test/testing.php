@@ -2,6 +2,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 $themes = base_url();
 ?>
+
 <style>
 body {
     background-image: url("<?= $themes ?>assets/img/thai/page1/bg.png");
@@ -9,33 +10,73 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
+    font-family: 'niramit';
+}
+
+.btn-exit {
+    width: 5vh;
+    height: 5vh;
+    top: 5vh;
+    right: 8vh;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-exit:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.btn-home {
+    width: 6vh;
+    height: 5vh;
+    top: 5vh;
+    right: 16vh;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-home:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .no-save {
+    width: 40vh;
     pointer-events: none;
     user-select: none;
     -webkit-touch-callout: none;
 }
 
-.banner {
-    margin-top: 50px;
+.title p {
+    font-size: 42px;
+    color: #8a603a;
+    font-family: 'niramit-nm';
+    line-height: 0.5;
+    display: contents;
 }
 
-.title {
-    font-size: 36px;
+.title b {
+    font-size: 42px;
+    font-family: 'niramit-nm';
+    font-weight: bold;
 }
 
 .choice {
-    font-size: 26px;
+    margin-top: 1vh;
+    font-size: 42px;
+    font-family: 'niramit-nm';
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
 }
 
 .send-img {
     position: absolute;
-    top: 53%;
-    left: 65%;
-    width: 15vh;
-    z-index: 1;
-    cursor: pointer;
+    bottom: 10%;
+    right: 10%;
+    width: 33vh;
+    height: 20vh;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -64,22 +105,28 @@ body {
 
 .explanation {
     position: absolute;
-    top: 15%;
-    left: 35%;
+    top: 5%;
+    left: 29%;
     z-index: 1;
-    color: #8a603a;
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 26px;
+    font-family: 'niramit';
 }
 
 .number {
     position: absolute;
-    top: 35%;
-    left: 22%;
+    top: 21%;
+    left: 17%;
     z-index: 1;
-    color: #8a603a;
-    font-size: 32px;
+    line-height: 50px;
+    color: #ffffff;
+    font-size: 42px;
     font-weight: bold;
+    font-family: 'niramit';
+    background-color: #8c6239;
+    padding: 3vh 5vh 5vh 4vh;
+    border-radius: 50%;
+    width: 18vh;
+    height: 18vh;
 }
 
 h4 span {
@@ -88,355 +135,390 @@ h4 span {
 
 .testing {
     position: absolute;
-    top: 30%;
-    left: 29%;
+    width: 125vh;
+    top: 23%;
+    left: 28%;
     z-index: 1;
-    text-align: center;
 }
 
 .answer {
     position: absolute;
-    top: 39%;
-    left: 29%;
+    width: 125vh;
+    top: 33%;
+    left: 28%;
     z-index: 1;
 }
 
 .answer input {
     margin-top: 12px;
     margin-right: 10px
-    
 }
 
 .correct-score {
     position: absolute;
-    top: 73%;
-    left: 38.5%;
-    z-index: 2;
-    color: #fff;
-    font-size: 32px;
+    top: 70%;
+    left: 29%;
+    width: 100vh;
+    height: 20vh;
+    color: #006837;
+    font-size: 62px;
     font-weight: bold;
-    text-align: center;
-    line-height: 1.2;
 }
 
 .wrong-score {
     position: absolute;
-    top: 73%;
-    left: 54.5%;
-    z-index: 2;
-    color: #fff;
-    font-size: 32px;
+    top: 78%;
+    left: 29%;
+    width: 29%;
+    width: 100vh;
+    height: 20vh;
+    color: #c1272d;
+    font-size: 62px;
     font-weight: bold;
-    text-align: center;
-    line-height: 1.2;
 }
 
 .score {
-    font-size: 56px;
+    padding: 0 5vh;
+    font-size: 98px;
 }
 
-@media (max-width: 768px) {
-    .logo {
-        width: 30vh;
+.choice-form {
+    display: flex;
+    margin-top: 5vh;
+}
+
+.tick-mark {
+    width: 20vh;
+    top: 40%;
+    left: 45%;
+    position: absolute;
+    animation: bounceIn 0.5s ease;
+    z-index: 2;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
     }
 
-    .banner {
-        margin-top: 0;
+    50% {
+        transform: scale(1.2);
     }
 
-    .title {
-        font-size: 28px
-    }
-
-    .choice {
-        font-size: 24px;
-    }
-    
-    .send-img {
-        position: absolute;
-        top: 52vh;
-        left: 52vh;
-        width: 12vh;
-        z-index: 1;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .send-img:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-    }
-
-    .cerrect-img {
-        position: absolute;
-        top: 63%;
-        left: 25%;
-        width: 20vh;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .wrong-img {
-        position: absolute;
-        top: 63%;
-        left: 50%;
-        width: 20vh;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .explanation {
-        position: absolute;
-        top: 28vh;
-        left: 13vh;
-        z-index: 1;
-        color: #8a603a;
-        font-size: 26px;
-        font-weight: bold;
-    }
-
-    .number {
-        position: absolute;
-        top: 43vh;
-        left: 6.5vh;
-        z-index: 1;
-        color: #8a603a;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    h4 span {
-        font-size: 55px;
-    }
-
-    .testing {
-        position: absolute;
-        top: 38vh;
-        left: 0;
-        z-index: 1;
-        text-align: center;
-    }
-
-    .answer {
-        position: absolute;
-        top: 43vh;
-        left: 0;
-        z-index: 1;
-    }
-
-    .answer input {
-        margin-top: 8px;
-        margin-right: 10px
-        
-    }
-
-    .correct-score {
-        position: absolute;
-        top: 67vh;
-        left: 23vh;
-        z-index: 2;
-        color: #fff;
-        font-size: 26px;
-        font-weight: bold;
-        text-align: center;
-        line-height: 1.2;
-    }
-
-    .wrong-score {
-        position: absolute;
-        top: 67vh;
-        left: 44vh;
-        z-index: 2;
-        color: #fff;
-        font-size: 26px;
-        font-weight: bold;
-        text-align: center;
-        line-height: 1.2;
-    }
-
-    .score {
-        font-size: 42px;
+    100% {
+        transform: scale(1);
     }
 }
 
-@media (max-width: 390px) {
-    .logo {
-        width: 20vh;
-    }
-
-    .banner {
-        margin-top: 0;
-    }
-
-    .title {
-        font-size: 18px
-    }
-
-    .choice {
-        font-size: 16px;
-    }
-    
-    .send-img {
-        position: absolute;
-        top: 35vh;
-        left: 31vh;
-        width: 7vh;
-        z-index: 1;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .send-img:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-    }
-
-    .cerrect-img {
-        position: absolute;
-        top: 43vh;
-        left: 10.5vh;
-        width: 15vh;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .wrong-img {
-        position: absolute;
-        top: 43vh;
-        left: 23vh;
-        width: 15vh;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .explanation {
-        position: absolute;
-        top: 16vh;
-        left: 5vh;
-        z-index: 1;
-        color: #8a603a;
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    .number {
-        position: absolute;
-        top: 30vh;
-        left: 5vh;
-        z-index: 1;
-        color: #8a603a;
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    h4 span {
-        font-size: 26px;
-    }
-
-    .testing {
-        position: absolute;
-        top: 27vh;
-        left: 0;
-        z-index: 1;
-        text-align: center;
-    }
-
-    .answer {
-        position: absolute;
-        top: 30vh;
-        left: 0;
-        z-index: 1;
-    }
-
-    .answer input {
-        margin-top: 0px;
-        margin-right: 10px
-        
-    }
-
-    .correct-score {
-        position: absolute;
-        top: 46vh;
-        left: 14vh;
-        z-index: 2;
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-        text-align: center;
-        line-height: 1.2;
-    }
-
-    .wrong-score {
-        position: absolute;
-        top: 46vh;
-        left: 28vh;
-        z-index: 2;
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-        text-align: center;
-        line-height: 1.2;
-    }
-
-    .score {
-        font-size: 24px;
-    }
+.form-check-input:checked {
+    background-color: #8cc63f;
+    border-color: #8cc63f;
 }
 
+.add-question {
+    width: 25vh;
+    height: 10vh;
+    color: #8a603a;
+    font-size: 24px;
+    font-family: 'niramit';
+    padding-left: 20px;
+    background-color: #ffffff;
+    border-radius: 10vh 0 0 0;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-question:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #198754;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
+}
+
+.submit {
+    padding-top: 5px;
+    height: 60px;
+    color: #ffffff;
+    font-size: 32px;
+    font-family: 'niramit';
+    background-color: #c0272d;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0.5, 0.5);
+    display: block;
+    margin-top: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.submit:hover {
+    transform: scale(1.05);
+}
 </style>
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-2">
-            <img src="<?= $themes ?>assets/img/thai/page1/test-logo.png" alt="" class="no-save img-fluid logo">
+        <div class="col-3">
+            <img src="<?= $themes ?>assets/img/thai/page1/test-logo.png" alt="" class="no-save">
         </div>
+        <div class="col text-end">
+            <a href="<?= site_url('Test_controller') ?>" id="home"><img
+                    src="<?= $themes ?>assets/img/thai/page5/home.png" alt="" class="btn-home"></a>
+            <a href="#" onclick="window.close();"><img src="<?= $themes ?>assets/img/thai/page3/exit.png" alt=""
+                    class="btn-exit"></a>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-lg">
             <div class="text-center">
-                <h4 class="explanation">คำชี้แจง: จงเลือกคำตอบที่ถูกที่สุดเพียงข้อเดียว (ข้อสอบมีจำนวน 20 ข้อ)</h4>
-                <h4 class="number">ข้อที่ <br><span>1</span></h4>
-                <img src="<?= $themes ?>assets/img/thai/page1/banner.png" alt="" class="no-save img-fluid banner">
-                <img src="<?= $themes ?>assets/img/thai/page1/btn-send.png" alt="" class="send-img">
+                <span class="explanation">คำชี้แจง: จงเลือกคำตอบที่ถูกที่สุดเพียงข้อเดียว (ข้อสอบมีจำนวน ๒๐ ข้อ)</span>
+                <h4 class="number d-none">ข้อที่ <br><span id="number">1</span></h4>
+                <span class="number">ข้อที่ <span id="number-show" style="font-size: 102px;"></span></span>
+                <img src="<?= $themes ?>assets/img/thai/page1/sent.png" alt="sent" class="send-img">
             </div>
         </div>
-        <div class="col-lg-2"></div>
     </div>
-    <div class="row">
-        <div class="col-lg-5 testing">
-            <h4 class="fw-bold title">คำถาม : ใครเป็นนักกล้ามในโมดโซลูชั่น ?</h4>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-5 answer">
-            <div class="row">
-                <div class="col-3"></div>
-                <div class="col">
-                    <input class="form-check-input fs-5" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="fw-bold choice" for="flexRadioDefault1">๑. ปิง</label><br>
-                    <input class="form-check-input fs-5" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="fw-bold choice" for="flexRadioDefault2">๒. อาร์ม</label><br>
-                    <input class="form-check-input fs-5" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                    <label class="fw-bold choice" for="flexRadioDefault2">๓. เลิฟ</label>
-                </div>
-                <div class="col-3"></div>
-            </div>
-        </div>
+    <div id="question-container">
+
     </div>
     <div class="row">
         <div class="col-lg">
             <div class="correct-score">
-                <span>คะแนนสะสม</span><br>
-                <span class="score">9</span><br>
+                <span>คะแนนสะสม</span>
+                <span class="score d-none" id="score">0</span>
+                <span class="score" id="score-show"></span>
                 <span>คะแนน</span>
             </div>
-            <img src="<?= $themes ?>assets/img/thai/page1/btn-cerrect.png" alt="" class="cerrect-img">
-        </div>
-        <div class="col-lg">
             <div class="wrong-score">
-                <span>ตอบผิด</span><br>
-                <span class="score">1</span><br>
+                <span>ตอบผิด</span>
+                <span class="score d-none" id="wrong-number">0</span>
+                <span style="padding: 0 5vh 0 16vh; font-size: 98px;" id="wrongnumber-show"></span>
                 <span>ข้อ</span>
             </div>
-            <img src="<?= $themes ?>assets/img/thai/page1/btn-wrong.png" alt="" class="wrong-img">
+        </div>
+    </div>
+    <a href="<?= site_url('Test_controller/Question') ?>">
+        <div class="mt-auto add-question"><i class="fa-solid fa-plus me-1"></i>เพิ่มข้อสอบ</div>
+    </a>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="Score" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 700px;">
+        <div class="modal-content" style="padding: 3vh 6vh 6vh 6vh;">
+            <div style="display: flex; justify-content: space-between;">
+                <span class="modal-title" style="color: #8c6239; font-size: 26px;">บันทึกคะแนนคลังข้อสอบ</span>
+                <span class="fw-bold fs-2" role="button" onclick="closeModal()">X</span>
+            </div>
+            <div class="text-center mt-5">
+                <span style="color: #76a52b; font-size: 28px; display: block;" id="total-score"></span>
+                <span style="color: #c1272d; font-size: 28px; display: block; margin-top: 20px;"
+                    id="total-wrong"></span>
+                <span style="font-size: 28px; display: block; margin-top: 20px;" id="total"></span>
+                <span style="display: none;" id="hidden-score"></span>
+                <a href="#" style="text-decoration: none;" onclick="Insert()"><span class="submit">บันทึกลงสถิติ และ
+                        แบบประเมิน</span></a>
+            </div>
         </div>
     </div>
 </div>
+
+<!-- <script src="<?= $themes ?>assets/files/Question/testQuiz.js"></script> -->
+<script>
+$(document).ready(function() {
+    Question();
+});
+
+function convertToThaiNumber(number) {
+    const thaiNumbers = ['๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙'];
+    return String(number).replace(/\d/g, (match) => thaiNumbers[parseInt(match)]);
+}
+
+function updateNumberShow() {
+    var numberElement = document.getElementById('number').textContent;
+    var numberShowElement = document.getElementById('number-show');
+    var number = parseInt(numberElement, 10);
+    var thaiNumber = convertToThaiNumber(number);
+    numberShowElement.textContent = thaiNumber;
+
+    var scoreElement = document.getElementById('score').textContent;
+    var scoreShowElement = document.getElementById('score-show');
+    var score = parseInt(scoreElement, 10);
+    var thaiScore = convertToThaiNumber(score);
+    scoreShowElement.textContent = thaiScore;
+
+    var wrongnumberElement = document.getElementById('wrong-number').textContent;
+    var wrongnumberShowElement = document.getElementById('wrongnumber-show');
+    var wrongnumber = parseInt(wrongnumberElement, 10);
+    var thaiWrong = convertToThaiNumber(wrongnumber);
+    wrongnumberShowElement.textContent = thaiWrong;
+
+    var hiddenScoreElement = document.getElementById('hidden-score');
+    hiddenScoreElement.textContent = scoreElement;
+
+    if (number > 20) {
+        var totalScore = document.getElementById('total-score');
+        var totalWrong = document.getElementById('total-wrong');
+        var total = document.getElementById('total');
+        totalScore.textContent = 'จำนวนข้อที่ถูก ' + thaiScore;
+        totalWrong.textContent = 'จำนวนข้อที่ผิด ' + thaiWrong;
+        total.textContent = 'คะแนนสะสม  ' + thaiScore + '  คะแนน';
+        var numberfinish = number - 1;
+        var thaiNumber = convertToThaiNumber(numberfinish);
+        numberShowElement.textContent = thaiNumber;
+        $('#Score').modal('show');
+    }
+}
+
+function closeModal() {
+    $('#Score').modal('hide');
+}
+
+var QuestionRandom = true;
+var randomQuestion;
+var score = 0;
+var number = 0;
+var wrong = 0;
+
+function Question() {
+    updateNumberShow();
+    if (QuestionRandom === true) {
+        var questions = <?= json_encode($this->data['Question']) ?>;
+        var randomIndex = Math.floor(Math.random() * questions.length);
+        randomQuestion = questions[randomIndex];
+        questions.splice(randomIndex, 1);
+        var questionContainer = document.getElementById("question-container");
+        var html = `
+            <div class="row">
+                <div class="col-lg-5 testing">
+                    <span style="font-size: 62px; font-weight: bold; color: #8a603a;">คำถาม : </span>
+                    <span class="title">${randomQuestion.title}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 answer">
+                    <div class="row">
+                        <div class="col">
+                            <div class="choice-form">
+                                <input class="form-check-input fs-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1" style="cursor: pointer">
+                                <label class="choice" for="flexRadioDefault1">ก. ${randomQuestion.choice1}</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="choice-form">
+                                <input class="form-check-input fs-1" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="2" style="cursor: pointer">
+                                <label class="choice" for="flexRadioDefault2">ข. ${randomQuestion.choice2}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="choice-form">
+                                <input class="form-check-input fs-1" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="3" style="cursor: pointer">
+                                <label class="choice" for="flexRadioDefault3">ค. ${randomQuestion.choice3}</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="choice-form">
+                                <input class="form-check-input fs-1" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value="4" style="cursor: pointer">
+                                <label class="choice" for="flexRadioDefault4">ง. ${randomQuestion.choice4}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        questionContainer.innerHTML = html;
+    }
+}
+
+var questionDisplayed = false;
+
+$('.send-img').click(function() {
+    if (questionDisplayed) {
+        return;
+    }
+
+    var selectedAnswer = parseInt($('input[name="flexRadioDefault"]:checked').val(), 10);
+    var correctAnswer = randomQuestion.correct;
+    var numberElement = document.getElementById('number');
+    var number = parseInt(numberElement.textContent, 10);
+    var scoreElement = document.getElementById('score');
+    var score = parseInt(scoreElement.textContent, 10);
+    var wrongElement = document.getElementById('wrong-number');
+    var wrong = parseInt(wrongElement.textContent, 10);
+
+    if (selectedAnswer === correctAnswer) {
+        $('body').append(
+            '<img src="<?= $themes ?>assets/img/correct.png" class="tick-mark">'
+        );
+        var audio = new Audio("<?= $themes ?>assets/sounds/correct.mp3");
+        audio.play();
+        score += 1;
+    } else if (selectedAnswer !== undefined) {
+        $('body').append(
+            '<img src="<?= $themes ?>assets/img/wrong.png" class="tick-mark">'
+        );
+        var audio = new Audio("<?= $themes ?>assets/sounds/wrong.mp3");
+        audio.play();
+        wrong += 1;
+    } else {
+        alert('กรุณาเลือกคำตอบก่อน (กดส่งคำตอบ)');
+        return;
+    }
+
+    number += 1;
+    scoreElement.textContent = score;
+    wrongElement.textContent = wrong;
+
+    updateNumberShow();
+
+    if (number > 20) {
+        QuestionRandom = false;
+    }
+
+    setTimeout(function() {
+        $('.tick-mark').remove();
+        numberElement.textContent = number;
+        questionDisplayed = false;
+        Question();
+    }, 1500);
+    questionDisplayed = true;
+});
+
+$('#Score').on('hidden.bs.modal', function () {
+    location.reload(); 
+});
+
+function Insert() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var No = urlParams.get('No');
+    var Score = document.getElementById('hidden-score').textContent;
+
+    let formData = new FormData();
+    formData.append('No', No);
+    formData.append('Score', Score);
+    $.ajax({
+        url: "<?= site_url('Test_controller/Insert_Score') ?>",
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(results) {
+            if (results == 'Success') {
+                window.location.href = "<?= site_url('Estimate') ?>";
+            } else {
+                swal.fire({
+                    icon: 'error',
+                    title: 'ไม่สามารถบันทึกลงสถิติได้',
+                    type: "error"
+                });
+            }
+        }
+    });
+}
+</script>

@@ -20,7 +20,7 @@ class GameLearningThai_controller extends CI_Controller
 
     public function Level()
     {
-        $this->data['view_file'] = 'Game_LearningThai/level-thaigame';
+        
 
         $this->data['view_file'] = 'Game_LearningThai/level-thaigame';
         $this->load->view(THEMES, $this->data);
@@ -28,8 +28,14 @@ class GameLearningThai_controller extends CI_Controller
 
     public function get_Stat()
     {
-        $No = $this->input->post('No');
-        $Stat = $this->GameLearningThai_model->get_Stat($No)->result();
+        $Stat = $this->GameLearningThai_model->get_Stat()->result();
+
+        echo json_encode($Stat);
+    }
+
+    public function get_StatNormal()
+    {
+        $Stat = $this->GameLearningThai_model->get_StatNormal()->result();
 
         echo json_encode($Stat);
     }
@@ -94,6 +100,7 @@ class GameLearningThai_controller extends CI_Controller
                 'id_game' => 1,
                 'unit' => $unit,
                 'score' => $Score,
+                'dtp' => date('Y-m-d H:i:s')
             );
         } else {
             $data = array(
@@ -102,6 +109,7 @@ class GameLearningThai_controller extends CI_Controller
                 'id_game' => 1,
                 'unit' => $unit,
                 'score' => $Score,
+                'dtp' => date('Y-m-d H:i:s')
             );
         }
 

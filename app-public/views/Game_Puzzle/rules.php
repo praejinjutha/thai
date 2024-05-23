@@ -68,8 +68,21 @@ body {
     <div class="row">
         <div class="col-md-12">
             <div class="role">
-                <a href="<?= site_url('GamePuzzle_controller/PlayGame/' . $this->data['Role']) ?>"><img src="<?= $themes ?>assets/img/thai/page6/rules/start.png" class="start"></a>
+                <a href="<?= site_url('GamePuzzle_controller/PlayGame/' . $this->data['Role']) ?>" id="Link"><img src="<?= $themes ?>assets/img/thai/page6/rules/start.png" class="start"></a>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var noValue = urlParams.get('No');
+
+    var Link = document.getElementById('Link');
+
+    if (noValue) {
+        Link.href = "<?= site_url('GamePuzzle_controller/PlayGame/' . $this->data['Role']) ?>" + "?No=" + noValue;
+    } else {
+        Link.href = "<?= site_url('GamePuzzle_controller/PlayGame/' . $this->data['Role']) ?>";
+    }
+</script>

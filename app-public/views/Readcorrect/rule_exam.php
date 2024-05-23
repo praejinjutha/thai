@@ -40,7 +40,7 @@ body {
     <div class="row">
         <div class="col mt-3">
             <div class="text-end" style="color: #8a603a;">
-                <a href="<?= site_url('Readcorrectly_controller') ?>"><img src="<?= $themes ?>assets/img/thai/page3/home.png" width="60vh"
+                <a href="<?= site_url('Readcorrectly_controller/Exam/') . $this->data['ID'] ?>"><img src="<?= $themes ?>assets/img/thai/page3/home.png" width="60vh"
                         class="img-hover-effect me-3"></a>
                 <a href="#" onclick="window.close();"><img src="<?= $themes ?>assets/img/thai/page3/exit.png" width="50vh"
                         class="img-hover-effect"></a>
@@ -49,7 +49,7 @@ body {
     </div>
     <div class="row">
         <div class="col">
-            <a href="#">
+            <a href="<?= $themes ?>assets/files/Readcorrectly/Exam<?= $this->data['ID'] ?>/Testing.html">
                 <img src="<?= $themes ?>assets/img/thai/page3/btn-exam-start.png" class="btn-exam-start">
             </a>
         </div>

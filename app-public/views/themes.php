@@ -12,7 +12,7 @@ $themes =  base_url();
   <title><?= APP_NAME ?></title>
   <meta content="<?= DESCRIPTION_NAME ?>" name="description">
   <meta content="<?= KEYWORDS_NAME ?>" name="keywords">
-  <link rel="icon" type="image/x-icon" href="<?= $themes ?>assets/images/icon/01.png">
+  <!-- <link rel="icon" type="image/x-icon" href="<?= $themes ?>assets/images/icon/01.png"> -->
   <link rel="stylesheet" href="<?= $themes ?>assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?= $themes ?>assets/css/style.css">
   <link rel="stylesheet" href="<?= $themes ?>assets/css/Font-Prompt/stylesheet.css">
@@ -40,6 +40,9 @@ $themes =  base_url();
   <link href="<?= $themes ?>assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="<?= $themes ?>assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="<?= $themes ?>assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
 

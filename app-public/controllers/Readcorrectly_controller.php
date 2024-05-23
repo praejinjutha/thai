@@ -48,6 +48,7 @@ class Readcorrectly_controller extends CI_Controller
 
     public function Rule_Exam($ID)
     {
+        $this->data['ID'] = $ID;
         
         $this->data['view_file'] = 'Readcorrect/rule_exam';
         $this->load->view(THEMES, $this->data);
@@ -58,6 +59,14 @@ class Readcorrectly_controller extends CI_Controller
         $this->data['ID'] = $ID;
 
         $this->data['view_file'] = 'Readcorrect/spell-theword';
+        $this->load->view(THEMES, $this->data);
+    }
+
+    public function Spell_Level($ID)
+    {
+        $this->data['ID'] = $ID;
+        
+        $this->data['view_file'] = 'Readcorrect/spell-level';
         $this->load->view(THEMES, $this->data);
     }
 

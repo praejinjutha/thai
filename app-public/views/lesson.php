@@ -67,14 +67,13 @@
   <main id="main">
     <!-- ======= Breadcrumbs ======= -->
         <!-- Navbar ที่เปลี่ยนเป็นรูปภาพ -->
-        <img src="../assets/img/navbar.png" alt="Navbar" style="width: 100%; height: auto;">
+        <img src="../assets/img/navbar.png" alt="Navbar" style="width: 100%; height: auto; pointer-events: none;">
 
 </main>
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container" >
-
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
           <ul class="portfolio-flters"  data-aos-delay="100">
             <li data-filter="*" class="filter-active">ทั้งหมด</li>
@@ -226,7 +225,6 @@
     </a>
   </div><!-- End Portfolio Item -->
 </div><!-- End Portfolio Container -->
-
 
 
 </div>
