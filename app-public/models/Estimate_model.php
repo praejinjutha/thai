@@ -16,9 +16,14 @@ class Estimate_model extends CI_Model
         return $this->load->database('pdo_db', TRUE);
     }
 
-    public function get_data()
+    public function get_ClassYear()
     {
-        return $this->db->get('SPL_AC_Student');
+        return $this->db->distinct()->select('ClassYear')->get('SPL_AC_Student');
+    }
+
+    public function get_Room()
+    {
+        return $this->db->distinct()->select('Room')->get('SPL_AC_Student');
     }
 
     public function get_EvaluationForm()

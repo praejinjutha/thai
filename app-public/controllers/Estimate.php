@@ -14,8 +14,8 @@ class Estimate extends CI_Controller
 
     public function index()
     {
-        $this->data['result'] = $this->Estimate_model->get_data()->result();
-        
+        $this->data['getClassYear'] = $this->Estimate_model->get_ClassYear()->result();
+        $this->data['getRoom'] = $this->Estimate_model->get_Room()->result();
 
         $this->data['view_file'] = 'estimate';
         $this->load->view(THEMES, $this->data);

@@ -128,7 +128,7 @@ body {
                     <img src="<?= $themes ?>assets/img/thai/page5/btn-search.png" class="btn-search" data-toggle="modal" data-target="#Search">
                 </div>
             </div>
-            <form method="post" action="<?= site_url('GamePuzzle_controller/study') ?>" enctype="multipart/form-data">
+            <form method="post" action="<?= site_url('Test_controller/study') ?>" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col d-flex justify-content-center align-items-center" style="margin-top: 5vh">
                         <input type="text" class="input-form" id="No" name="No" value="<?= isset($this->data['StudentNo']) ? $this->data['StudentNo'] : '' ?>" placeholder="กรอกรหัสประจําตัว">

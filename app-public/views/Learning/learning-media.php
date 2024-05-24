@@ -160,7 +160,7 @@ body {
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <a href="<?= $themes ?>assets/files/Reading/Spellwords.pdf" target="_brank"><img src="<?= $themes ?>assets/img/thai/page2/btn-document.png" alt="" class="btn-document"></a>
+                    <a href="<?= $themes ?>assets/files/Reading/Spellwords.pdf" target="_blank"><img src="<?= $themes ?>assets/img/thai/page2/btn-document.png" alt="" class="btn-document"></a>
                     <a href="<?= site_url('Learning_media_controller/media') ?>"><img src="<?= $themes ?>assets/img/thai/page2/btn-login.png" alt="" class="btn-login"></a>
                 </div>
             </div>

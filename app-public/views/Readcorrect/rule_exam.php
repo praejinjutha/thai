@@ -33,6 +33,19 @@ body {
     cursor: pointer;
     transform: scale(1.1);
 }
+
+.btn-document {
+    width: 25vh;
+    height: 7vh;
+    margin-right: 10vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-document:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.1);
+}
 </style>
 
 
@@ -40,6 +53,9 @@ body {
     <div class="row">
         <div class="col mt-3">
             <div class="text-end" style="color: #8a603a;">
+                <a href="<?= $themes ?>assets/files/Readcorrectly/Test/<?= $this->data['ID'] ?>.pdf" target="_blank">
+                    <img src="<?= $themes ?>assets/img/document.png" alt="" class="btn-document">
+                </a>
                 <a href="<?= site_url('Readcorrectly_controller/Exam/') . $this->data['ID'] ?>"><img src="<?= $themes ?>assets/img/thai/page3/home.png" width="60vh"
                         class="img-hover-effect me-3"></a>
                 <a href="#" onclick="window.close();"><img src="<?= $themes ?>assets/img/thai/page3/exit.png" width="50vh"

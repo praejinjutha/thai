@@ -54,7 +54,7 @@ if (!function_exists('loopRetire')) {
 if (!function_exists('loopYear')) {
     function loopYear() {
         $year = date("Y")+543;
-        for ($i = -10; $i <= 0; $i++) {
+        for ($i = -3; $i <= 1; $i++) {
             $newYear[] = $year + $i;
         }
         rsort($newYear);

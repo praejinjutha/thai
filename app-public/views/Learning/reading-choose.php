@@ -38,11 +38,27 @@ body {
     opacity: 1;
     transform: scale(1.1);
 }
+
+.btn-document {
+    width: 25vh;
+    height: 7vh;
+    margin-right: 10vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-document:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.1);
+}
 </style>
 
 <div class="container-fluid">
     <div class="row justify-content-end align-items-end">
         <div class="col-auto">
+            <a href="<?= $themes ?>assets/files/SpellTheWord/Listening-and-reading/document/<?= $this->data['ID'] ?>.pdf" target="_blank">
+                <img src="<?= $themes ?>assets/img/document.png" alt="" class="btn-document">
+            </a>
             <a href="#" onclick="window.close();">
                 <img src="<?= $themes ?>assets/img/thai/page2/close.png" alt="" class="btn-close">
             </a>

@@ -112,7 +112,7 @@ $themes = base_url();
                 <select class="form-select w-50 fw-bold" name="ClassYear" id="ClassYear">
                     <option class="fnz-select" value=""></option>
                     <?php 
-                      foreach ($result as $row) { 
+                      foreach ($getClassYear as $row) { 
                     ?>
                     <option class="fnz-select" value="<?= $row->ClassYear ?>"><?= $row->ClassYear ?></option>
                     <?php    
@@ -125,7 +125,7 @@ $themes = base_url();
                 <select class="form-select w-50 fw-bold" name="Room" id="Room">
                     <option class="fnz-select" value=""></option>
                     <?php 
-                      foreach ($result as $row) { 
+                      foreach ($getRoom as $row) { 
                     ?>
                     <option class="fnz-select" value="<?= $row->Room ?>"><?= $row->Room ?></option>
                     <?php    
@@ -197,12 +197,12 @@ function get_EvaluationForm() {
                     let table_row = `<tr class="fs-4">
                             <td>${row.id_user || ''}</td>
                             <td align="left">${row.FullName || ''}${row.Name || ''}</td>
-                            <td></td>
-                            <td>${row.TScore || ''}</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>${row.CScore || 0}</td>
+                            <td>${row.TScore || 0}</td>
+                            <td>${row.WScore || 0}</td>
+                            <td>${row.SScore || 0}</td>
+                            <td>${row.RScore || 0}</td>
+                            <td>${0 + row.TScore + 0 + 0 + 0}</td>
                         </tr>`;
                     table_body.append(table_row);
                 });
