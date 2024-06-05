@@ -185,11 +185,11 @@
             "๑๕. อยู่ดีกินดี",
             "๑๖. การอ่านคำควบกล้ำ",
             "๑๗. ขอบคุณจากใจ",
-            "๑๘. คำที่มาจากภาษาต่างประเทศ",
+            "๑๘. คำจากภาษาต่างประเทศ",
             "๑๙. แม่เกอว - เกย - กง",
             "๒๐. สระไอ",
             "๒๑. รักเมืองไทย",
-            "๒๒. ห - อ - น",
+            "๒๒. ห - อ - นำ",
             "๒๓. สิ่งแวดล้อม",
             "๒๔. คำที่มาจากภาษาจีน",
             "๒๕. สงกรานต์",
@@ -208,59 +208,149 @@
             "../assets/img/kara/marayat.png",
             "../assets/img/kara/chartthai.png",
             "../assets/img/kara/kumsorn.png",
-            // เพิ่มลิงก์ไปยังภาพของรายการที่ต้องการที่นี่
             "../assets/img/kara/maiaok.png",
             "../assets/img/kara/putarai.png",
             "../assets/img/kara/balee.png",
+            "../assets/img/kara/10.png",
+            "../assets/img/kara/11.png",
+            "../assets/img/kara/12.png",
+            "../assets/img/kara/13.png",
+            "../assets/img/kara/14.png",
+            "../assets/img/kara/15.png",
+            "../assets/img/kara/16.png",
+            "../assets/img/kara/17.png",
+            "../assets/img/kara/18.png",
+            "../assets/img/kara/19.png",
+            "../assets/img/kara/20.png",
+            "../assets/img/kara/21.png",
+            "../assets/img/kara/22.png",
+            "../assets/img/kara/23.png",
+            "../assets/img/kara/24.png",
+            "../assets/img/kara/25.png",
+            "../assets/img/kara/26.png",
+            "../assets/img/kara/27.png",
+            "../assets/img/kara/28.png",
+            "../assets/img/kara/29.png",
+            "../assets/img/kara/30.png"
         ];
 
         // กำหนดลิงก์ไปยังไฟล์เสียงของแต่ละรายการ
         $audio_links_1 = [
             "../assets/audio/kara/music1.mp3",
             "../assets/audio/kara/music2.mp3",
-            "../assets/audio/audio3_1.mp3",
-            "../assets/audio/audio4_1.mp3",
-            "../assets/audio/audio5_1.mp3",
-            "../assets/audio/audio6_1.mp3",
-            "../assets/audio/audio7_1.mp3",
+            "../assets/audio/kara/music3.mp3",
+            "../assets/audio/kara/music4.mp3",
+            "../assets/audio/kara/music5.mp3",
+            "../assets/audio/kara/music6.mp3",
+            "../assets/audio/kara/music7.mp3",
             "../assets/audio/kara/music8.mp3",
             "../assets/audio/kara/music9.mp3",
+            "../assets/audio/kara/music10.mp3",
+            "../assets/audio/kara/music11.mp3",
+            "../assets/audio/kara/music12.mp3",
+            "../assets/audio/kara/music13.mp3",
+            "../assets/audio/kara/music14.mp3",
+            "../assets/audio/kara/music15.mp3",
+            "../assets/audio/kara/music16.mp3",
+            "../assets/audio/kara/music17.mp3",
+            "../assets/audio/kara/music18.mp3",
+            "../assets/audio/kara/music19.mp3",
+            "../assets/audio/kara/music20.mp3",
+            "../assets/audio/kara/music21.mp3",
+            "../assets/audio/kara/music22.mp3",
+            "../assets/audio/kara/music23.mp3",
+            "../assets/audio/kara/music24.mp3",
+            "../assets/audio/kara/music25.mp3",
+            "../assets/audio/kara/music26.mp3",
+            "../assets/audio/kara/music27.mp3",
+            "../assets/audio/kara/music28.mp3",
+            "../assets/audio/kara/music29.mp3",
+            "../assets/audio/kara/music30.mp3",
             // เพิ่มลิงก์ไปยังไฟล์เสียงของรายการที่ต้องการที่นี่
         ];
 
         $audio_links_2 = [
             "../assets/audio/kara/vocal1.mp3",
             "../assets/audio/kara/vocal2.mp3",
-            "../assets/audio/audio3_2.mp3",
-            "../assets/audio/audio4_2.mp3",
-            "../assets/audio/audio5_2.mp3",
-            "../assets/audio/audio6_2.mp3",
-            "../assets/audio/audio7_2.mp3",
+            "../assets/audio/kara/vocal3.mp3",
+            "../assets/audio/kara/vocal4.mp3",
+            "../assets/audio/kara/vocal5.mp3",
+            "../assets/audio/kara/vocal6.mp3",
+            "../assets/audio/kara/vocal7.mp3",
             "../assets/audio/kara/vocal8.mp3",
             "../assets/audio/kara/vocal9.mp3",
+            "../assets/audio/kara/vocal10.mp3",
+            "../assets/audio/kara/vocal11.mp3",
+            "../assets/audio/kara/vocal12.mp3",
+            "../assets/audio/kara/vocal13.mp3",
+            "../assets/audio/kara/vocal14.mp3",
+            "../assets/audio/kara/vocal15.mp3",
+            "../assets/audio/kara/vocal16.mp3",
+            "../assets/audio/kara/vocal17.mp3",
+            "../assets/audio/kara/vocal18.mp3",
+            "../assets/audio/kara/vocal19.mp3",
+            "../assets/audio/kara/vocal20.mp3",
+            "../assets/audio/kara/vocal21.mp3",
+            "../assets/audio/kara/vocal22.mp3",
+            "../assets/audio/kara/vocal23.mp3",
+            "../assets/audio/kara/vocal24.mp3",
+            "../assets/audio/kara/vocal25.mp3",
+            "../assets/audio/kara/vocal26.mp3",
+            "../assets/audio/kara/vocal27.mp3",
+            "../assets/audio/kara/vocal28.mp3",
+            "../assets/audio/kara/vocal29.mp3",
+            "../assets/audio/kara/vocal30.mp3"
             // เพิ่มลิงก์ไปยังไฟล์เสียงของรายการที่ต้องการที่นี่
         ];
 
         $video_links = [
-          "../assets/video/video1.mp4",
-          "../assets/video/video2.mp4",
-          "../assets/video/video3.mp4",
-          "../assets/video/video4.mp4",
-          "../assets/video/video5.mp4",
-          "../assets/video/video6.mp4",
-          "../assets/video/video7.mp4",
-          "../assets/video/video8.mp4",
-          "../assets/video/video9.mp4"
-          // เพิ่มลิงก์วิดีโอของรายการที่ต้องการที่นี่
-      ];
-      
+            "../assets/video/video1.mp4",
+            "../assets/video/video2.mp4",
+            "../assets/video/video3.mp4",
+            "../assets/video/video4.mp4",
+            "../assets/video/video5.mp4",
+            "../assets/video/video6.mp4",
+            "../assets/video/video7.mp4",
+            "../assets/video/video8.mp4",
+            "../assets/video/video9.mp4",
+            "../assets/video/video10.mp4",
+            "../assets/video/video11.mp4",
+            "../assets/video/video12.mp4",
+            "../assets/video/video13.mp4",
+            "../assets/video/video14.mp4",
+            "../assets/video/video15.mp4",
+            "../assets/video/video16.mp4",
+            "../assets/video/video17.mp4",
+            "../assets/video/video18.mp4",
+            "../assets/video/video19.mp4",
+            "../assets/video/video20.mp4",
+            "../assets/video/video21.mp4",
+            "../assets/video/video22.mp4",
+            "../assets/video/video23.mp4",
+            "../assets/video/video24.mp4",
+            "../assets/video/video25.mp4",
+            "../assets/video/video26.mp4",
+            "../assets/video/video27.mp4",
+            "../assets/video/video28.mp4",
+            "../assets/video/video29.mp4",
+            "../assets/video/video30.mp4",
+            
+            // เพิ่มลิงก์วิดีโอของรายการที่ต้องการที่นี่
+        ];
 
         for ($i = 0; $i < count($names); $i++): ?>
-    <li class="list-group-item <?php if ($names[$i] == "๑. สระในภาษาไทย") echo 'active'; ?>" data-image="<?= $image_links[$i] ?>" data-audio1="<?= $audio_links_1[$i] ?>" data-audio2="<?= $audio_links_2[$i] ?>" data-video="<?= $video_links[$i] ?>"><?= $names[$i]; ?></li>
-<?php endfor; ?>
+            <?php
+            $fontSize = '22px'; // ขนาดฟ้อนเริ่มต้น
+            if ($names[$i] == "๑๘. คำจากภาษาต่างประเทศ") {
+                $fontSize = '20px'; // ขนาดฟ้อนเมื่อเจอรายการที่ต้องการ
+            }
+            ?>
+            <li class="list-group-item <?php if ($names[$i] == "๑. สระในภาษาไทย") echo 'active'; ?>" style="font-size: <?= $fontSize ?>;" data-image="<?= $image_links[$i] ?>" data-audio1="<?= $audio_links_1[$i] ?>" data-audio2="<?= $audio_links_2[$i] ?>" data-video="<?= $video_links[$i] ?>"><?= $names[$i]; ?></li>
+        <?php endfor; ?>
 
     </ul>
 </div>
+
 
 
 
@@ -280,7 +370,7 @@
 
 
 <!-- แสดงวีดีโอ -->
-<div class="video-container" style="display: none; pointer-events: none; position: absolute; top: 43%; left: 35%; transform: translate(-50%, -50%); font-family: 'Noto Sans Thai Looped', sans-serif; font-weight: 700; font-style: normal;  font-size: 70px;">
+<div class="video-container" style="display: none; pointer-events: none; position: absolute; top: 46%; left: 35%; transform: translate(-50%, -50%); font-family: 'Noto Sans Thai Looped', sans-serif; font-weight: 700; font-style: normal;  font-size: 70px;">
     <video id="selectedVideo" style="width: 150%; height: auto;"></video>
 </div>
 
@@ -512,8 +602,6 @@ document.querySelector('.bi-play-circle').addEventListener('click', function() {
 
     // Initialize time display
     document.querySelector('.timesong').style.display = 'inline';
-
-
 });
 
 
