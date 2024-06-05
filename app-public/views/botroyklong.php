@@ -156,7 +156,7 @@ if (empty($botroyklong) || $botroyklong == 1) {
                                     $botroyklong_text = "๕. สามแก้ววิเศษ";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $botroyklong_text; ?></span>
                             </a>
                         </li>

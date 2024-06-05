@@ -128,7 +128,7 @@ if (empty($kumpungpoei) || $kumpungpoei == 1) {
                                     $kumpungpoei_text = "๑. คำพังเพย";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $kumpungpoei_text; ?></span>
                             </a>
                         </li>

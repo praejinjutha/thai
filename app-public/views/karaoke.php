@@ -163,7 +163,8 @@
   <!-- รูปภาพ -->
   <img id="selectedImage" src="../assets/img/kara/bg-kara.png" alt="Your Image">
 
-  <div class="column-left" style="overflow-y: scroll; max-height: 530px;">
+  <!-- ไฟล์ html -->
+  <div class="column-left" style="overflow-y: scroll; max-height: 530px; margin-top: 40px;">
     <ul class="list-group">
         <?php
         $names = [

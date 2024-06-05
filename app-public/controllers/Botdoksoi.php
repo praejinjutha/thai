@@ -7,7 +7,6 @@ class Botdoksoi extends CI_Controller
     {
         parent::__construct();
         $this->load->database();
-        $this->load->model('Dashboard_model');
         $this->load->helper(array('form', 'url', 'text'));
         $this->load->library('session');
     }

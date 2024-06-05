@@ -214,7 +214,7 @@ if (empty($tumnongsonpanya) || $tumnongsonpanya == 1) {
                                     $tumnongsonpanya_text = "๑๓. บทสวดทำนองสรภัญญะพระสังฆคุณ";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $tumnongsonpanya_text; ?></span>
                             </a>
                         </li>

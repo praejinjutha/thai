@@ -128,7 +128,7 @@ if (empty($kumkwan) || $kumkwan == 1) {
                                     $kumkwan_text = "๑. คำขวัญ";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $kumkwan_text; ?></span>
                             </a>
                         </li>

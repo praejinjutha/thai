@@ -170,7 +170,7 @@ if (empty($botlenkongdek) || $botlenkongdek == 1) {
                                     $botlenkongdek_text = "๗. เพลงระบำชาวเกาะ";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $botlenkongdek_text; ?></span>
                             </a>
                         </li>

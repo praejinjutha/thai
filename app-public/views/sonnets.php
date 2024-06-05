@@ -156,7 +156,7 @@ if (empty($sonnets) || $sonnets == 1) {
                                     $sonnets_text = "๕. กระเชอกันรั่ว";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $sonnets_text; ?></span>
                             </a>
                         </li>

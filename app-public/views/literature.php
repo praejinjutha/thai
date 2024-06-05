@@ -120,7 +120,7 @@ body {
   <main id="main">
     <!-- ======= Breadcrumbs ======= -->
         <!-- Navbar ที่เปลี่ยนเป็นรูปภาพ -->
-        <img src="../assets/img/navbar.png" alt="Navbar" style="width: 100%; height: auto;">
+        <img src="../assets/img/navbar.png" alt="Navbar" style="width: 100%; height: auto; pointer-events: none;">
 </main>
 
 
@@ -129,8 +129,8 @@ body {
 <div style="display: flex; justify-content: space-between; align-items: center;">
 <p class="custom-paragraph" style="text-align: left; margin-left: 60px; font-size:20px;">เลือกหัวข้อที่สนใจ</p>
 
-<button onclick="window.location.href='lesson'" style="padding: 5px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; margin-right: 60px; margin-bottom: 20px;">ย้อนกลับ</button>
-
+  <button  onclick="window.location.href='<?= site_url('lesson'); ?>'" style="padding: 5px 20px; background-color: #4CAF50; color: white; 
+  border: none; border-radius: 5px; cursor: pointer; margin-right: 60px; margin-bottom: 20px;">ย้อนกลับ</button>
 </div>
 
 
@@ -217,8 +217,8 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" > ✤ บทอาขยาน</a></h4>
+    <a href="botarkayan" class="stretched-link"></a>
   </div>
-  <a href="botarkayan" class="stretched-link"></a>
 </div>
 
 
