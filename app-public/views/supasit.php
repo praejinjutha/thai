@@ -128,7 +128,7 @@ if (empty($supasit) || $supasit == 1) {
                                     $supasit_text = "๑. สุภาษิต";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $supasit_text; ?></span>
                             </a>
                         </li>

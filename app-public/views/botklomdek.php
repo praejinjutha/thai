@@ -156,7 +156,7 @@ if (empty($botklomdek) || $botklomdek == 1) {
                                     $botklomdek_text = "๕. วัดโบสถ์";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $botklomdek_text; ?></span>
                             </a>
                         </li>

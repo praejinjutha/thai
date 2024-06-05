@@ -128,7 +128,7 @@ if (empty($sumnuanthai) || $sumnuanthai == 1) {
                                     $sumnuanthai_text = "๑. สำนวนไทย";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $sumnuanthai_text; ?></span>
                             </a>
                         </li>

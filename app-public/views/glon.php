@@ -144,7 +144,7 @@ if (empty($glon) || $glon == 1) {
                                     $glon_text = "๓. ก ข ก กา";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $glon_text; ?></span>
                             </a>
                         </li>

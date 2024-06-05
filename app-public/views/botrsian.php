@@ -128,7 +128,7 @@ if (empty($botrsian) || $botrsian == 1) {
                                     $botrsian_text = "๑. บทอาเศียรวาท";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $botrsian_text; ?></span>
                             </a>
                         </li>

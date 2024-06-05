@@ -145,7 +145,7 @@ if (empty($poetry) || $poetry == 1) {
                                     $poetry_text = "๓. ช้างพลาย";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $poetry_text; ?></span>
                             </a>
                         </li>

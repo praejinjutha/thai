@@ -144,7 +144,7 @@ if (empty($botdoksoi) || $botdoksoi == 1) {
                                     $botdoksoi_text = "๓. มดแดง";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $botdoksoi_text; ?></span>
                             </a>
                         </li>

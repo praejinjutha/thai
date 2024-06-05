@@ -144,7 +144,7 @@ if (empty($botarkayan) || $botarkayan == 1) {
                                     $botarkayan_text = "๓. ฝน ตก แดด ออก";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $botarkayan_text; ?></span>
                             </a>
                         </li>

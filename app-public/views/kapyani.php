@@ -144,7 +144,7 @@ if (empty($kapyani) || $kapyani == 1) {
                                     $kapyani_text = "๓. ภูมิใจไทย";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold;  font-family: Thasadith;">
                           <?php echo $kapyani_text; ?></span>
                             </a>
                         </li>

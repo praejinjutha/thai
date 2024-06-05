@@ -179,7 +179,7 @@ if (empty($patee) || $patee == 1) {
                                     $patee_text = "๘. โยกมา โยกไป";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $patee_text; ?></span>
                             </a>
                         </li>

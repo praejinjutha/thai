@@ -144,7 +144,7 @@ if (empty($tumnongsanor) || $tumnongsanor == 1) {
                                     $tumnongsanor_text = "๓. คิดถึง เพื่อนรัก";
                                 }
                                 ?>
-                          <span style="font-size: 18px; color: #333; font-weight: bold;">
+                          <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
                           <?php echo $tumnongsanor_text; ?></span>
                             </a>
                         </li>

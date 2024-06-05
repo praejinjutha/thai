@@ -130,7 +130,7 @@ $image_file = $image_files[$wannagum];
                 <ul class="list-group">
                 <li class="list-group-item <?php echo ($wannagum == 1 || $wannagum == 2 || $wannagum == 3) ? 'active' : ''; ?>" style="background-color: <?php echo ($wannagum == 1 || $wannagum == 2 || $wannagum == 3) ? '#A4DBD0' : '#f8f9fa'; ?>;">
     <a href="?wannagum=1" class="text-decoration-none">
-        <span style="font-size: 18px; color: #333; font-weight: bold;">
+        <span style="font-size: 18px; color: #333; font-weight: bold; font-family: Thasadith;">
             ๑. วรรณกรรมพื้นบ้าน
         </span>
     </a>
