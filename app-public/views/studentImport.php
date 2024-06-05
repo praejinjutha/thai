@@ -14,8 +14,6 @@ $themes =  base_url();
     <meta content="" name="description">
     <meta content="" name="keywords">
 
-    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,9 +22,9 @@ $themes =  base_url();
     <link href="https://fonts.googleapis.com/css2?family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
-
     <!-- Template Main CSS File -->
     <link href="<?= $themes ?>assets/css/main.css" rel="stylesheet">
+    <script src="<?= $themes ?>assets/js/main.js"></script>
 
     <style>
     body {
@@ -105,8 +103,6 @@ $themes =  base_url();
                     <li><a href="<?= site_url('Lesson') ?>" class="active">บทเรียน</a></li>
             </nav>
         </div>
-
-
     </header>
     <!-- End Header -->
 

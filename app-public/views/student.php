@@ -34,6 +34,7 @@ $themes = base_url();
 
     <!-- Template Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet">
+    <script src="../assets/js/main.js"></script>
 
     <style>
     body {
@@ -180,12 +181,12 @@ $themes = base_url();
                 <table id="tbl_Student" style="margin-left: 0; width: 100%;">
                     <thead class="text-center">
                         <tr>
-                            <th width="150px"><span class="fw-bold fs-4">ลำดับ</span></th>
-                            <th width="150px"><span class="fw-bold fs-4">รหัสประจำตัว</span></th>
+                            <th width="100px"><span class="fw-bold fs-4">ลำดับ</span></th>
+                            <th width="180px"><span class="fw-bold fs-4">รหัสประจำตัว</span></th>
                             <th><span class="fw-bold fs-4">ชื่อ - นามสกุล</span></th>
-                            <th width="160px"><span class="fw-bold fs-4">ชั้นห้อง</span></th>
-                            <th width="130px"><span class="fw-bold fs-4">เกิดวันที่</span></th>
-                            <th width="165px"><span class="fw-bold fs-4">อายุ</span></th>
+                            <th width="180px"><span class="fw-bold fs-4">ชั้นห้อง</span></th>
+                            <th width="180px"><span class="fw-bold fs-4">เกิดวันที่</span></th>
+                            <th width="180px"><span class="fw-bold fs-4">อายุ</span></th>
                         </tr>
                     </thead>
                     <tbody class="text-center">
