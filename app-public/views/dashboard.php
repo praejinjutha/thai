@@ -72,7 +72,7 @@ $themes =  base_url();
     <div class="col-xl-4 d-flex justify-content-center align-items-center"> <!-- เพิ่มคลาส align-items-center -->
       <div class="text-center">
         <h2 data-aos="fade-up">ภาษาไทย <br> ภาษาสนุก</h2>
-        <a href="#about" class="btn-get-started" style="width: 230px;">เข้าสู่ระบบ</a>
+        <a href="<?= site_url('Auth') ?>" class="btn-get-started" style="width: 230px;">เข้าสู่ระบบ</a>
       </div>
     </div>
   </div>
