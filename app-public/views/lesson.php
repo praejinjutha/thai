@@ -129,8 +129,10 @@
   </div><!-- End Portfolio Item -->
 
   <div class="col-lg-3 col-md-6 portfolio-item filter-lesson">
-    <img src="../assets/img/portfolio/lesson-7.png" class="img-fluid" alt="">
-    <div class="caption">    นิทาน  <br>  Tale </div>
+    <a href="<?= site_url('Tale_controller') ?>">
+      <img src="../assets/img/portfolio/lesson-7.png" class="img-fluid" alt="">
+      <div class="caption">นิทาน  <br>  Tale </div>
+    </a>
   </div><!-- End Portfolio Item -->
 
   <div class="col-lg-3 col-md-6 portfolio-item filter-lesson">
@@ -141,8 +143,10 @@
   </div><!-- End Portfolio Item -->
 
   <div class="col-lg-3 col-md-6 portfolio-item filter-lesson">
-    <img src="../assets/img/portfolio/lesson-9.png" class="img-fluid" alt="">
-    <div class="caption">   คลังสื่อ   <br>Media Archive</div>
+    <a href="<?= site_url('Media_archive_controller') ?>">
+      <img src="../assets/img/portfolio/lesson-9.png" class="img-fluid" alt="">
+      <div class="caption">   คลังสื่อ   <br>Media Archive</div>
+    </a>
   </div><!-- End Portfolio Item -->
 </div><!-- End Portfolio Container -->
 
@@ -171,7 +175,7 @@
   </div><!-- End Portfolio Item -->
 
   <div class="col-lg-3 col-md-6 portfolio-item filter-prac">
-    <a href="<?= site_url('record') ?>">
+    <a href="#">
       <img src="../assets/img/portfolio/prac5.png" class="img-fluid" alt="">
       <div class="caption">    ฝึกลีลามือ  <br> Writing </div>
     </a>
@@ -207,8 +211,10 @@
 <h2 id="teacher-heading" style="margin-top: 50px;"  >สำหรับครู <hr></h2>
 <div class="row gy-4 portfolio-container"  data-aos-delay="300">
   <div class="col-lg-3 col-md-6 portfolio-item filter-tea">
-    <img src="../assets/img/portfolio/tc1.png" class="img-fluid" alt="">
-    <div class="caption"> แผนการเรียนรู้ <br> Learning Plan </div>
+    <a href="<?= site_url('Learning_Plan_controller') ?>">
+      <img src="../assets/img/portfolio/tc1.png" class="img-fluid" alt="">
+      <div class="caption"> แผนการเรียนรู้ <br> Learning Plan </div>
+    </a>
   </div><!-- End Portfolio Item -->
 
   <div class="col-lg-3 col-md-6 portfolio-item filter-tea">

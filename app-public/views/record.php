@@ -59,8 +59,8 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="<?= site_url('dashboard') ?>">หน้าหลัก</a></li>
-          <li><a href="<?= site_url('Lesson') ?>" class="active">บทเรียน</a></li>
+          <li><a href="<?= site_url('dashboard') ?>" class="fw-bold">หน้าหลัก</a></li>
+          <li><a href="<?= site_url('Lesson') ?>" class="active fw-bold">บทเรียน</a></li>
         </ul>
       </nav>
     </div>
