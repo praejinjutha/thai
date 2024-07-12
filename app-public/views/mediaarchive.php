@@ -83,8 +83,12 @@ $themes = base_url();
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="<?= site_url('dashboard') ?>" class="fw-bold">หน้าหลัก</a></li>
-                    <li><a href="<?= site_url('Lesson') ?>" class="active fw-bold">บทเรียน</a></li>
+
+                    <span style="margin-right: 30px; font-weight: bold; font-size: 22px">
+                        <i class="fa-regular fa-user"></i> <?= $this->session->userdata('Name'); ?>
+                    </span>
+                    <li><a href="<?= site_url('auth/logout') ?>" class="active">ออกจากระบบ</a></li>
+                </ul>
             </nav>
         </div>
 
@@ -111,8 +115,10 @@ $themes = base_url();
                 <div class="menu-story">
                     <div class="story" onclick="loadVideo('การคัดลายมือ', this)">การคัดลายมือ</div>
                     <div class="story" onclick="loadVideo('การอ่านออกเสียง', this)">การอ่านออกเสียง</div>
-                    <div class="story" onclick="loadVideo('การอ่านออกเสียงและบอกความหมายคำ', this)">การอ่านออกเสียงและบอกความหมายคำ</div>
-                    <div class="story" onclick="loadVideo('เรื่องการอ่านเขียนพยัญชนะ', this)">เรื่องการอ่านเขียนพยัญชนะ</div>
+                    <div class="story" onclick="loadVideo('การอ่านออกเสียงและบอกความหมายคำ', this)">
+                        การอ่านออกเสียงและบอกความหมายคำ</div>
+                    <div class="story" onclick="loadVideo('เรื่องการอ่านเขียนพยัญชนะ', this)">เรื่องการอ่านเขียนพยัญชนะ
+                    </div>
                     <div class="story" onclick="loadVideo('เรื่องอักษรไทย', this)">เรื่องอักษรไทย</div>
                 </div>
             </div>

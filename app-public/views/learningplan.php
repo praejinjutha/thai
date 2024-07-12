@@ -83,8 +83,12 @@ $themes = base_url();
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="<?= site_url('dashboard') ?>" class="fw-bold">หน้าหลัก</a></li>
-                    <li><a href="<?= site_url('Lesson') ?>" class="active fw-bold">บทเรียน</a></li>
+
+                    <span style="margin-right: 30px; font-weight: bold; font-size: 22px">
+                        <i class="fa-regular fa-user"></i> <?= $this->session->userdata('Name'); ?>
+                    </span>
+                    <li><a href="<?= site_url('auth/logout') ?>" class="active">ออกจากระบบ</a></li>
+                </ul>
             </nav>
         </div>
 
@@ -145,21 +149,21 @@ $themes = base_url();
 function updateUnits() {
     var classYear = document.getElementById('ClassYear').value;
     var unitSelect = document.getElementById('Unit');
-    unitSelect.innerHTML = '<option class="fnz-select" value=""></option>';  
+    unitSelect.innerHTML = '<option class="fnz-select" value=""></option>';
 
     if (classYear === 'ป.1') {
         for (let i = 1; i <= 4; i++) {
             var option = document.createElement('option');
             option.value = i;
             option.innerHTML = `${i}`;
-            option.className = 'fnz-select'; 
+            option.className = 'fnz-select';
             unitSelect.appendChild(option);
         }
     } else if (classYear !== '') {
         var option = document.createElement('option');
         option.value = 1;
         option.innerHTML = '1';
-        option.className = 'fnz-select'; 
+        option.className = 'fnz-select';
         unitSelect.appendChild(option);
     }
 }
@@ -178,7 +182,8 @@ function updatePlans() {
             option.className = 'fnz-select';
             planSelect.appendChild(option);
         }
-    } else if (classYear === 'ป.2' || classYear === 'ป.3' || classYear === 'ป.4' || classYear === 'ป.5' || classYear === 'ป.6') {
+    } else if (classYear === 'ป.2' || classYear === 'ป.3' || classYear === 'ป.4' || classYear === 'ป.5' || classYear ===
+        'ป.6') {
         var option = document.createElement('option');
         option.value = 'หน่วยที่ 1 แผนที่ 1';
         option.innerHTML = `หน่วยที่ ${unit} แผนที่ 1`;
@@ -195,7 +200,7 @@ function openPDF() {
 
     var url = `../assets/files/Plan/P${plan}/Unit${unit}/${selectedPlan}.pdf`;
     var pdfViewer = document.getElementById('pdfViewer');
-        pdfViewer.src = url;
-        pdfViewer.hidden = false;
+    pdfViewer.src = url;
+    pdfViewer.hidden = false;
 }
 </script>

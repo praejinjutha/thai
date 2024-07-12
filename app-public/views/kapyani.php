@@ -48,8 +48,11 @@
       
       <nav id="navbar" class="navbar">
         <ul>
-        <li><a href="<?= site_url('dashboard') ?>">หน้าหลัก</a></li>
-        <li><a href="<?= site_url('Lesson') ?>" class="active">บทเรียน</a></li>
+          <span style="margin-right: 30px; font-weight: bold; font-size: 22px">
+            <i class="fa-regular fa-user"></i> <?= $this->session->userdata('Name'); ?>
+          </span>
+          <li><a href="<?= site_url('auth/logout') ?>" class="active">ออกจากระบบ</a></li>
+        </ul>
       </nav>
     </div>
 

@@ -12,8 +12,11 @@ $themes =  base_url();
             </a>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="<?= site_url('dashboard') ?>">หน้าหลัก</a></li>
-                    <li><a href="<?= site_url('Lesson') ?>" class="active">บทเรียน</a></li>
+
+                    <span style="margin-right: 30px; font-weight: bold; font-size: 22px">
+                        <i class="fa-regular fa-user"></i> <?= $this->session->userdata('Name'); ?>
+                    </span>
+                    <li><a href="<?= site_url('auth/logout') ?>" class="active">ออกจากระบบ</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,7 +33,7 @@ $themes =  base_url();
             <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
                 data-portfolio-sort="original-order">
                 <ul class="portfolio-flters" data-aos-delay="100">
-                    <li data-filter="*" class="filter" >เกมรอบรู้ภาษาไทย</li>
+                    <li data-filter="*" class="filter">เกมรอบรู้ภาษาไทย</li>
                     <li data-filter=".filter-lesson" class="filter">เกมปริศนาทายคำ</li>
                 </ul>
             </div>
@@ -41,25 +44,29 @@ $themes =  base_url();
             </div>
             <div class="mt-5" id="Game_LearningThai">
                 <a href="<?= site_url('GameLearningThai_controller'); ?>" target="_brank">
-                    <img src="<?= $themes ?>assets/img/game1.png" style="width: 100%; height: auto; border-radius: 10px;">
+                    <img src="<?= $themes ?>assets/img/game1.png"
+                        style="width: 100%; height: auto; border-radius: 10px;">
                 </a>
             </div>
             <div class="mt-5" id="Game_Puzzle">
                 <a href="<?= site_url('GamePuzzle_controller'); ?>" target="_brank">
-                    <img src="<?= $themes ?>assets/img/game2.png" style="width: 100%; height: auto; border-radius: 10px;">
+                    <img src="<?= $themes ?>assets/img/game2.png"
+                        style="width: 100%; height: auto; border-radius: 10px;">
                 </a>
             </div>
         </div>
     </section>
 </body>
 <link href="<?= $themes ?>assets/css/main.css" rel="stylesheet">
-  <script src="<?= $themes ?>assets/js/main.js"></script>
+<script src="<?= $themes ?>assets/js/main.js"></script>
 <script>
 $(document).ready(function() {
     $('.portfolio-flters li').removeClass('filter-active'); // ลบคลาส filter-active จากทุก filter
-    $('.portfolio-flters li:first-child').addClass('filter-active'); // เพิ่มคลาส filter-active ให้กับ filter แรก
+    $('.portfolio-flters li:first-child').addClass(
+    'filter-active'); // เพิ่มคลาส filter-active ให้กับ filter แรก
 
-    var selectedFilter = $('.portfolio-flters li:first-child').data('filter'); // รับค่า filter ของ filter แรกที่ถูกเลือก
+    var selectedFilter = $('.portfolio-flters li:first-child').data(
+    'filter'); // รับค่า filter ของ filter แรกที่ถูกเลือก
 
     if (selectedFilter === '*') {
         $('#Game_LearningThai').show();

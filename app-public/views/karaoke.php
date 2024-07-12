@@ -2,171 +2,190 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>ภาษาไทย</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>ภาษาไทย</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Niramit:wght@500&family=Thasadith:wght@700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Niramit:wght@500&family=Thasadith:wght@700&display=swap"
+        rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@400;700&display=swap"
+        rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="../assets/css/main.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/main.css" rel="stylesheet">
 
-<style>
-  body {
-  background-color: #FFEEC0;
-  }
+    <style>
+    body {
+        background-color: #FFEEC0;
+    }
 
-.header.sticked {
-  position: static !important; /* ยกเลิกการติดตามการเลื่อนหน้าจอ */
-}
+    .header.sticked {
+        position: static !important;
+        /* ยกเลิกการติดตามการเลื่อนหน้าจอ */
+    }
 
-.image-container {
-  position: relative;
-  display: flex; /* เพิ่มบรรทัดนี้ */
-  height: 100%; /* เพิ่มบรรทัดนี้ */
-}
+    .image-container {
+        position: relative;
+        display: flex;
+        /* เพิ่มบรรทัดนี้ */
+        height: 100%;
+        /* เพิ่มบรรทัดนี้ */
+    }
 
-.image-container img {
-  width: 100%;
-  height: auto;
-}
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
 
-.column-left{
-  position: absolute;
-  top: 320px;
-  height: 100%;
-}
+    .column-left {
+        position: absolute;
+        top: 320px;
+        height: 100%;
+    }
 
-.column-right {
-  position: absolute;
-  top: 92px;
-  height: 120%;
-}
+    .column-right {
+        position: absolute;
+        top: 92px;
+        height: 120%;
+    }
 
-.column-left {
-  width: 21%; /* ปรับความกว้างตามที่ต้องการ */
-  padding-left: 41px; /* ปรับระยะห่างข้างขวา */
-  overflow-y: scroll;
-  max-height: 600px;
-}
+    .column-left {
+        width: 21%;
+        /* ปรับความกว้างตามที่ต้องการ */
+        padding-left: 41px;
+        /* ปรับระยะห่างข้างขวา */
+        overflow-y: scroll;
+        max-height: 600px;
+    }
 
-.column-right {
-  width: 72%; /* ปรับความกว้างตามที่ต้องการ */
-  margin-left: 25%; /* ปรับระยะห่างข้างขวา */
-}
-
-
-
-/* เพิ่มสไตล์ต่าง ๆ ตามต้องการ */
-.column-left ul {
-  list-style: none;
-  padding: 0;
-}
-
-.column-left li {
-  margin-bottom: 10px;
-}
-
-.column-right div {
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.list-group li {
-  list-style-type: none;
-  margin-bottom: 0px; /* ปรับพื้นที่ห่างระหว่างรายการ */
-  padding: 5px;
-  background-color: #FFF0EE; /* สีพื้นหลังของรายการ */
-  height: 50px; 
-  font-size: 22px; 
-  text-indent: 20px; /* เพิ่มย่อหน้าของตัวอักษร */
-  line-height: 40px; /* ปรับห่างระหว่างบรรทัดให้ตรงกลาง */
-  cursor: pointer;
-}
-
-.list-group li:last-child {
-  margin-bottom: 0; /* ไม่มีระยะห่างสุดท้าย */
-}
-
-#selectedImage1 {
-    width: 100%; /* กำหนดความกว้างของรูปเป็น 300px */
-    height: 75%; /* กำหนดความสูงของรูปเป็น 200px */
-  }
-
-  .list-group-item.active {
-    background-color: #FCBEB9 !important; /* สีเมื่อเลือก Active */
-    color: black; /* สีข้อความ */
-    font-weight: bold; /* ตัวหนา */
-    border: 2px solid #FFECEB; /* เพิ่มสีกรอบ */
-}
+    .column-right {
+        width: 72%;
+        /* ปรับความกว้างตามที่ต้องการ */
+        margin-left: 25%;
+        /* ปรับระยะห่างข้างขวา */
+    }
 
 
 
+    /* เพิ่มสไตล์ต่าง ๆ ตามต้องการ */
+    .column-left ul {
+        list-style: none;
+        padding: 0;
+    }
 
-</style>
+    .column-left li {
+        margin-bottom: 10px;
+    }
+
+    .column-right div {
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .list-group li {
+        list-style-type: none;
+        margin-bottom: 0px;
+        /* ปรับพื้นที่ห่างระหว่างรายการ */
+        padding: 5px;
+        background-color: #FFF0EE;
+        /* สีพื้นหลังของรายการ */
+        height: 50px;
+        font-size: 22px;
+        text-indent: 20px;
+        /* เพิ่มย่อหน้าของตัวอักษร */
+        line-height: 40px;
+        /* ปรับห่างระหว่างบรรทัดให้ตรงกลาง */
+        cursor: pointer;
+    }
+
+    .list-group li:last-child {
+        margin-bottom: 0;
+        /* ไม่มีระยะห่างสุดท้าย */
+    }
+
+    #selectedImage1 {
+        width: 100%;
+        /* กำหนดความกว้างของรูปเป็น 300px */
+        height: 75%;
+        /* กำหนดความสูงของรูปเป็น 200px */
+    }
+
+    .list-group-item.active {
+        background-color: #FCBEB9 !important;
+        /* สีเมื่อเลือก Active */
+        color: black;
+        /* สีข้อความ */
+        font-weight: bold;
+        /* ตัวหนา */
+        border: 2px solid #FFECEB;
+        /* เพิ่มสีกรอบ */
+    }
+    </style>
 
 </head>
 
 <body class="page-portfolio">
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-    <a href="<?= site_url('dashboard') ?>" class="logo d-flex align-items-center">
-    <img src="../assets/img/logo.png" alt="">
-</a>
-      </a>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="<?= site_url('dashboard') ?>" class="logo d-flex align-items-center">
+                <img src="../assets/img/logo.png" alt="">
+            </a>
+            </a>
 
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-        <li><a href="<?= site_url('dashboard') ?>">หน้าหลัก</a></li>
-          <li><a href="<?= site_url('Lesson') ?>" class="active">บทเรียน</a></li>
-      </nav>
-    </div>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <span style="margin-right: 30px; font-weight: bold; font-size: 22px">
+                        <i class="fa-regular fa-user"></i> <?= $this->session->userdata('Name'); ?>
+                    </span>
+                    <li><a href="<?= site_url('auth/logout') ?>" class="active">ออกจากระบบ</a></li>
+                </ul>
+            </nav>
+        </div>
 
-    
-  </header>
-  <!-- End Header -->
 
-  <main id="main">
-    <!-- ======= Breadcrumbs ======= -->
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
         <!-- Navbar ที่เปลี่ยนเป็นรูปภาพ -->
-        <img src="../assets/img/navbar.png" alt="Navbar" style="width: 100%; height: auto;">
-</main>
+        <img src="../assets/img/navbar.png" alt="Navbar" style="width: 100%; height: auto; pointer-events: none;">
+    </main>
 
-<div class="image-container">
-  <!-- รูปภาพ -->
-  <img id="selectedImage" src="../assets/img/kara/bg-kara.png" alt="Your Image">
+    <div class="image-container">
+        <!-- รูปภาพ -->
+        <img id="selectedImage" src="../assets/img/kara/bg-kara.png" alt="Your Image">
 
-  <!-- ไฟล์ html -->
-  <div class="column-left" style="overflow-y: scroll; max-height: 530px; margin-top: 40px;">
-    <ul class="list-group">
-        <?php
+        <!-- ไฟล์ html -->
+        <div class="column-left" style="overflow-y: scroll; max-height: 530px; margin-top: 40px;">
+            <ul class="list-group">
+                <?php
         $names = [
             "๑. สระในภาษาไทย",
             "๒. สยามานุสติ",
@@ -339,285 +358,303 @@
         ];
 
         for ($i = 0; $i < count($names); $i++): ?>
-            <?php
+                <?php
             $fontSize = '22px'; // ขนาดฟ้อนเริ่มต้น
             if ($names[$i] == "๑๘. คำจากภาษาต่างประเทศ") {
                 $fontSize = '20px'; // ขนาดฟ้อนเมื่อเจอรายการที่ต้องการ
             }
             ?>
-            <li class="list-group-item <?php if ($names[$i] == "๑. สระในภาษาไทย") echo 'active'; ?>" style="font-size: <?= $fontSize ?>;" data-image="<?= $image_links[$i] ?>" data-audio1="<?= $audio_links_1[$i] ?>" data-audio2="<?= $audio_links_2[$i] ?>" data-video="<?= $video_links[$i] ?>"><?= $names[$i]; ?></li>
-        <?php endfor; ?>
+                <li class="list-group-item <?php if ($names[$i] == "๑. สระในภาษาไทย") echo 'active'; ?>"
+                    style="font-size: <?= $fontSize ?>;" data-image="<?= $image_links[$i] ?>"
+                    data-audio1="<?= $audio_links_1[$i] ?>" data-audio2="<?= $audio_links_2[$i] ?>"
+                    data-video="<?= $video_links[$i] ?>"><?= $names[$i]; ?></li>
+                <?php endfor; ?>
 
-    </ul>
-</div>
-
-
-
-
-
-
-<div class="column-right">
-    <!-- Image to be displayed -->
-    <!-- Image to be displayed -->
-    <div style="position: relative; display: inline-block;">
-        <img id="selectedImage1" src="<?= $image_links[0] ?>" alt="Selected Image">
-        <!-- Position and size of icons -->
-
-        <i class="bi bi-play-circle play-icon active" style="position: absolute; top: 77%; left: 48%; transform: translate(-50%, -50%); font-size: 48px; color: red; cursor: pointer;"></i>
-
-        <i class="bi bi-pause-circle active" style="position: absolute; top: 77%; left: 57%; transform: translate(-50%, -50%); font-size: 48px; color: red; cursor: pointer;"></i>
+            </ul>
+        </div>
 
 
 
-<!-- แสดงวีดีโอ -->
-<div class="video-container" style="display: none; pointer-events: none; position: absolute; top: 46%; left: 35%; transform: translate(-50%, -50%); font-family: 'Noto Sans Thai Looped', sans-serif; font-weight: 700; font-style: normal;  font-size: 70px;">
-    <video id="selectedVideo" style="width: 150%; height: auto;"></video>
-</div>
 
 
-<!-- แสดงวีดีโอ 
+
+        <div class="column-right">
+            <div class="text-end">
+            <button onclick="window.history.back()"
+            style="padding: 5px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">ย้อนกลับ</button>
+            </div>
+            <!-- Image to be displayed -->
+            <!-- Image to be displayed -->
+            <div style="position: relative; display: inline-block;">
+                <img id="selectedImage1" src="<?= $image_links[0] ?>" alt="Selected Image">
+                <!-- Position and size of icons -->
+
+                <i class="bi bi-play-circle play-icon active"
+                    style="position: absolute; top: 77%; left: 48%; transform: translate(-50%, -50%); font-size: 48px; color: red; cursor: pointer;"></i>
+
+                <i class="bi bi-pause-circle active"
+                    style="position: absolute; top: 77%; left: 57%; transform: translate(-50%, -50%); font-size: 48px; color: red; cursor: pointer;"></i>
+
+
+
+                <!-- แสดงวีดีโอ -->
+                <div class="video-container"
+                    style="display: none; pointer-events: none; position: absolute; top: 46%; left: 35%; transform: translate(-50%, -50%); font-family: 'Noto Sans Thai Looped', sans-serif; font-weight: 700; font-style: normal;  font-size: 70px;">
+                    <video id="selectedVideo" style="width: 150%; height: auto;"></video>
+                </div>
+
+
+                <!-- แสดงวีดีโอ 
 <div class="video-container" style="display: none; position: absolute; top: 46%; left: 51%; transform: translate(-50%, -50%); font-family: 'Noto Sans Thai Looped', sans-serif; font-weight: 700; font-style: normal;  font-size: 70px;">
     <video id="selectedVideo" style="width: 100%; height: auto;"></video>
 </div>-->
 
 
 
-        <input type="range" min="0" max="100" value="100" class="slider1" id="volumeSlider" style="display: none;">
-        <input type="range" min="0" max="100" value="50" class="slider2" id="musicSlider" style="display: none;">
+                <input type="range" min="0" max="100" value="100" class="slider1" id="volumeSlider"
+                    style="display: none;">
+                <input type="range" min="0" max="100" value="50" class="slider2" id="musicSlider"
+                    style="display: none;">
 
-        <div class="timesong" style="display: none;">
-    <div id="currentTimeDisplay" style="display:inline;">0:00 </div><p style="display:inline;">|</p><div id="totalTimeDisplay" style="display:inline;">0:00</div>
-</div>
-    </div>
-</div>
+                <div class="timesong" style="display: none;">
+                    <div id="currentTimeDisplay" style="display:inline;">0:00 </div>
+                    <p style="display:inline;">|</p>
+                    <div id="totalTimeDisplay" style="display:inline;">0:00</div>
+                </div>
+            </div>
+        </div>
 
-<script>
-window.addEventListener('DOMContentLoaded', (event) => {
-    var firstListItem = document.querySelector('.list-group-item');
-    firstListItem.classList.add('active');
+        <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            var firstListItem = document.querySelector('.list-group-item');
+            firstListItem.classList.add('active');
 
-    // ตั้งค่ารูปภาพและเล่นเสียงที่เกี่ยวข้องกับรายการที่ 1
-    var firstImageURL = firstListItem.getAttribute('data-image');
-    document.getElementById('selectedImage1').src = firstImageURL;
-    playAudio(firstListItem.getAttribute('data-audio1'), firstListItem.getAttribute('data-audio2'));
-});
-    var listItems = document.querySelectorAll('.list-group-item');
+            // ตั้งค่ารูปภาพและเล่นเสียงที่เกี่ยวข้องกับรายการที่ 1
+            var firstImageURL = firstListItem.getAttribute('data-image');
+            document.getElementById('selectedImage1').src = firstImageURL;
+            playAudio(firstListItem.getAttribute('data-audio1'), firstListItem.getAttribute('data-audio2'));
+        });
+        var listItems = document.querySelectorAll('.list-group-item');
 
-    listItems.forEach(function(item, index) {
-        item.addEventListener('click', function() {
-            listItems.forEach(function(li) {
-                li.classList.remove('active');
+        listItems.forEach(function(item, index) {
+            item.addEventListener('click', function() {
+                listItems.forEach(function(li) {
+                    li.classList.remove('active');
+                });
+                this.classList.add('active');
+                var imageURL = this.getAttribute('data-image');
+                document.getElementById('selectedImage1').src = imageURL;
+
+                // เล่นเสียงที่เกี่ยวข้องกับรายการที่เลือก
+                playAudio(audio_links_1[index], audio_links_2[index]);
             });
-            this.classList.add('active');
-            var imageURL = this.getAttribute('data-image');
-            document.getElementById('selectedImage1').src = imageURL;
-
-            // เล่นเสียงที่เกี่ยวข้องกับรายการที่เลือก
-            playAudio(audio_links_1[index], audio_links_2[index]);
         });
-    });
 
 
-    var audio1, audio2;
-    
-
-    function playAudio(audioLink1, audioLink2) {
-    // สร้างและกำหนดค่าตัวแปร audio1 และ audio2 ใหม่ทุกครั้งที่มีการคลิกบนรายการใหม่
-    audio1 = new Audio(audioLink1);
-    audio2 = new Audio(audioLink2);
-    resetVideo();  // เรียกใช้ฟังก์ชัน resetVideo
-
-    // Play when play-icon is clicked
-    document.querySelector('.bi-play-circle').addEventListener('click', function() {
-    if (audio1.paused && audio2.paused) { // If audio is paused
-        audio1.play();
-        audio2.play();
-        document.getElementById('selectedImage1').src = '../assets/img/kara/karao.png';
+        var audio1, audio2;
 
 
-        // Initialize time display
-        initializeTimeDisplay(audio1);
+        function playAudio(audioLink1, audioLink2) {
+            // สร้างและกำหนดค่าตัวแปร audio1 และ audio2 ใหม่ทุกครั้งที่มีการคลิกบนรายการใหม่
+            audio1 = new Audio(audioLink1);
+            audio2 = new Audio(audioLink2);
+            resetVideo(); // เรียกใช้ฟังก์ชัน resetVideo
 
-        // Show volume sliders when play is clicked
-        document.getElementById('volumeSlider').style.display = 'inline';
-        document.getElementById('musicSlider').style.display = 'inline';
+            // Play when play-icon is clicked
+            document.querySelector('.bi-play-circle').addEventListener('click', function() {
+                if (audio1.paused && audio2.paused) { // If audio is paused
+                    audio1.play();
+                    audio2.play();
+                    document.getElementById('selectedImage1').src = '../assets/img/kara/karao.png';
 
-        // Update video source based on selected item
-        var selectedVideoURL = document.querySelector('.list-group-item.active').getAttribute('data-video');
-        document.getElementById('selectedVideo').src = selectedVideoURL;
-        document.getElementById('selectedVideo').load(); // Reload the video to apply the new source
 
-        // Show the video container
-        document.querySelector('.video-container').style.display = 'block';
+                    // Initialize time display
+                    initializeTimeDisplay(audio1);
 
-        // Update video source based on selected item
-    var selectedVideoURL = document.querySelector('.list-group-item.active').getAttribute('data-video');
-    document.getElementById('selectedVideo').src = selectedVideoURL;
-    document.getElementById('selectedVideo').load(); // Reload the video to apply the new source
+                    // Show volume sliders when play is clicked
+                    document.getElementById('volumeSlider').style.display = 'inline';
+                    document.getElementById('musicSlider').style.display = 'inline';
 
-    // Show the video container
-    document.querySelector('.video-container').style.display = 'block';
+                    // Update video source based on selected item
+                    var selectedVideoURL = document.querySelector('.list-group-item.active').getAttribute(
+                        'data-video');
+                    document.getElementById('selectedVideo').src = selectedVideoURL;
+                    document.getElementById('selectedVideo').load(); // Reload the video to apply the new source
 
-    // Start playing the video
-    document.getElementById('selectedVideo').play();
+                    // Show the video container
+                    document.querySelector('.video-container').style.display = 'block';
 
-    // Retrieve the stored playback position from the data attribute
-    var storedTime = parseFloat(document.getElementById('selectedVideo').getAttribute('data-current-time'));
-        document.getElementById('selectedVideo').currentTime = storedTime;
+                    // Update video source based on selected item
+                    var selectedVideoURL = document.querySelector('.list-group-item.active').getAttribute(
+                        'data-video');
+                    document.getElementById('selectedVideo').src = selectedVideoURL;
+                    document.getElementById('selectedVideo').load(); // Reload the video to apply the new source
 
-        document.getElementById('selectedVideo').play();
+                    // Show the video container
+                    document.querySelector('.video-container').style.display = 'block';
 
-        
-      
-           
-        // Change color of play button to gray
-        this.style.color = 'gray';
+                    // Start playing the video
+                    document.getElementById('selectedVideo').play();
 
-        // Reset color of pause button to red
-        document.querySelector('.bi-pause-circle').style.color = 'red';
-    } else { // If audio is playing
-        // Do nothing or handle continuation from pause
-    }
-});
+                    // Retrieve the stored playback position from the data attribute
+                    var storedTime = parseFloat(document.getElementById('selectedVideo').getAttribute(
+                        'data-current-time'));
+                    document.getElementById('selectedVideo').currentTime = storedTime;
 
-// Function to initialize time display
-function initializeTimeDisplay(audio) {
-    // Update the displayed total time of the audio
-    var totalTime = audio.duration;
-    var minutes = Math.floor(totalTime / 60);
-    var seconds = Math.floor(totalTime % 60);
-    var totalTimeDisplay = document.getElementById('totalTimeDisplay');
-    totalTimeDisplay.textContent = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
-
-    // Update the displayed current time of the audio
-    audio.addEventListener('timeupdate', function() {
-        var currentTime = audio.currentTime;
-        var minutes = Math.floor(currentTime / 60);
-        var seconds = Math.floor(currentTime % 60);
-        var currentTimeDisplay = document.getElementById('currentTimeDisplay');
-        currentTimeDisplay.textContent = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
-    });
-}
+                    document.getElementById('selectedVideo').play();
 
 
 
-    // Pause when pause-icon is clicked
-    document.querySelector('.bi-pause-circle').addEventListener('click', function() {
-        if (!audio1.paused && !audio2.paused) { // If audio is playing
-            audio1.pause(); // Pause audio
-            audio2.pause();
-            
-           // Pause video and store the current playback position
-        var currentVideoTime = document.getElementById('selectedVideo').currentTime;
-        document.getElementById('selectedVideo').pause();
 
-        // Store the current playback position in a data attribute
-        document.getElementById('selectedVideo').setAttribute('data-current-time', currentVideoTime);
+                    // Change color of play button to gray
+                    this.style.color = 'gray';
 
-        // Change color of pause button to gray
-            this.style.color = 'gray';
+                    // Reset color of pause button to red
+                    document.querySelector('.bi-pause-circle').style.color = 'red';
+                } else { // If audio is playing
+                    // Do nothing or handle continuation from pause
+                }
+            });
 
-            // Reset color of play button to red
-            document.querySelector('.bi-play-circle').style.color = 'red';
+            // Function to initialize time display
+            function initializeTimeDisplay(audio) {
+                // Update the displayed total time of the audio
+                var totalTime = audio.duration;
+                var minutes = Math.floor(totalTime / 60);
+                var seconds = Math.floor(totalTime % 60);
+                var totalTimeDisplay = document.getElementById('totalTimeDisplay');
+                totalTimeDisplay.textContent = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+
+                // Update the displayed current time of the audio
+                audio.addEventListener('timeupdate', function() {
+                    var currentTime = audio.currentTime;
+                    var minutes = Math.floor(currentTime / 60);
+                    var seconds = Math.floor(currentTime % 60);
+                    var currentTimeDisplay = document.getElementById('currentTimeDisplay');
+                    currentTimeDisplay.textContent = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+                });
+            }
+
+
+
+            // Pause when pause-icon is clicked
+            document.querySelector('.bi-pause-circle').addEventListener('click', function() {
+                if (!audio1.paused && !audio2.paused) { // If audio is playing
+                    audio1.pause(); // Pause audio
+                    audio2.pause();
+
+                    // Pause video and store the current playback position
+                    var currentVideoTime = document.getElementById('selectedVideo').currentTime;
+                    document.getElementById('selectedVideo').pause();
+
+                    // Store the current playback position in a data attribute
+                    document.getElementById('selectedVideo').setAttribute('data-current-time',
+                        currentVideoTime);
+
+                    // Change color of pause button to gray
+                    this.style.color = 'gray';
+
+                    // Reset color of play button to red
+                    document.querySelector('.bi-play-circle').style.color = 'red';
+                }
+            });
         }
-    });
-}
 
 
-    // Function to reset audio playback
-    function resetAudio() {
-        if (audio1 && audio2) {
-            audio1.pause();
-            audio1.currentTime = 0; // Reset audio playback position to the beginning
-            audio2.pause();
-            audio2.currentTime = 0;
+        // Function to reset audio playback
+        function resetAudio() {
+            if (audio1 && audio2) {
+                audio1.pause();
+                audio1.currentTime = 0; // Reset audio playback position to the beginning
+                audio2.pause();
+                audio2.currentTime = 0;
+            }
         }
-    }
 
-    function resetVideo() {
-    var video = document.getElementById('selectedVideo');
-    video.pause();  // หยุดการเล่น
-    video.currentTime = 0;  // กลับไปยังจุดเริ่มต้น
-}
+        function resetVideo() {
+            var video = document.getElementById('selectedVideo');
+            video.pause(); // หยุดการเล่น
+            video.currentTime = 0; // กลับไปยังจุดเริ่มต้น
+        }
 
 
-    var listItems = document.querySelectorAll('.list-group-item');
+        var listItems = document.querySelectorAll('.list-group-item');
 
-    listItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-        listItems.forEach(function(li) {
-            li.classList.remove('active');
+        listItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                listItems.forEach(function(li) {
+                    li.classList.remove('active');
+                });
+                this.classList.add('active');
+                var imageURL = this.getAttribute('data-image');
+                document.getElementById('selectedImage1').src = imageURL;
+
+                // Reset video playback
+
+                // Remove stored playback position data attribute
+                document.getElementById('selectedVideo').removeAttribute('data-current-time');
+                resetVideo();
+
+                // Update video source based on selected item
+                var selectedVideoURL = this.getAttribute('data-video');
+                document.getElementById('selectedVideo').src = selectedVideoURL;
+                document.getElementById('selectedVideo')
+                    .load(); // Reload the video to apply the new source
+                document.getElementById('selectedVideo').play(); // Start playing the video
+
+                // ลบวีดีโอของรายการเก่าที่แสดงในคอลัมน์ขวา
+                document.getElementById('selectedVideo').src = '';
+
+                // Reset audio playback before playing the selected audio
+                resetAudio();
+
+                // Reset sliders to default values
+                document.getElementById('volumeSlider').value = 100; // Default volume
+                document.getElementById('musicSlider').value = 50; // Default music balance
+
+
+                // Play the selected audio
+                playAudio(this.getAttribute('data-audio1'), this.getAttribute('data-audio2'));
+
+                // Reset color of both buttons to red
+                document.querySelector('.bi-play-circle').style.color = 'red';
+                document.querySelector('.bi-pause-circle').style.color = 'red';
+
+                // Hide sliders
+                document.getElementById('volumeSlider').style.display = 'none';
+                document.getElementById('musicSlider').style.display = 'none';
+
+                // Hide time display
+                document.querySelector('.timesong').style.display = 'none';
+            });
         });
-        this.classList.add('active');
-        var imageURL = this.getAttribute('data-image');
-        document.getElementById('selectedImage1').src = imageURL;
 
-   // Reset video playback
+        // Event listener for icon play
+        document.querySelector('.bi-play-circle').addEventListener('click', function() {
+            // Show volume sliders when play is clicked
+            document.getElementById('volumeSlider').style.display = 'inline';
+            document.getElementById('musicSlider').style.display = 'inline';
 
-   // Remove stored playback position data attribute
-   document.getElementById('selectedVideo').removeAttribute('data-current-time');
-   resetVideo();
+            // Show video when play is clicked
+            document.querySelector('.video-container').style.display = 'inline';
 
-   // Update video source based on selected item
-   var selectedVideoURL = this.getAttribute('data-video');
-        document.getElementById('selectedVideo').src = selectedVideoURL;
-        document.getElementById('selectedVideo').load(); // Reload the video to apply the new source
-        document.getElementById('selectedVideo').play(); // Start playing the video
-
-// ลบวีดีโอของรายการเก่าที่แสดงในคอลัมน์ขวา
-document.getElementById('selectedVideo').src = '';
-
-// Reset audio playback before playing the selected audio
-resetAudio();
-
-         // Reset sliders to default values
-         document.getElementById('volumeSlider').value = 100;  // Default volume
-        document.getElementById('musicSlider').value = 50;    // Default music balance
-
-
-        // Play the selected audio
-        playAudio(this.getAttribute('data-audio1'), this.getAttribute('data-audio2'));
-
-        // Reset color of both buttons to red
-        document.querySelector('.bi-play-circle').style.color = 'red';
-        document.querySelector('.bi-pause-circle').style.color = 'red';
-
-        // Hide sliders
-        document.getElementById('volumeSlider').style.display = 'none';
-        document.getElementById('musicSlider').style.display = 'none';
-
-        // Hide time display
-        document.querySelector('.timesong').style.display = 'none';
-    });
-});
-
-// Event listener for icon play
-document.querySelector('.bi-play-circle').addEventListener('click', function() {
-    // Show volume sliders when play is clicked
-    document.getElementById('volumeSlider').style.display = 'inline';
-    document.getElementById('musicSlider').style.display = 'inline';
-
-    // Show video when play is clicked
-    document.querySelector('.video-container').style.display = 'inline';
-
-    // Initialize time display
-    document.querySelector('.timesong').style.display = 'inline';
-});
+            // Initialize time display
+            document.querySelector('.timesong').style.display = 'inline';
+        });
 
 
 
-    // Function to adjust volume
-    function adjustVolume(type) {
-        var volumeValue = document.getElementById(type === 'volume' ? 'volumeSlider' : 'musicSlider').value;
-        if (type === 'volume') {
-            audio1.volume = volumeValue / 100;
-            audio2.volume = volumeValue / 100;
-        } else if (type === 'music') {
-            // Adjust music volume accordingly
+        // Function to adjust volume
+        function adjustVolume(type) {
+            var volumeValue = document.getElementById(type === 'volume' ? 'volumeSlider' : 'musicSlider').value;
+            if (type === 'volume') {
+                audio1.volume = volumeValue / 100;
+                audio2.volume = volumeValue / 100;
+            } else if (type === 'music') {
+                // Adjust music volume accordingly
+            }
         }
-    }
-
-</script>
+        </script>
 
 
 
@@ -625,30 +662,29 @@ document.querySelector('.bi-play-circle').addEventListener('click', function() {
 
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
- 
-
-  <!-- Vendor JS Files -->
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
+        <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
 
 
-  <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/karaoke.js"></script>
-  <script src="../assets/js/lyrics.js"></script>
-  <script src="../assets/js/color.js"></script>
+
+        <!-- Vendor JS Files -->
+        <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/vendor/aos/aos.js"></script>
+        <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+
+        <!-- Template Main JS File -->
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/karaoke.js"></script>
+        <script src="../assets/js/lyrics.js"></script>
+        <script src="../assets/js/color.js"></script>
 </body>
 
 </html>
-
-

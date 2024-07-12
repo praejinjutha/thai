@@ -9,6 +9,10 @@ class Game_controller extends CI_Controller
         $this->load->database();
         $this->load->model('GameLearningThai_model');
         $this->load->helper(array('form', 'url', 'text'));
+        $this->load->library('session');
+        if (!$this->session->userdata('is_logged_in')) {
+            redirect(site_url('dashboard'));
+        }
     }
 
     public function index()

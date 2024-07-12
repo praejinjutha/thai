@@ -109,8 +109,12 @@ $themes = base_url();
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="<?= site_url('dashboard') ?>" class="fw-bold">หน้าหลัก</a></li>
-                    <li><a href="<?= site_url('Lesson') ?>" class="active fw-bold">บทเรียน</a></li>
+
+                    <span style="margin-right: 30px; font-weight: bold; font-size: 22px">
+                        <i class="fa-regular fa-user"></i> <?= $this->session->userdata('Name'); ?>
+                    </span>
+                    <li><a href="<?= site_url('auth/logout') ?>" class="active">ออกจากระบบ</a></li>
+                </ul>
             </nav>
         </div>
 
@@ -130,9 +134,10 @@ $themes = base_url();
             <div class="col-8 text-end pe-5">
                 <a href="<?= site_url('Student/StudentImport') ?>" style="padding: 7px 10px; background-color: #8c6239; color: white; border: none; 
                   border-radius: 5px; cursor: pointer;font-size: 22px; font-family: Thasadith; margin-right: 5px;">
-                  นำเข้าข้อมูลจาก Excel
+                    นำเข้าข้อมูลจาก Excel
                 </a>
-                <button style="padding: 5px 10px; background-color: #2aa5df; color: white; border: none; border-radius: 5px; cursor: pointer;font-size: 22px;"
+                <button
+                    style="padding: 5px 10px; background-color: #2aa5df; color: white; border: none; border-radius: 5px; cursor: pointer;font-size: 22px;"
                     data-toggle="modal" data-target="#AddStuden">
                     เพิ่มชื่อนักเรียน
                 </button>
@@ -207,89 +212,89 @@ $themes = base_url();
                 <span class="fs-3 fw-bold" id="exampleModalLongTitle">เพิ่มชื่อนักเรียน</span>
             </div>
             <form action="" method="POST" id="InsertStudent" role="form">
-              <div class="modal-body">
-                  <div class="row">
-                      <div class="col">
-                          <span class="fw-bold fs-5">ปีการศึกษา</span>
-                          <select class="form-select fw-bold" name="AcYear" id="AcYear" required>
-                              <option class="fnz-select" value=""></option>
-                              <?php
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <span class="fw-bold fs-5">ปีการศึกษา</span>
+                            <select class="form-select fw-bold" name="AcYear" id="AcYear" required>
+                                <option class="fnz-select" value=""></option>
+                                <?php
                           foreach ($loopYear as $row => $Year) {
                         ?>
-                              <option value="<?= $Year ?>" class="fnz-select"><?= $Year ?></option>
-                              <?php
+                                <option value="<?= $Year ?>" class="fnz-select"><?= $Year ?></option>
+                                <?php
                           }
                         ?>
-                          </select>
-                      </div>
-                      <div class="col">
-                          <span class="fw-bold fs-5">รหัสประจำตัว</span>
-                          <input type="text" class="form-control w-100 fw-bold" name="StudentNo" id="StudentNo"
-                              style="margin: 0; padding: .375rem 2.25rem .375rem .75rem;" required>
-                      </div>
-                      <div class="col">
-                          <span class="fw-bold fs-5">คำนำหน้า</span>
-                          <select class="form-select fw-bold" name="Titlename" id="Titlename" required>
-                              <option class="fnz-select" value=""></option>
-                              <option class="fnz-select" value="เด็กชาย">เด็กชาย</option>
-                              <option class="fnz-select" value="เด็กหญิง">เด็กหญิง</option>
-                              <option class="fnz-select" value="นาย">นาย</option>
-                              <option class="fnz-select" value="นางสาว">นางสาว</option>
-                          </select>
-                      </div>
-                  </div>
-                  <div class="row mt-4">
-                      <div class="col">
-                          <span class="fw-bold fs-5">ชื่อ</span>
-                          <input type="text" class="form-control w-100 fw-bold" name="Firstname" id="Firstname"
-                              style="margin: 0; padding: .375rem 2.25rem .375rem .75rem;" required>
-                      </div>
-                      <div class="col">
-                          <span class="fw-bold fs-5">นามสกุล</span>
-                          <input type="text" class="form-control w-100 fw-bold" name="Lastname" id="Lastname"
-                              style="margin: 0; padding: .375rem 2.25rem .375rem .75rem;" required>
-                      </div>
-                      <div class="col">
-                          <span class="fw-bold fs-5">เพศ</span>
-                          <select class="form-select fw-bold" name="Gender" id="Gender" required>
-                              <option class="fnz-select" value=""></option>
-                              <option class="fnz-select" value="ช">ชาย</option>
-                              <option class="fnz-select" value="ญ">หญิง</option>
-                          </select>
-                      </div>
-                  </div>
-                  <div class="row mt-4">
-                      <div class="col">
-                          <span class="fw-bold fs-5">ระดับชั้น</span>
-                          <select class="form-select fw-bold" name="AClassYear" id="AClassYear" required>
-                              <option class="fnz-select" value=""></option>
-                              <option class="fnz-select" value="อ.1">อ.1</option>
-                              <option class="fnz-select" value="อ.2">อ.2</option>
-                              <option class="fnz-select" value="อ.3">อ.3</option>
-                              <option class="fnz-select" value="ป.1">ป.1</option>
-                              <option class="fnz-select" value="ป.2">ป.2</option>
-                              <option class="fnz-select" value="ป.3">ป.3</option>
-                              <option class="fnz-select" value="ป.4">ป.4</option>
-                              <option class="fnz-select" value="ป.5">ป.5</option>
-                              <option class="fnz-select" value="ป.6">ป.6</option>
-                          </select>
-                      </div>
-                      <div class="col">
-                          <span class="fw-bold fs-5">ห้อง</span>
-                          <input type="text" class="form-control w-100 fw-bold" name="ARoom" id="ARoom"
-                              style="margin: 0; padding: .375rem 2.25rem .375rem .75rem;" required>
-                      </div>
-                      <div class="col">
-                          <span class="fw-bold fs-5">วันเดือนปีเกิด</span>
-                          <input type="date" class="form-control w-100 fw-bold" name="Birthdate" id="Birthdate"
-                              style="margin: 0;" required>
-                      </div>
-                  </div>
-              </div>
-              <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary fs-5">บันทึก</button>
-                  <button type="button" class="btn btn-danger fs-5" data-dismiss="modal">ยกเลิก</button>
-              </div>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <span class="fw-bold fs-5">รหัสประจำตัว</span>
+                            <input type="text" class="form-control w-100 fw-bold" name="StudentNo" id="StudentNo"
+                                style="margin: 0; padding: .375rem 2.25rem .375rem .75rem;" required>
+                        </div>
+                        <div class="col">
+                            <span class="fw-bold fs-5">คำนำหน้า</span>
+                            <select class="form-select fw-bold" name="Titlename" id="Titlename" required>
+                                <option class="fnz-select" value=""></option>
+                                <option class="fnz-select" value="เด็กชาย">เด็กชาย</option>
+                                <option class="fnz-select" value="เด็กหญิง">เด็กหญิง</option>
+                                <option class="fnz-select" value="นาย">นาย</option>
+                                <option class="fnz-select" value="นางสาว">นางสาว</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <span class="fw-bold fs-5">ชื่อ</span>
+                            <input type="text" class="form-control w-100 fw-bold" name="Firstname" id="Firstname"
+                                style="margin: 0; padding: .375rem 2.25rem .375rem .75rem;" required>
+                        </div>
+                        <div class="col">
+                            <span class="fw-bold fs-5">นามสกุล</span>
+                            <input type="text" class="form-control w-100 fw-bold" name="Lastname" id="Lastname"
+                                style="margin: 0; padding: .375rem 2.25rem .375rem .75rem;" required>
+                        </div>
+                        <div class="col">
+                            <span class="fw-bold fs-5">เพศ</span>
+                            <select class="form-select fw-bold" name="Gender" id="Gender" required>
+                                <option class="fnz-select" value=""></option>
+                                <option class="fnz-select" value="ช">ชาย</option>
+                                <option class="fnz-select" value="ญ">หญิง</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <span class="fw-bold fs-5">ระดับชั้น</span>
+                            <select class="form-select fw-bold" name="AClassYear" id="AClassYear" required>
+                                <option class="fnz-select" value=""></option>
+                                <option class="fnz-select" value="อ.1">อ.1</option>
+                                <option class="fnz-select" value="อ.2">อ.2</option>
+                                <option class="fnz-select" value="อ.3">อ.3</option>
+                                <option class="fnz-select" value="ป.1">ป.1</option>
+                                <option class="fnz-select" value="ป.2">ป.2</option>
+                                <option class="fnz-select" value="ป.3">ป.3</option>
+                                <option class="fnz-select" value="ป.4">ป.4</option>
+                                <option class="fnz-select" value="ป.5">ป.5</option>
+                                <option class="fnz-select" value="ป.6">ป.6</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <span class="fw-bold fs-5">ห้อง</span>
+                            <input type="text" class="form-control w-100 fw-bold" name="ARoom" id="ARoom"
+                                style="margin: 0; padding: .375rem 2.25rem .375rem .75rem;" required>
+                        </div>
+                        <div class="col">
+                            <span class="fw-bold fs-5">วันเดือนปีเกิด</span>
+                            <input type="date" class="form-control w-100 fw-bold" name="Birthdate" id="Birthdate"
+                                style="margin: 0;" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary fs-5">บันทึก</button>
+                    <button type="button" class="btn btn-danger fs-5" data-dismiss="modal">ยกเลิก</button>
+                </div>
             </form>
         </div>
     </div>
