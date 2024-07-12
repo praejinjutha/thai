@@ -13,6 +13,9 @@ class Student extends CI_Controller
         $this->load->model('Student_model');
         $this->load->helper(array('form', 'url', 'text', 'my_helper'));
         $this->load->library('session');
+        if (!$this->session->userdata('is_logged_in')) {
+            redirect(site_url('dashboard'));
+        }
     }
 
     public function index()

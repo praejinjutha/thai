@@ -76,8 +76,12 @@ $themes = base_url();
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="<?= site_url('dashboard') ?>" class="fw-bold">หน้าหลัก</a></li>
-                    <li><a href="<?= site_url('Lesson') ?>" class="active fw-bold">บทเรียน</a></li>
+
+                    <span style="margin-right: 30px; font-weight: bold; font-size: 22px">
+                        <i class="fa-regular fa-user"></i> <?= $this->session->userdata('Name'); ?>
+                    </span>
+                    <li><a href="<?= site_url('auth/logout') ?>" class="active">ออกจากระบบ</a></li>
+                </ul>
             </nav>
         </div>
 
@@ -174,40 +178,50 @@ function get_EvaluationForm() {
     let ClassYear = $('#ClassYear').val();
     let Room = $('#Room').val();
     let table_body = $('#tbl_EvaluationForm tbody');
-    console.log(Type);
+
     $.ajax({
         url: "<?= site_url('Estimate/get_EvaluationForm') ?>",
         method: "POST",
-        data: {
-            Type: Type,
-            ClassYear: ClassYear,
-            Room: Room
-        },
+        data: { Type, ClassYear, Room },
         dataType: 'json',
-        success: function(data) {
+        success: function(data) { console.log(data);
             table_body.html('');
             if (data.length === 0) {
                 let table_row = `
                     <tr>
-                        <td colspan="8" valign="middle" style="height:100px;" class="text-center fs-4"> ไม่พบข้อมูลคะแนน </td>
+                        <td colspan="8" valign="middle" style="height:100px;" class="text-center fs-4">ไม่พบข้อมูลคะแนน</td>
                     </tr>`;
                 table_body.append(table_row);
             } else {
                 $.each(data, function(index, row) {
+                    let CScore = parseInt(row.CScore) || 0;
+                    let TScore = parseInt(row.TScore) || 0;
+                    let WScore = parseInt(row.WScore) || 0;
+                    let SScore = parseInt(row.SScore) || 0;
+                    let RScore = parseInt(row.RScore) || 0;
+                    let totalScore = CScore + TScore + WScore + SScore + RScore;
                     let table_row = `<tr class="fs-4">
-                            <td>${row.id_user || ''}</td>
-                            <td align="left">${row.FullName || ''}${row.Name || ''}</td>
-                            <td>${row.CScore || 0}</td>
-                            <td>${row.TScore || 0}</td>
-                            <td>${row.WScore || 0}</td>
-                            <td>${row.SScore || 0}</td>
-                            <td>${row.RScore || 0}</td>
-                            <td>${0 + row.TScore + 0 + 0 + 0}</td>
-                        </tr>`;
+                        <td>${row.id_user || ''}</td>
+                        <td align="left">${row.FullName || ''}${row.Name || ''}</td>
+                        <td>${CScore}</td>
+                        <td>${TScore}</td>
+                        <td>${WScore}</td>
+                        <td>${SScore}</td>
+                        <td>${RScore}</td>
+                        <td>${totalScore}</td>
+                    </tr>`;
                     table_body.append(table_row);
                 });
             }
+        },
+        error: function() {
+            swal.fire({
+                icon: 'error',
+                title: 'เกิดข้อผิดพลาด',
+                type: 'error'
+            });
         }
     });
 }
+
 </script>

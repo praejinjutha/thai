@@ -99,8 +99,11 @@ $themes =  base_url();
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="<?= site_url('dashboard') ?>">หน้าหลัก</a></li>
-                    <li><a href="<?= site_url('Lesson') ?>" class="active">บทเรียน</a></li>
+                    <span style="margin-right: 30px; font-weight: bold; font-size: 22px">
+                        <i class="fa-regular fa-user"></i> <?= $this->session->userdata('Name'); ?>
+                    </span>
+                    <li><a href="<?= site_url('auth/logout') ?>" class="active">ออกจากระบบ</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -134,18 +137,23 @@ $themes =  base_url();
                     <input type="file" class="form-control mb-3" name="Excel_file" id="Excel_file"
                         onchange="getDataExcel()">
                     <p style="font-family: Thasadith; font-weight: 600; color: red">** หมายเหตุ</p>
-                    <p style="font-family: Thasadith; font-weight: 600; color: red">คำนำหน้า ได้แก่ เด็กชาย, เด็กหญิง, นาย, นางสาว</p>
-                    <p style="font-family: Thasadith; font-weight: 600; color: red">ชั้น ได้แก่ อ.1, อ.2, อ.3, ป.1, ป.2, ป.3, ป.4, ป.5, ป.6</p>
+                    <p style="font-family: Thasadith; font-weight: 600; color: red">คำนำหน้า ได้แก่ เด็กชาย, เด็กหญิง,
+                        นาย, นางสาว</p>
+                    <p style="font-family: Thasadith; font-weight: 600; color: red">ชั้น ได้แก่ อ.1, อ.2, อ.3, ป.1, ป.2,
+                        ป.3, ป.4, ป.5, ป.6</p>
                     <p style="font-family: Thasadith; font-weight: 600; color: red">เกิดวันที่ ได้แก่ 01/01/2564</p>
                     <div class="title1 mt-3">
                         <p style="font-family: Thasadith; font-weight: 900;">ขั้นตอนการนำเข้าข้อมูลนักเรียนจากไฟล์ Excel
                             เข้าระบบ</p>
                         <p style="font-family: Thasadith; font-weight: 600;">1.ดาวน์โหลดไฟล์ตัวอย่างนำเข้าข้อมูล
                         </p>
-                        <p style="font-family: Thasadith; font-weight: 600;">2.กรอกข้อมูลนักเรียนที่ต้องการแล้วบันทึกไฟล์ Excel</p>
-                        <p style="font-family: Thasadith; font-weight: 600;">3.คลิกเลือกไฟล์ Excel ที่มีการกรอกข้อมูลนักเรียนไว้เเล้ว</p>
+                        <p style="font-family: Thasadith; font-weight: 600;">
+                            2.กรอกข้อมูลนักเรียนที่ต้องการแล้วบันทึกไฟล์ Excel</p>
+                        <p style="font-family: Thasadith; font-weight: 600;">3.คลิกเลือกไฟล์ Excel
+                            ที่มีการกรอกข้อมูลนักเรียนไว้เเล้ว</p>
                         <p style="font-family: Thasadith; font-weight: 600;">4.คลิกปุ่ม เปิด (open)</p>
-                        <p style="font-family: Thasadith; font-weight: 600;">5.ตรวจสอบข้อมูลนักเรียนที่เพิ่มบนหน้าตาราง</p>
+                        <p style="font-family: Thasadith; font-weight: 600;">5.ตรวจสอบข้อมูลนักเรียนที่เพิ่มบนหน้าตาราง
+                        </p>
                         <p style="font-family: Thasadith; font-weight: 600;">6.คลิกปุ่มบันทึก</p>
                     </div>
 
@@ -198,13 +206,20 @@ function getDataExcel() {
             let tableBody = "";
             $.each(jsonData, function(index, value) {
                 tableBody += "<tr>";
-                if (value[0]) tableBody += `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='StudentNo[]' value='${value[0]}' required></td>`;
-                if (value[1]) tableBody += `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='Titlename[]' value='${value[1]}' required></td>`;
-                if (value[2]) tableBody += `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='Firstname[]' value='${value[2]}' required></td>`;
-                if (value[3]) tableBody += `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='Lastname[]' value='${value[3]}' required></td>`;
-                if (value[4]) tableBody += `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='ClassYear[]' value='${value[4]}' required></td>`;
-                if (value[5]) tableBody += `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='Room[]' value='${value[5]}' required></td>`;
-                if (value[6]) tableBody += `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='Birthdate[]' value='${value[6]}' required></td>`;
+                if (value[0]) tableBody +=
+                    `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='StudentNo[]' value='${value[0]}' required></td>`;
+                if (value[1]) tableBody +=
+                    `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='Titlename[]' value='${value[1]}' required></td>`;
+                if (value[2]) tableBody +=
+                    `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='Firstname[]' value='${value[2]}' required></td>`;
+                if (value[3]) tableBody +=
+                    `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='Lastname[]' value='${value[3]}' required></td>`;
+                if (value[4]) tableBody +=
+                    `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='ClassYear[]' value='${value[4]}' required></td>`;
+                if (value[5]) tableBody +=
+                    `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='Room[]' value='${value[5]}' required></td>`;
+                if (value[6]) tableBody +=
+                    `<td><input type='text' class='form-control text-center w-100 fs-4' style="margin: 0;" name='Birthdate[]' value='${value[6]}' required></td>`;
                 tableBody += "</tr>";
             });
             $("#ShowExcelData tbody").html(tableBody);

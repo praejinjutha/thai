@@ -50,20 +50,11 @@ $themes =  base_url();
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-    <a href="<?= site_url('dashboard') ?>" class="logo d-flex align-items-center">
-    <img src="<?= $themes ?>assets/img/logo.png" alt="">
-</a>
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      <nav id="navbar" class="navbar">
-        <ul>
-        <li><a href="<?= site_url('dashboard') ?>" class="active">หน้าหลัก</a></li>
-          <li><a href="<?= site_url('Lesson') ?>">บทเรียน</a></li>
-
-        </ul>
-      </nav><!-- .navbar -->
+      <a href="<?= site_url('dashboard') ?>" class="logo d-flex align-items-center">
+        <img src="<?= $themes ?>assets/img/logo.png" alt="">
+      </a>
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <!-- ======= Hero Section ======= -->
 

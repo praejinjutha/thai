@@ -83,8 +83,12 @@ $themes = base_url();
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="<?= site_url('dashboard') ?>" class="fw-bold">หน้าหลัก</a></li>
-                    <li><a href="<?= site_url('Lesson') ?>" class="active fw-bold">บทเรียน</a></li>
+
+                    <span style="margin-right: 30px; font-weight: bold; font-size: 22px">
+                        <i class="fa-regular fa-user"></i> <?= $this->session->userdata('Name'); ?>
+                    </span>
+                    <li><a href="<?= site_url('auth/logout') ?>" class="active">ออกจากระบบ</a></li>
+                </ul>
             </nav>
         </div>
 
@@ -122,10 +126,12 @@ $themes = base_url();
                     <div class="story" onclick="loadVideo('ใบ้กตัญญู', this)">ใบ้กตัญญู</div>
                     <div class="story" onclick="loadVideo('มดน้อยจอมขยัน', this)">มดน้อยจอมขยัน</div>
                     <div class="story" onclick="loadVideo('ไม้เท้ายอดกตัญญู', this)">ไม้เท้ายอดกตัญญู</div>
-                    <div class="story" onclick="loadVideo('เศรษฐีเจ้าเล่ห์กับลูกสาวชาวนา', this)">เศรษฐีเจ้าเล่ห์กับลูกสาวชาวนา</div>
+                    <div class="story" onclick="loadVideo('เศรษฐีเจ้าเล่ห์กับลูกสาวชาวนา', this)">
+                        เศรษฐีเจ้าเล่ห์กับลูกสาวชาวนา</div>
                     <div class="story" onclick="loadVideo('สิงโตเบาปัญญา', this)">สิงโตเบาปัญญา</div>
                     <div class="story" onclick="loadVideo('สุนัขจิ้งจอกกับนกกระสา', this)">สุนัขจิ้งจอกกับนกกระสา</div>
-                    <div class="story" onclick="loadVideo('สุนัขจิ้งจอกอยากเป็นผู้นำ', this)">สุนัขจิ้งจอกอยากเป็นผู้นำ</div>
+                    <div class="story" onclick="loadVideo('สุนัขจิ้งจอกอยากเป็นผู้นำ', this)">สุนัขจิ้งจอกอยากเป็นผู้นำ
+                    </div>
                     <div class="story" onclick="loadVideo('หมากับเงา', this)">หมากับเงา</div>
                     <div class="story" onclick="loadVideo('หมู่บ้านเห็ดหอม', this)">หมู่บ้านเห็ดหอม</div>
                     <div class="story" onclick="loadVideo('หัวล้านชอบยอ', this)">หัวล้านชอบยอ</div>

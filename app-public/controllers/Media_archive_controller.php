@@ -7,6 +7,10 @@ class Media_archive_controller extends CI_Controller
     {
         parent::__construct();
         $this->load->helper(array('form', 'url', 'text'));
+        $this->load->library('session');
+        if (!$this->session->userdata('is_logged_in')) {
+            redirect(site_url('dashboard'));
+        }
     }
 
     public function index()

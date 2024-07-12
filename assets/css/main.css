@@ -347,11 +347,11 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color:white; /* สีข้อความเมื่อ hover */
+    color:white;
     background: #8c6239;
-    padding: 6px 20px;     /* ลดความสูงของขอบ */
+    padding: 6px 20px;    
     border-radius: 50px;
-    margin-right: 10px;   /*ความห่างระหว่างปุ่ม navbar*/
+    margin-right: 10px; 
     margin-left: 10px;
     
   }

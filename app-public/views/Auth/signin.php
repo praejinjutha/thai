@@ -31,6 +31,7 @@ $themes =  base_url();
     <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
     <!-- Template Main CSS File -->
     <link href="<?= $themes ?>assets/css/main.css" rel="stylesheet">
@@ -47,6 +48,36 @@ $themes =  base_url();
   ======================================================== -->
 </head>
 
+<style>
+.role {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.std-role,
+.tec-role {
+    display: flex;
+    align-items: center;
+    border: 1px solid #8c6239;
+    border-radius: 5px;
+    padding: 3px 15px;
+    cursor: pointer;
+}
+
+.std-role:hover,
+.tec-role:hover,
+.std-role.active,
+.tec-role.active {
+    background-color: #8c6239;
+    color: #ffffff;
+    border: 1px solid #8c6239;
+    border-radius: 5px;
+}
+</style>
 <body class="page-index">
 
     <!-- ======= Header ======= -->
@@ -55,15 +86,6 @@ $themes =  base_url();
             <a href="<?= site_url('dashboard') ?>" class="logo d-flex align-items-center">
                 <img src="<?= $themes ?>assets/img/logo.png" alt="">
             </a>
-            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a href="<?= site_url('dashboard') ?>" class="active">หน้าหลัก</a></li>
-                    <li><a href="<?= site_url('Lesson') ?>">บทเรียน</a></li>
-
-                </ul>
-            </nav><!-- .navbar -->
         </div>
     </header><!-- End Header -->
 
@@ -72,13 +94,46 @@ $themes =  base_url();
     <section id="hero" class="hero d-flex align-items-center">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3 mt-5">
+                <div class="col-xl-3">
+                    <div class="role">
+                        <div class="tec-role active" onclick="toggleActive(this)" name="role" value="teacher">
+                            <i class="fa-solid fa-user-tie me-2"></i>
+                            <span>ครู</span>
+                        </div>
+                        <div class="std-role" onclick="toggleActive(this)" name="role" value="student">
+                            <i class="fa-solid fa-user me-2"></i>
+                            <span>นักเรียน</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 mt-5" id="teacher">
                     <form action="<?= site_url('auth/signin') ?>" method="POST" class="form-horizontal">
                         <div class="col-12">
                             <label for="inputUsername">ชื่อผู้ใช้งาน</label>
                             <input type="text" class="form-control" id="username" name="username" required
                                 style="margin: 0; padding: .375rem .75rem; width: 100%;">
                             <label for="inputPassword" class="mt-3">รหัสผ่าน</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="col mt-3 text-end"> <a href="<?= site_url('auth/singupForm') ?>"
+                                style="color: #000000">ลงทะเบียนเข้าใช้งาน</a>
+                            <div class="col-md-12 mt-3">
+                                <button class="btn w-100" style="background: #8c6239; color: #ffff; font-size: 18px"
+                                    role="button">เข้าสู่ระบบ</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xl-3 mt-5 d-none" id="student">
+                    <form action="<?= site_url('auth/signinStd') ?>" method="POST" class="form-horizontal">
+                        <div class="col-12">
+                            <label for="inputUsername">เลขบัตรประชาชน</label>
+                            <input type="text" class="form-control" id="username" name="username" required
+                                style="margin: 0; padding: .375rem .75rem; width: 100%;">
+                            <label for="inputPassword" class="mt-3">เลขที่นักเรียน</label>
                             <input type="password" class="form-control" id="password" name="password" required>
                         </div>
                         <div class="col mt-3 text-end"> <a href="<?= site_url('auth/singupForm') ?>"
@@ -117,4 +172,23 @@ Swal.fire({
     confirmButtonText: 'close'
 })
 <?php endif; ?>
+
+function toggleActive(element) {
+    var activeElements = document.querySelectorAll('.role .active');
+    activeElements.forEach(function(active) {
+        active.classList.remove('active');
+    });
+
+    element.classList.add('active');
+
+    var teacher = document.getElementById('teacher');
+    var student = document.getElementById('student');
+    if (element.classList.contains('tec-role')) {
+        teacher.classList.remove('d-none');
+        student.classList.add('d-none');
+    } else if (element.classList.contains('std-role')) {
+        student.classList.remove('d-none');
+        teacher.classList.add('d-none');
+    }
+}
 </script>
