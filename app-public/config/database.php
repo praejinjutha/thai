@@ -96,6 +96,28 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
+$db['mode_database'] = array(
+    'dsn'   => '',
+    'hostname' => DB_HOSTMODE,
+    'username' => DB_UIDMODE,
+    'password' => DB_PASSWORDMODE,
+    'database' => DB_NAMEMODE,
+    'dbdriver' => 'sqlsrv',
+    'dbprefix' => '',
+    'pconnect' => FALSE,
+    'db_debug' => (ENVIRONMENT !== 'production'),
+    'cache_on' => FALSE,
+    'cachedir' => '',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
+    'swap_pre' => '',
+    'encrypt'  => FALSE,
+    'compress' => FALSE,
+    'stricton' => FALSE,
+    'failover' => array(),
+    'save_queries' => TRUE
+);
+
 $DNS = 'sqlsrv:server=' . DB_HOST . '; Database=' . DB_NAME . '';
 $db['pdo_db'] = array(
 	'dsn'	=> "$DNS",

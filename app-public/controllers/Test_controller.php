@@ -8,6 +8,7 @@ class Test_controller extends CI_Controller
         parent::__construct();
         $this->load->database();
         $this->load->model('Test_model');
+        $this->load->model('LogActivity_model');
         $this->load->helper(array('form', 'url', 'text'));
         $this->load->library('session');
         if (!$this->session->userdata('is_logged_in')) {
@@ -17,6 +18,9 @@ class Test_controller extends CI_Controller
 
     public function index()
     {
+        //----------------------- LOG ACTIVITY -----------------------------//
+        $this->LogActivity_model->InsertLog('เข้าเมนูคลังข้อสอบ');
+        //----------------------- LOG ACTIVITY -----------------------------//
 
         $this->data['view_file'] = 'Test/testpage';
         $this->load->view(THEMES, $this->data);
@@ -107,6 +111,11 @@ class Test_controller extends CI_Controller
         $results = $this->Test_model->Insert_Question($Data);
         
         if ($results) { 
+
+            //----------------------- LOG ACTIVITY -----------------------------//
+            $this->LogActivity_model->InsertLog('เพิ่มข้อสอบในเมนูคลังข้อสอบ');
+            //----------------------- LOG ACTIVITY -----------------------------//
+
             echo 'Success';
         } else {
             echo 'error';
@@ -137,6 +146,11 @@ class Test_controller extends CI_Controller
         $results = $this->Test_model->Update_Question($id, $Data);
         
         if ($results) { 
+
+            //----------------------- LOG ACTIVITY -----------------------------//
+            $this->LogActivity_model->InsertLog('แก้ไขข้อสอบในเมนูคลังข้อสอบ');
+            //----------------------- LOG ACTIVITY -----------------------------//
+
             echo 'Success';
         } else {
             echo 'error';
@@ -149,6 +163,11 @@ class Test_controller extends CI_Controller
 
         $results = $this->Test_model->Delete_Question($id);
         if ($results) {
+
+            //----------------------- LOG ACTIVITY -----------------------------//
+            $this->LogActivity_model->InsertLog('ลบข้อสอบในเมนูคลังข้อสอบ');
+            //----------------------- LOG ACTIVITY -----------------------------//
+
             echo 'Success';
         } else {
             echo 'error';

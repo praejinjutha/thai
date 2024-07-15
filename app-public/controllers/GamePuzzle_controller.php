@@ -8,6 +8,7 @@ class GamePuzzle_controller extends CI_Controller
         parent::__construct();
         $this->load->database();
         $this->load->model('GamePuzzle_model');
+        $this->load->model('LogActivity_model');
         $this->load->helper(array('form', 'url', 'text'));
         $this->load->library('session');
         if (!$this->session->userdata('is_logged_in')) {
@@ -17,6 +18,9 @@ class GamePuzzle_controller extends CI_Controller
 
     public function index()
     {
+        //----------------------- LOG ACTIVITY -----------------------------//
+        $this->LogActivity_model->InsertLog('เข้าเล่นเกมปริศนาทายคำ');
+        //----------------------- LOG ACTIVITY -----------------------------//
 
         $this->data['view_file'] = 'Game_Puzzle/gamepage';
         $this->load->view(THEMES, $this->data);

@@ -15,6 +15,9 @@ class Readcorrectly_controller extends CI_Controller
 
     public function index()
     {
+        //----------------------- LOG ACTIVITY -----------------------------//
+        $this->LogActivity_model->InsertLog('เข้าเมนูอ่านออกอ่านถูก');
+        //----------------------- LOG ACTIVITY -----------------------------//
 
         $this->data['view_file'] = 'Readcorrect/readcorrect';
         $this->load->view(THEMES, $this->data);

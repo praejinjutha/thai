@@ -15,6 +15,9 @@ class Readfluently_controller extends CI_Controller
 
     public function index()
     {
+        //----------------------- LOG ACTIVITY -----------------------------//
+        $this->LogActivity_model->InsertLog('เข้าเมนูอ่านเร็วอ่านคล่อง');
+        //----------------------- LOG ACTIVITY -----------------------------//
 
         $this->data['view_file'] = 'Readfluently/readfluently';
         $this->load->view(THEMES, $this->data);

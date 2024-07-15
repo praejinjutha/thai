@@ -11,6 +11,7 @@ class Student extends CI_Controller
         parent::__construct();
         $this->load->database();
         $this->load->model('Student_model');
+        $this->load->model('LogActivity_model');
         $this->load->helper(array('form', 'url', 'text', 'my_helper'));
         $this->load->library('session');
         if (!$this->session->userdata('is_logged_in')) {
@@ -20,6 +21,10 @@ class Student extends CI_Controller
 
     public function index()
     {
+        //----------------------- LOG ACTIVITY -----------------------------//
+        $this->LogActivity_model->InsertLog('เข้าเมนูข้อมูลนักเรียน');
+        //----------------------- LOG ACTIVITY -----------------------------//
+
         $this->data['getClassYear'] = $this->Student_model->get_ClassYear()->result();
         $this->data['getRoom'] = $this->Student_model->get_Room()->result();
         
@@ -92,6 +97,11 @@ class Student extends CI_Controller
         $result = $this->Student_model->Insert_Student($data);
 
         if ($result) {
+
+            //----------------------- LOG ACTIVITY -----------------------------//
+            $this->LogActivity_model->InsertLog('เพิ่มชื่อนักเรียนในเมนูข้อมูลนักเรียน');
+            //----------------------- LOG ACTIVITY -----------------------------//
+
             echo 'Success';
         } else {
             echo 'error';
@@ -202,6 +212,11 @@ class Student extends CI_Controller
         }
 
         if ($data) {
+            
+            //----------------------- LOG ACTIVITY -----------------------------//
+            $this->LogActivity_model->InsertLog('นำเข้าข้อมูลจาก Excel ในเมนูข้อมูลนักเรียน');
+            //----------------------- LOG ACTIVITY -----------------------------//
+
             echo 'success';
         } else {
             echo 'error';
