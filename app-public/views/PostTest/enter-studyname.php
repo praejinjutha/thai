@@ -114,7 +114,7 @@ body {
         </div>
         <div class="col-9 text-end">
             <img src="<?= $themes ?>assets/img/thai/page5/stat.png" class="score-stat" data-toggle="modal" data-target="#Stat">
-            <a href="<?= site_url('Test_controller') ?>"><img src="<?= $themes ?>assets/img/thai/page6/choicerole/home.png" alt="" class="btn-home"></a>
+            <a href="<?= site_url('PostTest_controller') ?>"><img src="<?= $themes ?>assets/img/thai/page6/choicerole/home.png" alt="" class="btn-home"></a>
             <a href="#" onclick="window.close();"><img src="<?= $themes ?>assets/img/thai/page3/exit.png" alt=""
                     class="btn-exit"></a>
         </div>
@@ -128,7 +128,7 @@ body {
                     <img src="<?= $themes ?>assets/img/thai/page5/btn-search.png" class="btn-search" data-toggle="modal" data-target="#Search">
                 </div>
             </div>
-            <form method="post" action="<?= site_url('Test_controller/study') ?>" enctype="multipart/form-data">
+            <form method="post" action="<?= site_url('PostTest_controller/study') ?>" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col d-flex justify-content-center align-items-center" style="margin-top: 5vh">
                         <input type="text" class="input-form" id="No" name="No" value="<?= isset($this->data['StudentNo']) ? $this->data['StudentNo'] : '' ?>" placeholder="กรอกรหัสประจําตัว">
@@ -243,7 +243,7 @@ function get_Stat() {
     let table_body = $('#tbl_Stat tbody');
 
     $.ajax({
-        url: "<?= site_url('Test_controller/get_Stat') ?>",
+        url: "<?= site_url('PostTest_controller/get_Stat') ?>",
         method: "POST",
         dataType: 'json',
         success: function(data) { 
@@ -294,7 +294,7 @@ document.getElementById('confirm').addEventListener('click', function(event) {
         if (!found) {
             alert('ไม่พบนักเรียน กรุณาตรวจสอบรหัสประจำตัวนักเรียน');
         } else {
-            var url = "<?= site_url('Test_controller/Testing?No=') ?>" + studentNo;
+            var url = "<?= site_url('PostTest_controller/PostTest?No=') ?>" + studentNo;
             window.location.href = url;
         }
     }

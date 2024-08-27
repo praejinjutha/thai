@@ -28,59 +28,57 @@ class Estimate_model extends CI_Model
 
     public function get_EvaluationForm()
     {
-        $this->db->select('ST.id_user');
+        $this->db->distinct()->select('ST.id_user');
         $this->db->select("CASE WHEN SU.Name IS NULL OR SU.Name = '' THEN ISNULL(SS.Titlename,'') + ' ' + ISNULL(SS.Firstname,'') + ' ' + ISNULL(SS.Lastname,'') ELSE SU.Name END AS FullName", FALSE);
-        $this->db->select('MAX(CAST(ST.score AS INTEGER)) AS TScore', FALSE);
+        $this->db->select('(SELECT MAX(CAST(ST2.score AS INT)) FROM Score_Thai ST2 WHERE ST2.id_game = 3 AND ST2.id_user = ST.id_user) AS PreScore', FALSE);
+        $this->db->select('(SELECT MAX(CAST(ST3.score AS INT)) FROM Score_Thai ST3 WHERE ST3.id_game = 4 AND ST3.id_user = ST.id_user) AS PostScore', FALSE);
         $this->db->from('Score_Thai ST');
         $this->db->join('SPL_AC_Student SS', 'SS.StudentNo = ST.id_user', 'LEFT');
         $this->db->join('SPL_LOG_UserData SU', 'SU.NationalID = ST.id_user', 'LEFT');
-        $this->db->where_in('ST.id_game', array(3, 4, 5, 6, 7));
-        $this->db->group_by('ST.id_user, SS.Titlename, SS.Firstname, SS.Lastname, SS.ClassYear, SS.Room, ST.unit, SU.Name');
+        $this->db->where('(SELECT MAX(CAST(ST2.score AS INT)) FROM Score_Thai ST2 WHERE ST2.id_game = 3 AND ST2.id_user = ST.id_user) IS NOT NULL');
+        $this->db->or_where('(SELECT MAX(CAST(ST3.score AS INT)) FROM Score_Thai ST3 WHERE ST3.id_game = 4 AND ST3.id_user = ST.id_user) IS NOT NULL');
         return $this->db->get();
     }
 
     public function get_EvaluationFormType($Type)
     {
-        $this->db->select('ST.id_user');
-        $this->db->select('CASE WHEN SU.Name IS NULL OR SU.Name = \'\' THEN ISNULL(SS.Titlename, \'\')+ \' \' + ISNULL(SS.Firstname, \'\')+ \' \' + ISNULL(SS.Lastname, \'\') ELSE SU.Name END AS FullName', FALSE);
-        $this->db->select('MAX(ST.score) AS TScore');
+        $this->db->distinct()->select('ST.id_user');
+        $this->db->select("CASE WHEN SU.Name IS NULL OR SU.Name = '' THEN ISNULL(SS.Titlename,'') + ' ' + ISNULL(SS.Firstname,'') + ' ' + ISNULL(SS.Lastname,'') ELSE SU.Name END AS FullName", FALSE);
+        $this->db->select('(SELECT MAX(CAST(ST2.score AS INT)) FROM Score_Thai ST2 WHERE ST2.id_game = 3 AND ST2.id_user = ST.id_user) AS PreScore', FALSE);
+        $this->db->select('(SELECT MAX(CAST(ST3.score AS INT)) FROM Score_Thai ST3 WHERE ST3.id_game = 4 AND ST3.id_user = ST.id_user) AS PostScore', FALSE);
         $this->db->from('Score_Thai ST');
         $this->db->join('SPL_AC_Student SS', 'SS.StudentNo = ST.id_user', 'LEFT');
         $this->db->join('SPL_LOG_UserData SU', 'SU.NationalID = ST.id_user', 'LEFT');
-        $this->db->where('ST.role', $Type);
-        $this->db->where_in('ST.id_game', array(3, 4, 5, 6, 7));
-        $this->db->group_by('ST.id_user, SS.Titlename, SS.Firstname, SS.Lastname, SS.ClassYear, SS.Room, ST.unit, SU.Name');
+        $this->db->where('(SELECT MAX(CAST(ST2.score AS INT)) FROM Score_Thai ST2 WHERE ST2.id_game = 3 AND ST2.id_user = ST.id_user AND ST.role = ' . $this->db->escape($Type) . ') IS NOT NULL', NULL, FALSE);
+        $this->db->or_where('(SELECT MAX(CAST(ST3.score AS INT)) FROM Score_Thai ST3 WHERE ST3.id_game = 4 AND ST3.id_user = ST.id_user AND ST.role = ' . $this->db->escape($Type) . ') IS NOT NULL', NULL, FALSE);
         return $this->db->get();
     }
 
     public function get_EvaluationFormTypeClassYear($Type, $ClassYear)
     {
-        $this->db->select('ST.id_user');
-        $this->db->select('CASE WHEN SU.Name IS NULL OR SU.Name = \'\' THEN ISNULL(SS.Titlename, \'\')+ \' \' + ISNULL(SS.Firstname, \'\')+ \' \' + ISNULL(SS.Lastname, \'\') ELSE SU.Name END AS FullName', FALSE);
-        $this->db->select('MAX(ST.score) AS TScore');
+        $this->db->distinct()->select('ST.id_user');
+        $this->db->select("CASE WHEN SU.Name IS NULL OR SU.Name = '' THEN ISNULL(SS.Titlename,'') + ' ' + ISNULL(SS.Firstname,'') + ' ' + ISNULL(SS.Lastname,'') ELSE SU.Name END AS FullName", FALSE);
+        $this->db->select('(SELECT MAX(CAST(ST2.score AS INT)) FROM Score_Thai ST2 WHERE ST2.id_game = 3 AND ST2.id_user = ST.id_user) AS PreScore', FALSE);
+        $this->db->select('(SELECT MAX(CAST(ST3.score AS INT)) FROM Score_Thai ST3 WHERE ST3.id_game = 4 AND ST3.id_user = ST.id_user) AS PostScore', FALSE);
         $this->db->from('Score_Thai ST');
         $this->db->join('SPL_AC_Student SS', 'SS.StudentNo = ST.id_user', 'LEFT');
         $this->db->join('SPL_LOG_UserData SU', 'SU.NationalID = ST.id_user', 'LEFT');
-        $this->db->where('ST.role', $Type);
-        $this->db->where('SS.ClassYear', $ClassYear);
-        $this->db->where_in('ST.id_game', array(3, 4, 5, 6, 7));
-        $this->db->group_by('ST.id_user, SS.Titlename, SS.Firstname, SS.Lastname, SS.ClassYear, SS.Room, ST.unit, SU.Name');
+        $this->db->where('(SELECT MAX(CAST(ST2.score AS INT)) FROM Score_Thai ST2 WHERE ST2.id_game = 3 AND ST2.id_user = ST.id_user AND ST.role = ' . $this->db->escape($Type) . ' AND SS.ClassYear = ' . $this->db->escape($ClassYear) . ') IS NOT NULL', NULL, FALSE);
+        $this->db->or_where('(SELECT MAX(CAST(ST3.score AS INT)) FROM Score_Thai ST3 WHERE ST3.id_game = 4 AND ST3.id_user = ST.id_user AND ST.role = ' . $this->db->escape($Type) . ' AND SS.ClassYear = ' . $this->db->escape($ClassYear) . ') IS NOT NULL', NULL, FALSE);
         return $this->db->get();
     }
 
     public function get_EvaluationFormAll($Type, $ClassYear, $Room)
     {
-        $this->db->select('ST.id_user');
-        $this->db->select('CASE WHEN SU.Name IS NULL OR SU.Name = \'\' THEN ISNULL(SS.Titlename, \'\')+ \' \' + ISNULL(SS.Firstname, \'\')+ \' \' + ISNULL(SS.Lastname, \'\') ELSE SU.Name END AS FullName', FALSE);
-        $this->db->select('MAX(ST.score) AS TScore');
+        $this->db->distinct()->select('ST.id_user');
+        $this->db->select("CASE WHEN SU.Name IS NULL OR SU.Name = '' THEN ISNULL(SS.Titlename,'') + ' ' + ISNULL(SS.Firstname,'') + ' ' + ISNULL(SS.Lastname,'') ELSE SU.Name END AS FullName", FALSE);
+        $this->db->select('(SELECT MAX(CAST(ST2.score AS INT)) FROM Score_Thai ST2 WHERE ST2.id_game = 3 AND ST2.id_user = ST.id_user) AS PreScore', FALSE);
+        $this->db->select('(SELECT MAX(CAST(ST3.score AS INT)) FROM Score_Thai ST3 WHERE ST3.id_game = 4 AND ST3.id_user = ST.id_user) AS PostScore', FALSE);
         $this->db->from('Score_Thai ST');
         $this->db->join('SPL_AC_Student SS', 'SS.StudentNo = ST.id_user', 'LEFT');
         $this->db->join('SPL_LOG_UserData SU', 'SU.NationalID = ST.id_user', 'LEFT');
-        $this->db->where('ST.role', $Type);
-        $this->db->where('SS.ClassYear', $ClassYear);
-        $this->db->where('SS.Room', $Room);
-        $this->db->where_in('ST.id_game', array(3, 4, 5, 6, 7));
-        $this->db->group_by('ST.id_user, SS.Titlename, SS.Firstname, SS.Lastname, SS.ClassYear, SS.Room, ST.unit, SU.Name');
+        $this->db->where('(SELECT MAX(CAST(ST2.score AS INT)) FROM Score_Thai ST2 WHERE ST2.id_game = 3 AND ST2.id_user = ST.id_user AND ST.role = ' . $this->db->escape($Type) . ' AND SS.ClassYear = ' . $this->db->escape($ClassYear) . ' AND SS.Room = ' . $this->db->escape($Room) . ') IS NOT NULL', NULL, FALSE);
+        $this->db->or_where('(SELECT MAX(CAST(ST3.score AS INT)) FROM Score_Thai ST3 WHERE ST3.id_game = 4 AND ST3.id_user = ST.id_user AND ST.role = ' . $this->db->escape($Type) . ' AND SS.ClassYear = ' . $this->db->escape($ClassYear) . ' AND SS.Room = ' . $this->db->escape($Room) . ') IS NOT NULL', NULL, FALSE);
         return $this->db->get();
     }
 }

@@ -8,6 +8,7 @@ class Estimate extends CI_Controller
         parent::__construct();
         $this->load->database();
         $this->load->model('Estimate_model');
+        $this->load->model('LogActivity_model');
         $this->load->helper(array('form', 'url', 'text'));
         $this->load->library('session');
         if (!$this->session->userdata('is_logged_in')) {
@@ -17,6 +18,10 @@ class Estimate extends CI_Controller
 
     public function index()
     {
+        //----------------------- LOG ACTIVITY -----------------------------//
+        $this->LogActivity_model->InsertLog('เข้าเมนูแบบประเมินผล');
+        //----------------------- LOG ACTIVITY -----------------------------//
+
         $this->data['getClassYear'] = $this->Estimate_model->get_ClassYear()->result();
         $this->data['getRoom'] = $this->Estimate_model->get_Room()->result();
 

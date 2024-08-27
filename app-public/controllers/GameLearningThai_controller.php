@@ -8,6 +8,7 @@ class GameLearningThai_controller extends CI_Controller
         parent::__construct();
         $this->load->database();
         $this->load->model('GameLearningThai_model');
+        $this->load->model('LogActivity_model');
         $this->load->helper(array('form', 'url', 'text'));
         $this->load->library('session');
         if (!$this->session->userdata('is_logged_in')) {
@@ -17,6 +18,9 @@ class GameLearningThai_controller extends CI_Controller
 
     public function index()
     {
+        //----------------------- LOG ACTIVITY -----------------------------//
+        $this->LogActivity_model->InsertLog('เข้าเล่นเกมรอบรู้ภาษาไทย');
+        //----------------------- LOG ACTIVITY -----------------------------//
 
         $this->data['view_file'] = 'Game_LearningThai/gamepage';
         $this->load->view(THEMES, $this->data);

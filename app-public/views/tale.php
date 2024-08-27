@@ -113,33 +113,32 @@ $themes = base_url();
             <div class="col-3">
                 <h4 class="fw-bold text-center mb-4">นิทานเรื่อง</h4>
                 <div class="menu-story">
-                    <div class="story" onclick="loadVideo('กระต่ายน้อย', this)">กระต่ายน้อย</div>
-                    <div class="story" onclick="loadVideo('กล่องข้าวน้อยฆ่าแม่', this)">กล่องข้าวน้อยฆ่าแม่</div>
-                    <div class="story" onclick="loadVideo('ขุมทรัพย์ในไร่องุ่น', this)">ขุมทรัพย์ในไร่องุ่น</div>
-                    <div class="story" onclick="loadVideo('คนอกตัญญู', this)">คนอกตัญญู</div>
-                    <div class="story" onclick="loadVideo('ชาวนากับงูเห่า', this)">ชาวนากับงูเห่า</div>
-                    <div class="story" onclick="loadVideo('ดาวหินน้อย', this)">ดาวหินน้อย</div>
+                    <div class="story active" onclick="loadVideo('หมากับเงา', this)">หมากับเงา</div>
+                    <div class="story" onclick="loadVideo('กระต่ายตื่นตูม', this)">กระต่ายตื่นตูม</div>
                     <div class="story" onclick="loadVideo('เทพารักษ์กับคนตัดไม้', this)">เทพารักษ์กับคนตัดไม้</div>
+                    <div class="story" onclick="loadVideo('ไก่ได้พลอย', this)">ไก่ได้พลอย</div>
+                    <div class="story" onclick="loadVideo('ลิงกับเต่า', this)">ลิงกับเต่า</div>
+                    <div class="story" onclick="loadVideo('ลูกหมูสามตัว', this)">ลูกหมูสามตัว</div>
+                    <div class="story" onclick="loadVideo('หนูน้อยหมวกแดง', this)">หนูน้อยหมวกแดง</div>
                     <div class="story" onclick="loadVideo('นกกากับเหยือกน้ำ', this)">นกกากับเหยือกน้ำ</div>
-                    <div class="story" onclick="loadVideo('นกอินทรีเจ้าเล่ห์', this)">นกอินทรีเจ้าเล่ห์</div>
-                    <div class="story" onclick="loadVideo('บุญที่ให้ทานแก่ปลา', this)">บุญที่ให้ทานแก่ปลา</div>
-                    <div class="story" onclick="loadVideo('ใบ้กตัญญู', this)">ใบ้กตัญญู</div>
-                    <div class="story" onclick="loadVideo('มดน้อยจอมขยัน', this)">มดน้อยจอมขยัน</div>
-                    <div class="story" onclick="loadVideo('ไม้เท้ายอดกตัญญู', this)">ไม้เท้ายอดกตัญญู</div>
-                    <div class="story" onclick="loadVideo('เศรษฐีเจ้าเล่ห์กับลูกสาวชาวนา', this)">
-                        เศรษฐีเจ้าเล่ห์กับลูกสาวชาวนา</div>
-                    <div class="story" onclick="loadVideo('สิงโตเบาปัญญา', this)">สิงโตเบาปัญญา</div>
+                    <div class="story" onclick="loadVideo('ชาวนากับงูเห่า', this)">ชาวนากับงูเห่า</div>
+                    <div class="story" onclick="loadVideo('กระต่ายกับเต่า', this)">กระต่ายกับเต่า</div>
+                    <div class="story" onclick="loadVideo('นกน้อยกับจระเข้', this)">นกน้อยกับจระเข้</div>
+                    <div class="story" onclick="loadVideo('หนูกับมด', this)">หนูกับมด</div>
+                    <div class="story" onclick="loadVideo('แม่ช้างสอนลูก', this)">แม่ช้างสอนลูก</div>
+                    <div class="story" onclick="loadVideo('นกกระสากับห่าน', this)">นกกระสากับห่าน</div>
+                    <div class="story" onclick="loadVideo('หนูนากับหนูบ้าน', this)">หนูนากับหนูบ้าน</div>
+                    <div class="story" onclick="loadVideo('หนูนิดกับกิจวัตรประจำวัน', this)">หนูนิดกับกิจวัตรประจำวัน</div>
                     <div class="story" onclick="loadVideo('สุนัขจิ้งจอกกับนกกระสา', this)">สุนัขจิ้งจอกกับนกกระสา</div>
-                    <div class="story" onclick="loadVideo('สุนัขจิ้งจอกอยากเป็นผู้นำ', this)">สุนัขจิ้งจอกอยากเป็นผู้นำ
-                    </div>
-                    <div class="story" onclick="loadVideo('หมากับเงา', this)">หมากับเงา</div>
-                    <div class="story" onclick="loadVideo('หมู่บ้านเห็ดหอม', this)">หมู่บ้านเห็ดหอม</div>
-                    <div class="story" onclick="loadVideo('หัวล้านชอบยอ', this)">หัวล้านชอบยอ</div>
+                    <div class="story" onclick="loadVideo('นกอินทรีเจ้าเล่ห์', this)">นกอินทรีเจ้าเล่ห์</div>
+                    <div class="story" onclick="loadVideo('ปลาใหญ่กับปลาเล็ก', this)">ปลาใหญ่กับปลาเล็ก</div>
+                    <div class="story" onclick="loadVideo('หนูนิดกับสถานที่ใกล้ตัว', this)">หนูนิดกับสถานที่ใกล้ตัว</div>
                 </div>
             </div>
             <div class="col-8">
-                <video id="videoPlayer" width="113%" height="450px" style="margin-top: 10px; border: 1px solid #989898;"
-                    controls></video>
+            <iframe id="videoPlayer" width="113%" height="450" style="margin-top: 10px; border: 1px solid #989898;"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -156,8 +155,37 @@ function loadVideo(storyName, element) {
     element.classList.add('active');
 
     var videoPlayer = document.getElementById('videoPlayer');
-    videoPlayer.src = `../assets/video/novel/${storyName}.mp4`;
-    videoPlayer.load();
-    videoPlayer.play();
+    var videoMap = {
+        'หมากับเงา': 'oKd0ALsr0fQ?si=q57e8jVooh2NVk4f',
+        'กระต่ายตื่นตูม': '2E_HJlyib_4?si=XMcRozPL0ZeLvQ7Y',
+        'เทพารักษ์กับคนตัดไม้': 'cZswCuUPf5g?si=AzMctDGMuIwZ7_Z6',
+        'ไก่ได้พลอย': 'PR8if7rmXRQ?si=p8FIjEkoYaycbR7h',
+        'ลิงกับเต่า': 'tcCUIHp3D6s?si=ZADnMAKOj7EzCoGx',
+        'ลูกหมูสามตัว': '4oIEUMa0A0s?si=dGAf6O98kLobaVXa',
+        'หนูน้อยหมวกแดง': 'iMc_pQrXHJ0?si=ABfbz33d5DwQB36r',
+        'นกกากับเหยือกน้ำ': 'Rv3ZvePLuxE?si=IBVUYlw5yWycHg-i',
+        'ชาวนากับงูเห่า': 'GS3dx3iof28?si=wuVdh0vqOMVQia5o',
+        'กระต่ายกับเต่า': 'l5pbB2J1cTA?si=WpC_8GFoAu4zLno-',
+        'นกน้อยกับจระเข้': '1zh7Dem7e4k?si=JU54YxAUSy36j6oa',
+        'หนูกับมด': '6GsRxQ6fKD4?si=v-ZM1TyFSHr-7uy1',
+        'แม่ช้างสอนลูก': 'PiyCtOndt-c?si=YQSEzm55GgmFrk3q',
+        'นกกระสากับห่าน': 'r7IDWGxNfm8?si=hMk-cmLlF-mXHaPl',
+        'หนูนากับหนูบ้าน': 'odoyE00_Wys?si=9Ny2478xvO2Cz7KS',
+        'หนูนิดกับกิจวัตรประจำวัน': 'ftvnXt8T2T8?si=SgJL3OimFBkFoOes',
+        'สุนัขจิ้งจอกกับนกกระสา': 'eXU3CZeYALk?si=iP0-w1f30ZxW7xHV',
+        'นกอินทรีเจ้าเล่ห์': 'Y06-nKklQHE?si=5Gg00c8JgN4CefPp',
+        'ปลาใหญ่กับปลาเล็ก': '54gY765ASmY?si=g6OHNH_ByD-q0x-V',
+        'หนูนิดกับสถานที่ใกล้ตัว': 'wlq4iN0-xlY?si=4bZuOUyPyEsEiybY',
+    };
+
+    var videoId = videoMap[storyName] || 'iqZbGQzQkMA?si=nJl-L2LiATd8GZ6v';
+    videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
+    videoPlayer.onload = function() {
+        videoPlayer.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    };
 }
+
+window.onload = function() {
+    loadVideo('หมากับเงา', document.querySelector('.story.active'));
+};
 </script>

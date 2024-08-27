@@ -47,7 +47,7 @@ body {
             <button class="btn btn-success fw-bold fs-4" data-toggle="modal" data-target="#Question">+ เพิ่มข้อสอบ</button>
         </div>
         <div class="col-1">
-            <a href="<?= site_url('Test_controller/Testing') ?>">
+            <a href="<?= site_url('Lesson') ?>">
                 <img src="<?= $themes ?>assets/img/thai/page1/back.png" alt="" class="back">
             </a>
         </div>
@@ -148,7 +148,7 @@ body {
     </div>
 </div>
 
-<script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('title', {
         height: 100 
@@ -168,7 +168,7 @@ function get_Question() {
     let table_body = $('#tbl_question tbody');
 
     $.ajax({
-        url: "<?= site_url('Test_controller/get_Question') ?>",
+        url: "<?= site_url('PreTest_controller/get_Question') ?>",
         method: "POST",
         dataType: 'json',
         success: function(data) {
@@ -303,7 +303,7 @@ function Insert() {
     formData.append('classyear', classyear);
 
     $.ajax({
-        url: "<?= site_url('Test_controller/Insert_Question') ?>",
+        url: "<?= site_url('PreTest_controller/Insert_Question') ?>",
         type: "POST",
         data: formData,
         processData: false,
@@ -350,7 +350,7 @@ function Update(id, modalCount) {
     formData.append('classyear', classyear);
 
     $.ajax({
-        url: "<?= site_url('Test_controller/Update_Question') ?>",
+        url: "<?= site_url('PreTest_controller/Update_Question') ?>",
         method: "POST",
         data: formData,
         processData: false,
@@ -392,7 +392,7 @@ function deleteQuestion(id) {
     }).then((result) => {
         if (result.value) {
             $.ajax({
-                url: "<?= site_url('Test_controller/Delete_Question') ?>",
+                url: "<?= site_url('PreTest_controller/Delete_Question') ?>",
                 type: 'POST',
                 data: {
                     id: id

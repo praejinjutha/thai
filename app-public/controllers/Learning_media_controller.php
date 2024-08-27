@@ -6,6 +6,8 @@ class Learning_media_controller extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->database();
+        $this->load->model('LogActivity_model');
         $this->load->helper(array('form', 'url', 'text'));
         $this->load->library('session');
         if (!$this->session->userdata('is_logged_in')) {
@@ -22,6 +24,9 @@ class Learning_media_controller extends CI_Controller
 
     public function media()
     {
+        //----------------------- LOG ACTIVITY -----------------------------//
+        $this->LogActivity_model->InsertLog('เข้าเมนูสะกดคำ - เมนูฟังเเละอ่าน');
+        //----------------------- LOG ACTIVITY -----------------------------//
 
         $this->data['view_file'] = 'Learning/media';
         $this->load->view(THEMES, $this->data);
@@ -50,6 +55,9 @@ class Learning_media_controller extends CI_Controller
 
     public function Reading()
     {
+        //----------------------- LOG ACTIVITY -----------------------------//
+        $this->LogActivity_model->InsertLog('เข้าเมนูสะกดคำ - เมนูฝึกอ่าน');
+        //----------------------- LOG ACTIVITY -----------------------------//
 
         $this->data['view_file'] = 'Learning/reading';
         $this->load->view(THEMES, $this->data);
@@ -65,6 +73,9 @@ class Learning_media_controller extends CI_Controller
 
     public function Writing()
     {
+        //----------------------- LOG ACTIVITY -----------------------------//
+        $this->LogActivity_model->InsertLog('เข้าเมนูสะกดคำ - เมนูฝึกเขียน');
+        //----------------------- LOG ACTIVITY -----------------------------//
 
         $this->data['view_file'] = 'Learning/writing';
         $this->load->view(THEMES, $this->data);
