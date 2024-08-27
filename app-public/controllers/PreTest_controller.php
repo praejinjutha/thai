@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Test_controller extends CI_Controller
+class PreTest_controller extends CI_Controller
 {
     function __construct()
     {
@@ -22,7 +22,7 @@ class Test_controller extends CI_Controller
         $this->LogActivity_model->InsertLog('เข้าเมนูคลังข้อสอบ');
         //----------------------- LOG ACTIVITY -----------------------------//
 
-        $this->data['view_file'] = 'Test/testpage';
+        $this->data['view_file'] = 'PreTest/testpage';
         $this->load->view(THEMES, $this->data);
     }
 
@@ -40,7 +40,7 @@ class Test_controller extends CI_Controller
 
         $this->data['Student'] = $this->Test_model->get_student()->result();
 
-        $this->data['view_file'] = 'Test/enter-studyname';
+        $this->data['view_file'] = 'PreTest/enter-studyname';
         $this->load->view(THEMES, $this->data);
     }
 
@@ -48,36 +48,36 @@ class Test_controller extends CI_Controller
     {
         $this->data['User'] = $this->Test_model->get_user()->result();
 
-        $this->data['view_file'] = 'Test/enter-normalname';
+        $this->data['view_file'] = 'PreTest/enter-normalname';
         $this->load->view(THEMES, $this->data);
     }
 
     public function get_Stat()
     {
-        $Stat = $this->Test_model->get_Stat()->result();
+        $Stat = $this->Test_model->get_PreTestStat()->result();
 
         echo json_encode($Stat);
     }
 
     public function get_StatNormal()
     {
-        $Stat = $this->Test_model->get_StatNormal()->result();
+        $Stat = $this->Test_model->get_PreTestStatNormal()->result();
 
         echo json_encode($Stat);
     }
 
-    public function Testing()
+    public function PreTest()
     {
         $this->data['Question'] = $this->Test_model->get_Question()->result();
 
-        $this->data['view_file'] = 'Test/testing';
+        $this->data['view_file'] = 'PreTest/pretest';
         $this->load->view(THEMES, $this->data);
     }
 
     public function Question()
     {
 
-        $this->data['view_file'] = 'Test/questionAdd';
+        $this->data['view_file'] = 'questionAdd';
         $this->load->view(THEMES, $this->data);
     }
 
@@ -199,7 +199,7 @@ class Test_controller extends CI_Controller
             );
         }
 
-        $results = $this->Test_model->Insert_Score($data);
+        $results = $this->Test_model->Insert_PreTestScore($data);
 
         if ($results) {
             echo 'Success';

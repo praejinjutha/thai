@@ -156,26 +156,26 @@ function loadVideo(storyName, element) {
 
     var videoPlayer = document.getElementById('videoPlayer');
     var videoMap = {
-        'หมากับเงา': 'iqZbGQzQkMA?si=nJl-L2LiATd8GZ6v',
-        'กระต่ายตื่นตูม': '_GchvxRtUdQ?si=fypBCrQfia52F-vE',
-        'เทพารักษ์กับคนตัดไม้': 'V7Z4U4gE6fg?si=f7CSPJBY8ARPBeYK',
-        'ไก่ได้พลอย': 'ZIFWifbkWW4?si=7jFKU5BfYvsmqqXU',
-        'ลิงกับเต่า': '4hM4UvutsuE?si=k5KMXFuGuSrrMKol',
-        'ลูกหมูสามตัว': 'MJKt0t9IREg?si=9dLqdWoSUlcuYx_u',
-        'หนูน้อยหมวกแดง': 'gL4wtHG73iI?si=k2LW7iUTva7oPtWW',
+        'หมากับเงา': 'oKd0ALsr0fQ?si=q57e8jVooh2NVk4f',
+        'กระต่ายตื่นตูม': '2E_HJlyib_4?si=XMcRozPL0ZeLvQ7Y',
+        'เทพารักษ์กับคนตัดไม้': 'cZswCuUPf5g?si=AzMctDGMuIwZ7_Z6',
+        'ไก่ได้พลอย': 'PR8if7rmXRQ?si=p8FIjEkoYaycbR7h',
+        'ลิงกับเต่า': 'tcCUIHp3D6s?si=ZADnMAKOj7EzCoGx',
+        'ลูกหมูสามตัว': '4oIEUMa0A0s?si=dGAf6O98kLobaVXa',
+        'หนูน้อยหมวกแดง': 'iMc_pQrXHJ0?si=ABfbz33d5DwQB36r',
         'นกกากับเหยือกน้ำ': 'Rv3ZvePLuxE?si=IBVUYlw5yWycHg-i',
-        'ชาวนากับงูเห่า': '2rt3c0DE-yc?si=z8kR0F0R6TP9NNsx',
+        'ชาวนากับงูเห่า': 'GS3dx3iof28?si=wuVdh0vqOMVQia5o',
         'กระต่ายกับเต่า': 'l5pbB2J1cTA?si=WpC_8GFoAu4zLno-',
         'นกน้อยกับจระเข้': '1zh7Dem7e4k?si=JU54YxAUSy36j6oa',
         'หนูกับมด': '6GsRxQ6fKD4?si=v-ZM1TyFSHr-7uy1',
-        'แม่ช้างสอนลูก': 'mxcVmgU7bK8?si=b0p4Gzu_p1sIghYz',
-        'นกกระสากับห่าน': 'txFUC5hrHNQ?si=IYkgp772biTNYDfb',
+        'แม่ช้างสอนลูก': 'PiyCtOndt-c?si=YQSEzm55GgmFrk3q',
+        'นกกระสากับห่าน': 'r7IDWGxNfm8?si=hMk-cmLlF-mXHaPl',
         'หนูนากับหนูบ้าน': 'odoyE00_Wys?si=9Ny2478xvO2Cz7KS',
         'หนูนิดกับกิจวัตรประจำวัน': 'ftvnXt8T2T8?si=SgJL3OimFBkFoOes',
         'สุนัขจิ้งจอกกับนกกระสา': 'eXU3CZeYALk?si=iP0-w1f30ZxW7xHV',
         'นกอินทรีเจ้าเล่ห์': 'Y06-nKklQHE?si=5Gg00c8JgN4CefPp',
         'ปลาใหญ่กับปลาเล็ก': '54gY765ASmY?si=g6OHNH_ByD-q0x-V',
-        'หนูนิดกับสถานที่ใกล้ตัว': 'mEO4uSSOGjg?si=ROfRYt1N_OeEMsCq',
+        'หนูนิดกับสถานที่ใกล้ตัว': 'wlq4iN0-xlY?si=4bZuOUyPyEsEiybY',
     };
 
     var videoId = videoMap[storyName] || 'iqZbGQzQkMA?si=nJl-L2LiATd8GZ6v';

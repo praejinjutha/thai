@@ -138,7 +138,7 @@ $themes = base_url();
                 </select>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5 mb-5">
             <div class="col tbodyDiv">
                 <table id="tbl_EvaluationForm" style="margin-left: 0; width: 100%;">
                     <thead class="text-center">
@@ -146,8 +146,8 @@ $themes = base_url();
                             <th width="150px"><span class="fw-bold fs-4">รหัสประจำตัว</span></th>
                             <th><span class="fw-bold fs-4">ชื่อ - นามสกุล</span></th>
                             <th width="160px"><span class="fw-bold fs-4">แบบคัดลายมือ</span><br>(๒๐ คะแนน)</th>
-                            <th width="130px"><span class="fw-bold fs-4">แบบทดสอบ</span><br>(๒๐ คะแนน)</th>
-                            <th width="165px"><span class="fw-bold fs-4">วาดภาพระบายสี</span><br>(๒๐ คะแนน)</th>
+                            <th width="130px"><span class="fw-bold fs-4">แบบทดสอบก่อนเรียน</span><br>(๒๐ คะแนน)</th>
+                            <th width="165px"><span class="fw-bold fs-4">แบบทดสอบหลังเรียน</span><br>(๒๐ คะแนน)</th>
                             <th width="120px"><span class="fw-bold fs-4">ร้องเพลง</span><br>(๒๐ คะแนน)</th>
                             <th width="120px"><span class="fw-bold fs-4">เล่านิทาน</span><br>(๒๐ คะแนน)</th>
                             <th width="130px"><span class="fw-bold fs-4">คะแนนรวม</span><br>(๑๐๐ คะแนน)</th>
@@ -195,17 +195,17 @@ function get_EvaluationForm() {
             } else {
                 $.each(data, function(index, row) {
                     let CScore = parseInt(row.CScore) || 0;
-                    let TScore = parseInt(row.TScore) || 0;
-                    let WScore = parseInt(row.WScore) || 0;
+                    let PreScore = parseInt(row.PreScore) || 0;
+                    let PostScore = parseInt(row.PostScore) || 0;
                     let SScore = parseInt(row.SScore) || 0;
                     let RScore = parseInt(row.RScore) || 0;
-                    let totalScore = CScore + TScore + WScore + SScore + RScore;
+                    let totalScore = CScore + PreScore + PostScore + SScore + RScore;
                     let table_row = `<tr class="fs-4">
                         <td>${row.id_user || ''}</td>
                         <td align="left">${row.FullName || ''}${row.Name || ''}</td>
                         <td>${CScore}</td>
-                        <td>${TScore}</td>
-                        <td>${WScore}</td>
+                        <td>${PreScore}</td>
+                        <td>${PostScore}</td>
                         <td>${SScore}</td>
                         <td>${RScore}</td>
                         <td>${totalScore}</td>

@@ -114,7 +114,7 @@ body {
         </div>
         <div class="col-9 text-end">
             <img src="<?= $themes ?>assets/img/thai/page5/stat.png" class="score-stat" data-toggle="modal" data-target="#Stat">
-            <a href="<?= site_url('Test_controller') ?>"><img src="<?= $themes ?>assets/img/thai/page6/choicerole/home.png" alt="" class="btn-home"></a>
+            <a href="<?= site_url('PreTest_controller') ?>"><img src="<?= $themes ?>assets/img/thai/page6/choicerole/home.png" alt="" class="btn-home"></a>
             <a href="#" onclick="window.close();"><img src="<?= $themes ?>assets/img/thai/page3/exit.png" alt=""
                     class="btn-exit"></a>
         </div>
@@ -183,7 +183,7 @@ function get_Stat() {
     let table_body = $('#tbl_Stat tbody');
 
     $.ajax({
-        url: "<?= site_url('Test_controller/get_StatNormal') ?>",
+        url: "<?= site_url('PreTest_controller/get_StatNormal') ?>",
         method: "POST",
         dataType: 'json',
         success: function(data) { 
@@ -233,7 +233,7 @@ document.getElementById('confirm').addEventListener('click', function(event) {
         if (!found) {
             alert('ไม่พบผู้ใช้งาน กรุณาตรวจสอบเลขบัตรประชาชน');
         } else {
-            var url = "<?= site_url('Test_controller/Testing?No=') ?>" + IDCard;
+            var url = "<?= site_url('PreTest_controller/PreTest?No=') ?>" + IDCard;
             window.location.href = url;
         }
     }

@@ -205,16 +205,27 @@
                 </h2>
                 <div class="row gy-4 portfolio-container" data-aos-delay="300">
                     <div class="col-lg-3 col-md-6 portfolio-item filter-ex">
-                        <a href="<?= site_url('Test_controller') ?>" target="_brank">
+                        <a href="<?= site_url('activity') ?>">
+                            <img src="../assets/img/portfolio/ex2.png" class="img-fluid" alt="">
+                            <div class="caption"> ใบกิจกรรม <br> Activity </div>
+                        </a>
+                    </div><!-- End Portfolio Item -->
+                    <div class="col-lg-3 col-md-6 portfolio-item filter-ex">
+                        <a href="<?= site_url('PreTest_controller/Question') ?>">
                             <img src="../assets/img/portfolio/ex1.png" class="img-fluid" alt="">
                             <div class="caption"> คลังข้อสอบ <br> Exam Archive </div>
                         </a>
                     </div><!-- End Portfolio Item -->
-
                     <div class="col-lg-3 col-md-6 portfolio-item filter-ex">
-                        <a href="<?= site_url('activity') ?>">
-                            <img src="../assets/img/portfolio/ex2.png" class="img-fluid" alt="">
-                            <div class="caption"> ใบกิจกรรม <br> Activity </div>
+                        <a href="<?= site_url('PreTest_controller') ?>" target="_brank">
+                            <img src="../assets/img/portfolio/ex1.png" class="img-fluid" alt="">
+                            <div class="caption"> แบบทดสอบก่อนเรียน <br> Pre Test </div>
+                        </a>
+                    </div><!-- End Portfolio Item -->
+                    <div class="col-lg-3 col-md-6 portfolio-item filter-ex">
+                        <a href="<?= site_url('PostTest_controller') ?>" target="_brank">
+                            <img src="../assets/img/portfolio/ex1.png" class="img-fluid" alt="">
+                            <div class="caption"> แบบทดสอบหลังเรียน <br> Post Test </div>
                         </a>
                     </div><!-- End Portfolio Item -->
                 </div><!-- End Portfolio Container -->

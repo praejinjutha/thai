@@ -91,6 +91,7 @@ class Auth extends CI_Controller
     public function register()
     {
         $name = $this->input->post('name');
+        $key = $this->input->post('key');
         $idcard = $this->input->post('idcard');
         $email = $this->input->post('email');
         $phone = $this->input->post('phone');
@@ -148,12 +149,14 @@ class Auth extends CI_Controller
             }
 
             $isValid = $this->Auth_model->checkKey($key, $this->mode_db)->result();
+
             foreach ($isValid as $row) {
                 $ID = $row->id;
                 $MaxDevice = $row->MaxDevice;
             }
 
             $Count = $this->Auth_model->checkActivat($ID, $this->mode_db);
+           
             if ($Count >= $MaxDevice) {
                 echo json_encode(['type' => 'error', 'title' => 'Product key ใช้งานครบตามจำนวนเเล้ว']);
                 return;

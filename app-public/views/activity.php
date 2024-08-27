@@ -213,7 +213,7 @@
 
                     <div class="col-lg-4 col-md-6 service-item" data-aos-delay="100">
                         <div class="service-content d-flex" data-aos="fade-up" data-aos-delay="400">
-                            <h4 class="title"><a href="1" class="stretched-link" style="font-size: 28px; "> ✤
+                            <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; "> ✤
                                     มาตราตัวสะกดแม่กก</a></h4>
                         </div><!-- End Service Content -->
                     </div><!-- End Service Item -->

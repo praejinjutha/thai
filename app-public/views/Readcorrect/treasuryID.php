@@ -91,5 +91,5 @@ body {
             </div>
         </div>
     </div>
-    <a href="<?= $link ?>"><img src="<?= $themes ?>assets/img/thai/page3/btn-start.png" width="60vh" class="start"></a>
+    <a href="#"><img src="<?= $themes ?>assets/img/thai/page3/btn-start.png" width="60vh" class="start"></a>
 </div>

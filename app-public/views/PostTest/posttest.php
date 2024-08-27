@@ -77,6 +77,7 @@ body {
     right: 10%;
     width: 33vh;
     height: 20vh;
+    z-index: 1;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -266,7 +267,7 @@ h4 span {
             <img src="<?= $themes ?>assets/img/thai/page1/test-logo.png" alt="" class="no-save">
         </div>
         <div class="col text-end">
-            <a href="<?= site_url('Test_controller') ?>" id="home"><img
+            <a href="<?= site_url('PostTest_controller') ?>" id="home"><img
                     src="<?= $themes ?>assets/img/thai/page5/home.png" alt="" class="btn-home"></a>
             <a href="#" onclick="window.close();"><img src="<?= $themes ?>assets/img/thai/page3/exit.png" alt=""
                     class="btn-exit"></a>
@@ -301,9 +302,6 @@ h4 span {
             </div>
         </div>
     </div>
-    <a href="<?= site_url('Test_controller/Question') ?>">
-        <div class="mt-auto add-question"><i class="fa-solid fa-plus me-1"></i>เพิ่มข้อสอบ</div>
-    </a>
 </div>
 
 <!-- modal -->
@@ -503,7 +501,7 @@ function Insert() {
     formData.append('No', No);
     formData.append('Score', Score);
     $.ajax({
-        url: "<?= site_url('Test_controller/Insert_Score') ?>",
+        url: "<?= site_url('PostTest_controller/Insert_Score') ?>",
         type: "POST",
         data: formData,
         processData: false,

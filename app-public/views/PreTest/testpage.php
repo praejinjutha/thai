@@ -84,8 +84,8 @@ body {
         <div class="col-4"></div>
         <div class="col-4">
             <span style="color: #754c24; font-size: 46px;">ประเภทบุคคล</span>
-            <a href="<?= site_url('Test_controller/study') ?>" class="student">นักเรียน</a>
-            <a href="<?= site_url('Test_controller/normal') ?>" class="normal">บุคคลทั่วไป</a>
+            <a href="<?= site_url('PreTest_controller/study') ?>" class="student">นักเรียน</a>
+            <a href="<?= site_url('PreTest_controller/normal') ?>" class="normal">บุคคลทั่วไป</a>
         </div>
         <div class="col-4"></div>
     </div>
